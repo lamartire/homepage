@@ -36,5 +36,8 @@ module.exports = {
         'postcss-custom-properties': false
       }
     }
+  },
+  router: {
+  	linkActiveClass: 'is-active'
   }
 }
