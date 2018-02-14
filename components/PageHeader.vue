@@ -1,8 +1,8 @@
 <template>
 	<nav class="page-header navbar">
 		<div class="navbar-brand">
-			<a class="navbar-item" href="/">
-				<img src="" alt="endpass">
+			<a class="navbar-item logo" href="/">
+				<img src="~/assets/img/logo-light.png" alt="endpass">
 			</a>
 		</div>
 	</nav>
@@ -12,3 +12,11 @@
 export default {
 }
 </script>
+
+<style lang="scss" scoped>
+.navbar-item.logo {
+		img {
+			max-height: 2.5rem;
+		}
+}
+</style>
