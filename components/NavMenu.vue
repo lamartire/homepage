@@ -1,5 +1,5 @@
 <template>
-	<div class="navbar-menu">
+	<div class="navbar-menu" :class="{ 'is-active': isActive }">
 		<div class="navbar-start">
 		</div>
 		<div class="navbar-end">
@@ -8,3 +8,11 @@
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	props: {
+		isActive: Boolean
+	}
+}
+</script>
