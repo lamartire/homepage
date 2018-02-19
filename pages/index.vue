@@ -1,8 +1,13 @@
 <template>
   <div class="index-page">
-  	<section class="section">
-  	  <h1>Hello, World!</h1>
-  	</section>
+
+  	<hero-banner>
+  		<h1 class="title" slot="title">Take back control of your digital identity</h1>
+  		<h2 class="subtitle" slot="subtitle">Endpass is an identity platform
+  		that puts you, the user first. It combines a revolutionary new way to
+  		log in without passwords with controls that let you decide exactly
+  		which personal data is shared.</h2>
+  	</hero-banner>
 
   	<feature-bullet title="Decentralized Identity">
   		<img slot="image" src="~/assets/img/decentralized-identity.svg"
@@ -57,10 +62,12 @@
 
 <script>
 
+import HeroBanner from '~/components/HeroBanner.vue'
 import FeatureBullet from '~/components/FeatureBullet.vue'
 
 export default {
   components: {
+  	HeroBanner,
   	FeatureBullet
   }
 }
