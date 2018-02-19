@@ -12,5 +12,6 @@
 
 <style lang="scss" scoped>
 .title {
+	color: $purple;
 }
 </style>

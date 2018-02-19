@@ -1,3 +1,5 @@
+const resolve = require('path').resolve
+
 module.exports = {
   /*
   ** Headers of the page
@@ -39,5 +41,11 @@ module.exports = {
   },
   router: {
   	linkActiveClass: 'is-active'
-  }
+  },
+	modules: [
+    'nuxt-sass-resources-loader'
+  ],
+  sassResources: [
+    resolve(__dirname, 'assets/css/_settings.scss')
+  ]
 }
