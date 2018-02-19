@@ -1,14 +1,14 @@
 <template>
 	<div class="feature section">
 		<div class="container">
-			<h2 class="subtitle has-text-centered"> {{ title }} </h2>
 			<div class="columns" :class="{ 'reverse-row-order': reversed }">
-				<div class="column is-one-third">
+				<div class="column is-one-quarter">
 					<div class="image is-square">
 						<slot name="image"></slot>
 					</div>
 				</div>
 				<div class="column">
+					<h2 class="subtitle"> {{ title }} </h2>
 					<slot></slot>
 				</div>
 			</div>
@@ -25,8 +25,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .reverse-row-order {
 	flex-direction: row-reverse;
+}
+.feature {
+	.image>img {
+		max-height: 200px;
+		width: auto;
+	}
 }
 </style>
