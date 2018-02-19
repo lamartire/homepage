@@ -7,6 +7,12 @@
   		that puts you, the user first. It combines a revolutionary new way to
   		log in without passwords with controls that let you decide exactly
   		which personal data is shared.</h2>
+
+  		<div class="hero-cta">
+  			<email-form
+  				action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
+  			</email-form>
+  		</div>
   	</hero-banner>
 
   	<feature-bullet title="Decentralized Identity">
@@ -63,11 +69,13 @@
 <script>
 
 import HeroBanner from '~/components/HeroBanner.vue'
+import EmailForm from '~/components/EmailForm.vue'
 import FeatureBullet from '~/components/FeatureBullet.vue'
 
 export default {
   components: {
   	HeroBanner,
+  	EmailForm,
   	FeatureBullet
   }
 }
