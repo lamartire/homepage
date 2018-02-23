@@ -2,18 +2,27 @@
   <div class="index-page">
 
   	<hero-banner>
-  		<h1 class="title" slot="title">Take back control of your digital identity</h1>
+  		<h1 class="title is-size-1" slot="title">Take back control of your digital identity</h1>
   		<h2 class="subtitle" slot="subtitle">Endpass is an identity platform
   		that puts you, the user first. It combines a revolutionary new way to
   		log in without passwords with controls that let you decide exactly
   		which personal data is shared.</h2>
-
-  		<div class="hero-cta">
-  			<email-form
-  				action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
-  			</email-form>
-  		</div>
   	</hero-banner>
+  	<div class="section cta-box is-dark">
+  		<div class="container is-narrow">
+  			<div class="columns">
+  				<div class="column">
+  					<p>The endpass platform is currently in closed beta. Sign up
+  					for updates to be one of the first to receive an invite.</p>
+  				</div>
+  				<div class="column is-half">
+  					<email-form
+  				 action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
+  					</email-form>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
 
   	<feature-bullet title="Decentralized Identity">
   		<img slot="image" src="~/assets/img/decentralized-identity.svg"
@@ -82,4 +91,8 @@ export default {
 </script>
 
 <style lang="scss">
+.is-dark {
+	background-color: $dark-blue;
+	color: $light-grey;
+}
 </style>

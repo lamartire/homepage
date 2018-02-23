@@ -7,11 +7,11 @@
 			<form class="control" @submit.prevent="submitForm">
 				<div class="field has-addons">
 					<div class="control">
-				  	<input class="input" type="email" name="EMAIL" v-model="email"
+				  	<input class="input is-medium" type="email" name="EMAIL" v-model="email"
 				  	placeholder="Your Email Address" required>
 					</div>
 					<div class="control">
-				  	<button type="submit" class="button is-primary" :class="{
+				  	<button type="submit" class="button is-primary is-medium" :class="{
 				  	'is-loading': isLoading }">
 							Submit
 				  	</button>

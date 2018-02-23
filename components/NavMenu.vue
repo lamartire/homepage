@@ -16,3 +16,15 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss">
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover,
+a.navbar-link.is-active {
+	background: none;
+	color: $primary;
+}
+
+a.navbar-item {
+	text-transform: uppercase;
+}
+</style>

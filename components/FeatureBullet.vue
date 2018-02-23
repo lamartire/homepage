@@ -1,14 +1,14 @@
 <template>
 	<div class="feature section">
-		<div class="container">
+		<div class="container is-narrow">
 			<div class="columns" :class="{ 'reverse-row-order': reversed }">
-				<div class="column is-one-quarter">
+				<div class="column is-one-quarter has-text-centered">
 					<div class="image is-square">
 						<slot name="image"></slot>
 					</div>
 				</div>
 				<div class="column">
-					<h2 class="subtitle"> {{ title }} </h2>
+					<h2 class="subtitle is-size-2"> {{ title }} </h2>
 					<slot></slot>
 				</div>
 			</div>
@@ -33,6 +33,7 @@ export default {
 	.image>img {
 		max-height: 200px;
 		width: auto;
+		margin: auto;
 	}
 }
 </style>

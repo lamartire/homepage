@@ -1,7 +1,7 @@
 <template>
 	<section class="hero">
 		<div class="hero-body">
-			<div class="container">
+			<div class="container is-narrow">
 				<slot name="title"></slot>
 				<slot name="subtitle"></slot>
 				<slot></slot>
