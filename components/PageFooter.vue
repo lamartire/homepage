@@ -8,6 +8,8 @@
 					</div>
 				</div>
 				<div class="level-right">
+					<nuxt-link class="level-item"
+						to="/about#contact-us">Contact</nuxt-link>
 					<a class="level-item" href="#">Privacy</a>
 					<a class="level-item" href="#">Terms</a>
 				</div>
