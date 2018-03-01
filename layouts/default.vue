@@ -19,11 +19,10 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/bulma';
 
 // Global style helpers
 .is-grey {
-	background-color: $grey-lighter;
+	background-color: $light-grey;
 }
 
 .container.is-narrow {
@@ -38,5 +37,9 @@ h1,h2,h3,h4,h5,h6
 .button {
 	font-family: $heading-font-family;
 	font-weight: 400;
+
+	&.is-primary {
+		background-color: $primary;
+	}
 }
 </style>

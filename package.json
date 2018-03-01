@@ -12,7 +12,6 @@
     "deploy": "aws s3 sync --acl public-read dist/ s3://${S3_BUCKET_NAME}"
   },
   "dependencies": {
-    "bulma": "^0.6.2",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^1.1.1"
   },
