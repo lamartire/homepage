@@ -10,8 +10,8 @@
 				<div class="level-right">
 					<nuxt-link class="level-item"
 						to="/about#contact-us">Contact</nuxt-link>
-					<a class="level-item" href="#">Privacy</a>
-					<a class="level-item" href="#">Terms</a>
+					<nuxt-link class="level-item" to="/privacy">Privacy</nuxt-link>
+					<nuxt-link class="level-item" to="/terms">Terms</nuxt-link>
 				</div>
 			</nav>
 		</div>
@@ -26,6 +26,7 @@ export default {
 <style lang="scss">
 .footer {
 	padding: 1rem 1.5rem;
+	font-size: 0.9rem;
 
 	a {
 		color: $dark-grey;
