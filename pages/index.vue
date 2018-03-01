@@ -8,17 +8,30 @@
   		log in without passwords with controls that let you decide exactly
   		which personal data is shared.</h2>
   	</hero-banner>
-  	<div class="section cta-box is-dark">
+  	<div class="section cta-box">
   		<div class="container is-narrow">
-  			<div class="columns">
-  				<div class="column">
-  					<p>The endpass platform is currently in closed beta. Sign up
-  					for updates to be one of the first to receive an invite.</p>
+  			<div class="level level-centered">
+  				<div class="level-left">
+  					<div class="level-item">
+  						<h3 class="is-size-4">Sign up for private beta:</h3>
+  					</div>
+  					<div class="level-item">
+  						<email-form
+  					 action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
+  						</email-form>
+  					</div>
   				</div>
-  				<div class="column is-half">
-  					<email-form
-  				 action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
-  					</email-form>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class="section updates-box is-thin is-dark">
+  		<div class="container">
+  			<div class="level">
+  				<div class="level-left">
+  					<div class="level-item">
+  						<h3>Latest Updates</h3>
+  					</div>
   				</div>
   			</div>
   		</div>
@@ -94,5 +107,13 @@ export default {
 .is-dark {
 	background-color: $dark-blue;
 	color: $light-grey;
+}
+
+.level.level-centered {
+	justify-content: center;
+}
+
+.section.is-thin {
+	padding: 1rem 1.5rem;
 }
 </style>

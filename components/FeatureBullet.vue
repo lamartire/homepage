@@ -30,10 +30,19 @@ export default {
 	flex-direction: row-reverse;
 }
 .feature {
-	.image>img {
-		max-height: 200px;
-		width: auto;
-		margin: auto;
+	.image {
+		@media screen and (max-width: 1023px) {
+			padding-top: 50%;
+		}
+		img {
+			max-height: 200px;
+			width: auto;
+			margin: auto;
+
+			@media screen and (max-width: 1023px) {
+				max-height: 100px;
+			}
+		}
 	}
 }
 </style>
