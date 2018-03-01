@@ -29,4 +29,14 @@ export default {
 .container.is-narrow {
 	max-width: 960px;
 }
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: $heading-font-family;
+}
+
+.button {
+	font-family: $heading-font-family;
+	font-weight: 400;
+}
 </style>

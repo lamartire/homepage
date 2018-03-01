@@ -13,5 +13,6 @@
 <style lang="scss" scoped>
 .title {
 	color: $purple;
+	font-weight: 200;
 }
 </style>

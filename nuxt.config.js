@@ -46,6 +46,7 @@ module.exports = {
     'nuxt-sass-resources-loader'
   ],
   sassResources: [
+    resolve(__dirname, 'assets/css/global.scss'),
     resolve(__dirname, 'assets/css/_settings.scss')
   ]
 }

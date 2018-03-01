@@ -26,5 +26,7 @@ a.navbar-link.is-active {
 
 a.navbar-item {
 	text-transform: uppercase;
+	font-family: $heading-font-family;
+	font-weight: 500;
 }
 </style>
