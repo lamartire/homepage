@@ -1,5 +1,5 @@
 <template>
-	<nav class="page-header navbar">
+	<nav class="page-header navbar is-fixed-top">
 		<div class="navbar-brand">
 			<nuxt-link class="navbar-item logo" to="/" exact>
 				<img src="~/assets/img/logo-light.png" alt="endpass">

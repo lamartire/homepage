@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="has-navbar-fixed-top">
   	<page-header/>
     <nuxt/>
   	<page-footer/>
@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+.has-navbar-fixed-top {
+	padding-top: 3.25rem;
+}
 
 // Global style helpers
 .is-grey {
