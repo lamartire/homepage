@@ -44,7 +44,8 @@ module.exports = {
   	linkActiveClass: 'is-active'
   },
 	modules: [
-    'nuxt-sass-resources-loader'
+    'nuxt-sass-resources-loader',
+    ['@nuxtjs/google-analytics', { id: process.env.ANALYTICS_SITE_ID }]
   ],
   sassResources: [
     resolve(__dirname, 'assets/css/global.scss'),
