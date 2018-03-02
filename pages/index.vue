@@ -2,28 +2,31 @@
   <div class="index-page">
 
   	<hero-banner>
-  		<h1 class="title is-size-1" slot="title">Take back control of your digital identity</h1>
-  		<h2 class="subtitle" slot="subtitle">Endpass is an identity platform
-  		that puts you, the user first. It combines a revolutionary new way to
-  		log in without passwords with controls that let you decide exactly
-  		which personal data is shared.</h2>
-  	</hero-banner>
-  	<div class="section cta-box">
-  		<div class="container is-narrow">
-  			<div class="level level-centered">
-  				<div class="level-left">
-  					<div class="level-item">
-  						<h3 class="is-size-4">Sign up for private beta:</h3>
-  					</div>
-  					<div class="level-item">
-  						<email-form
-  					 action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
-  						</email-form>
-  					</div>
+  		<div class="columns">
+  			<div class="column is-two-thirds">
+  				<h1 class="title is-size-1" slot="title">Take back control of your digital identity</h1>
+  				<h2 class="subtitle" slot="subtitle">Endpass is an identity platform
+  					that puts you, the user first. It combines a revolutionary new way to
+  					log in without passwords with controls that let you decide exactly
+  					which personal data is shared.</h2>
+					<div class="cta-box">
+  					<h3 class="is-size-4">Sign up for private beta</h3>
+  					<email-form
+  						action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13"
+  						cta="Get Started">
+  					</email-form>
+  				</div>
+
+
+  			</div>
+  			<div class="column">
+  				<div class="image hero-image is-hidden-touch">
+  					<img src="~/assets/img/id-card.svg" alt="Control your digital identity">
   				</div>
   			</div>
   		</div>
-  	</div>
+  	</hero-banner>
+  	
 
   	<div class="section how-it-works is-dark">
   		<div class="container">
@@ -171,19 +174,30 @@ export default {
 		box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 	}
 	.card-header-title {
+		font-size: 1.1rem;
 		color: $purple;
 	}
 	.card-footer {
 		margin-top: auto;
 	}
 
-	.grow {
+	.grow>img {
+		object-fit: cover;
 		overflow: hidden;
 		transition:max-height 0.3s ease-out;
 		max-height: 200px;
 		&:hover {
 			max-height: 500px;
 		}
+	}
+}
+
+.hero-image {
+	height: 100%;
+	overflow: hidden;
+
+	img {
+		opacity: 0.4;
 	}
 }
 </style>

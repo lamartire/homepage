@@ -10,9 +10,11 @@
 	</section>
 </template>
 
-<style lang="scss" scoped>
-.title {
-	color: $purple;
-	font-weight: 200;
+<style lang="scss">
+.hero {
+	.title {
+		color: $purple;
+		font-weight: 200;
+	}
 }
 </style>
