@@ -1,7 +1,8 @@
 <template>
 	<div class="email-form">
 		<div v-if="isSubmitted">
-			<p>Thanks! You're on the list</p>
+			<p>You're on the list! We'll send you a beta invite as soon as a space
+			opens up.</p>
 		</div>
 		<div v-else>
 			<form class="control" @submit.prevent="submitForm">
