@@ -24,7 +24,7 @@ a.navbar-link.is-active {
 	color: $primary;
 }
 
-a.navbar-item {
+.navbar-item {
 	text-transform: uppercase;
 	font-family: $heading-font-family;
 	font-weight: 500;
