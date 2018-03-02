@@ -20,6 +20,9 @@
 
   			</div>
   			<div class="column">
+  				<div class="image hero-image is-hidden-touch">
+  					<img src="~/assets/img/id-card.svg" alt="Control your digital identity">
+  				</div>
   			</div>
   		</div>
   	</hero-banner>
@@ -186,6 +189,15 @@ export default {
 		&:hover {
 			max-height: 500px;
 		}
+	}
+}
+
+.hero-image {
+	height: 100%;
+	overflow: hidden;
+
+	img {
+		opacity: 0.4;
 	}
 }
 </style>
