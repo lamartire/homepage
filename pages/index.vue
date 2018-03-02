@@ -171,13 +171,15 @@ export default {
 		box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 	}
 	.card-header-title {
+		font-size: 1.1rem;
 		color: $purple;
 	}
 	.card-footer {
 		margin-top: auto;
 	}
 
-	.grow {
+	.grow>img {
+		object-fit: cover;
 		overflow: hidden;
 		transition:max-height 0.3s ease-out;
 		max-height: 200px;
