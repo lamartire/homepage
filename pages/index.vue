@@ -25,14 +25,62 @@
   		</div>
   	</div>
 
-  	<div class="section updates-box is-thin is-dark">
+  	<div class="section how-it-works is-dark">
   		<div class="container">
-  			<div class="level">
-  				<div class="level-left">
-  					<div class="level-item">
-  						<h3>Latest Updates</h3>
+  			<h2 class="is-size-3 has-text-centered">How It Works</h2>
+  			<div class="columns boxes">
+
+  				<div class="column">
+  					<div class="card">
+  						<div class="card-header">
+  							<h3 class="card-header-title">1. Login with Blockchain</h3>
+  						</div>
+  						<div class="card-image">
+  							<div class="image grow">
+  								<img src="~/assets/img/screen-wallet-login.png" alt="Login with your blockchain id">
+  							</div>
+  						</div>
+  						<div class="card-content">
+  							<p class="content">Use the same blockchain identity to
+  							connect to Web3 dApps and traditional web apps.</p>
+  						</div>
   					</div>
   				</div>
+
+  				<div class="column">
+  					<div class="card">
+  						<div class="card-header">
+  							<h3 class="card-header-title">2. Authorize access to your data</h3>
+  						</div>
+  						<div class="card-image">
+  							<div class="image grow">
+  								<img src="~/assets/img/screen-share-data.png" alt="Authorize access to data">
+  							</div>
+  						</div>
+  						<div class="card-content">
+  							<p class="content">Decide exactly what personal
+  						information will be shared and how it can be used.</p>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="column">
+  					<div class="card">
+  						<div class="card-header">
+  							<h3 class="card-header-title">3. Create on-demand identities</h3>
+  						</div>
+  						<div class="card-image">
+  							<div class="image grow">
+  								<img src="~/assets/img/screen-persona-select.png" alt="Create multiple personas">
+  							</div>
+  						</div>
+  						<div class="card-content">
+  							<p class="content">Create as many personas as you want to
+  						protect your privacy.</p>
+  						</div>
+  					</div>
+  				</div>
+
   			</div>
   		</div>
   	</div>
@@ -115,5 +163,27 @@ export default {
 
 .section.is-thin {
 	padding: 1rem 1.5rem;
+}
+
+.boxes {
+	.card {
+		height: 100%;
+		box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+	}
+	.card-header-title {
+		color: $purple;
+	}
+	.card-footer {
+		margin-top: auto;
+	}
+
+	.grow {
+		overflow: hidden;
+		transition:max-height 0.3s ease-out;
+		max-height: 200px;
+		&:hover {
+			max-height: 500px;
+		}
+	}
 }
 </style>
