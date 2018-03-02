@@ -11,7 +11,9 @@
   					which personal data is shared.</h2>
 					<div class="cta-box">
   					<h3 class="is-size-4">Sign up for private beta</h3>
-  					<email-form action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13">
+  					<email-form
+  						action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13"
+  						cta="Get Started">
   					</email-form>
   				</div>
 

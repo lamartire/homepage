@@ -13,7 +13,7 @@
 					<div class="control">
 				  	<button type="submit" class="button is-primary is-medium" :class="{
 				  	'is-loading': isLoading }">
-							Submit
+							{{ cta }}
 				  	</button>
 					</div>
 				</div>
@@ -37,7 +37,15 @@ export default {
 	},
 	props: {
 		// URL for the form to post to
-		action: String
+		action: {
+			type: String,
+			required: true
+		},
+		// Call to action on the Submit button
+		cta: {
+			type: String,
+			default: 'Submit'
+		}
 	},
 	methods: {
 		async submitForm() {
