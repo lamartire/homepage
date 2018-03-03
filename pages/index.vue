@@ -88,7 +88,7 @@
   		</div>
   	</div>
 
-  	<feature-bullet title="Decentralized Identity">
+  	<feature-bullet title="Protect your personal data">
   		<img slot="image" src="~/assets/img/decentralized-identity.svg"
   		alt="Self-Sovereign Identity">
   		<p>You own your personal data. Your personal information is stored
@@ -97,13 +97,13 @@
   		vulnerable to hacks and data breaches.</p>
   	</feature-bullet>
 
-  	<feature-bullet title="Passwordless Signon Everywhere" reversed>
+  	<feature-bullet title="Password-free login everywhere" reversed>
   		<img slot="image" src="~/assets/img/passwordless-login.svg"
   		alt="Passwordless login">
   		<p>Experience one-tap passwordless sign on to the next generation of
-  		decentralized apps. Never worry about managing multiple passwords,
-  		forgotten passwords, or phishing attacks again. Use a single
-  		blockchain identity to sign in across all of your devices.</p>
+  		decentralized apps. Never worry about managing or forgetting multiple
+  		passwords. Stop phishing attacks before they happen. One 
+  		blockchain identity signs you in across all of your devices.</p>
   	</feature-bullet>
 
 
@@ -118,17 +118,18 @@
   	<feature-bullet title="Total Data Security" reversed>
   		<img slot="image" src="~/assets/img/data-security.svg"
   		alt="Total Data Security">
-  		<p>Endpass ensures all of your personal data is protected by
-  		industry-standard encryption - and you're the only one with the key
-  		to unlock it. You're always protected from data breaches. You're always the only who can decrypt your sensitive personal information.</p>
+  		<p>Endpass ensures all of your personal data is encrypted and stored
+  		only on your device. You're the only one with the key
+  		to unlock it. Your sensitive personal information is always protected
+  		from data breaches.</p>
   	</feature-bullet>
 
 
   	<feature-bullet title="Complete Privacy">
   		<img slot="image" src="~/assets/img/absolute-privacy.svg"
   		alt="Complete Privacy">
-  		<p>You're in complete control of exactly what information about yourself you
-  		want to share. Without your explicit permission, your personal data
+  		<p> Decide how much personal information you want to share and who is
+  		allowed to see it. Without your permission, your personal data
   		is completely invisible.</p>
   	</feature-bullet>
 
