@@ -2,11 +2,17 @@
 	<div class="about-page">
   	<section class="about-us section">
   		<div class="container is-narrow">
-    		<h1 class="title">About Us</h1>
-    		<p>Endpass, founded in 2018, is a new startup using blockchain
-    		technology to solve the biggest problems with digital identity. In a
-    		world of growing data breaches, mass surveillance, and corporate data
-    		mining, only decentralized identity can ensure security and privacy.
+    		<h1 class="title">Our Mission</h1>
+    		<p>
+    		Our goal is to give people power over their personal data. We believe
+    		that your personal data doesn't belong to greedy corporations or
+    		surveillance states &mdash; it belongs to you!
+    		That's why we're building a self-sovereign identity platform that
+    		gives users control over personal information, without entrusting it
+    		to third parties. Individual control over identity massively
+    		increases privacy and security, protecting against data breaches and
+    		hackers.
+    		The next generation of identity is decentralized.
     		</p>
 			<p>
 				<nuxt-link to="/careers">We're hiring for our remote team - join us!</nuxt-link>
