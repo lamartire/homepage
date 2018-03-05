@@ -40,6 +40,16 @@
 	</div>
 </template>
 
+<script>
+export default {
+	head () {
+		return {
+			title: 'Privacy Policy'
+		}
+	}
+}
+</script>
+
 <style lang="scss">
 .legal {
 	font-size: 0.8rem;
