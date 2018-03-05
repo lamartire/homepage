@@ -1,3 +1,4 @@
+require('dotenv').config()
 const resolve = require('path').resolve
 
 module.exports = {
@@ -47,6 +48,7 @@ module.exports = {
   	linkActiveClass: 'is-active'
   },
 	modules: [
+		'@nuxtjs/dotenv',
     'nuxt-sass-resources-loader',
     ['@nuxtjs/google-analytics', { id: process.env.ANALYTICS_SITE_ID }]
   ],
