@@ -33,7 +33,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: true,
+    extractCSS: {
+    	allChunks: true
+    },
     postcss: {
       plugins: {
         'postcss-custom-properties': false
