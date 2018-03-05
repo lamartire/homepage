@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "aws s3 sync --acl public-read dist/ s3://${S3_BUCKET_NAME}"
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
