@@ -10,6 +10,13 @@
     	improving fast, transparency in communication, and flexibility and
     	personal freedom.
     	</p>
+    	<p class="lead">We are a distributed team, so <strong>all
+    		positions are remote/ work from home.</strong> Applications from
+    	anywhere in the world are welcome.</p>
+    	<div class="careers-widget">
+    		<h1 class="title">Open Positions</h1>
+    		<div id="BrzyHr_app"></div>
+    	</div>
     </div>
   </section>
 </template>
@@ -18,8 +25,12 @@
 export default {
 	head () {
 		return {
-			title: 'Careers'
+			title: 'Careers',
+			script: [
+				{src: 'https://endpass.breezy.hr/embed/js?link_external=true'}
+			]
 		}
 	}
 }
 </script>
+
