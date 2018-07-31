@@ -12,3 +12,6 @@ dist
 
 # Environment variables
 .env
+
+# Dev tools
+.tern-port
