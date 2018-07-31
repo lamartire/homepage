@@ -1,10 +1,10 @@
 <template>
-  <div>
-  	<page-header/>
+  <div class="page-container">
+  	<page-header class="page-header"/>
     <div class="page-content">
     	<nuxt/>
     </div>
-  	<page-footer/>
+  	<page-footer class="page-footer"/>
   </div>
 </template>
 
@@ -21,6 +21,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+// Grid layout
+.page-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 
 // Global style helpers
 .is-grey {

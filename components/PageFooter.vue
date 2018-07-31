@@ -1,5 +1,5 @@
 <template>
-	<footer class="footer page-footer">
+	<footer class="footer">
 		<div class="container">
 			<nav class="level">
 				<div class="level-left">

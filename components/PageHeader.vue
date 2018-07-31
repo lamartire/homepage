@@ -1,5 +1,5 @@
 <template>
-	<nav class="page-header navbar">
+	<nav class="navbar">
 		<div class="navbar-brand">
 			<div class="navbar-item">
 				<nuxt-link class="logo" to="/" exact>
@@ -36,7 +36,7 @@ export default {
 	},
 	methods: {
 		toggleNavMenu() {
-			this.navMenuActive = !this.navMenuActive 
+			this.navMenuActive = !this.navMenuActive
 		}
 	}
 }
