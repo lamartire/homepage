@@ -1,5 +1,5 @@
 <template>
-  <div class="has-navbar-fixed-top">
+  <div>
   	<page-header/>
     <div class="page-content">
     	<nuxt/>
@@ -21,15 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.has-navbar-fixed-top {
-	padding-top: 3.25rem;
-}
-
-// Main content div
-.page-content {
-	min-height: calc(100vh - 3.25rem - 3rem);
-}
 
 // Global style helpers
 .is-grey {

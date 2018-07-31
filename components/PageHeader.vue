@@ -1,5 +1,5 @@
 <template>
-	<nav class="page-header navbar is-fixed-top">
+	<nav class="page-header navbar">
 		<div class="navbar-brand">
 			<div class="navbar-item">
 				<nuxt-link class="logo" to="/" exact>
