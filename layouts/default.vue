@@ -91,4 +91,59 @@ p.lead {
 	font-size: 1.3rem;
 	margin-bottom: 1rem;
 }
+
+.icon {
+  width: 100%;
+  height: auto;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  &.is-orange {
+    fill: $orange;
+    .image svg * {
+      fill: $orange;
+    }
+  }
+
+  &.is-primary {
+    fill: $primary;
+    .image svg * {
+      fill: $primary;
+    }
+  }
+
+  &.is-warning {
+    fill: $warning;
+    .image svg * {
+      fill: $warning;
+    }
+  }
+
+  &.is-danger {
+    fill: $danger;
+    .image svg * {
+      fill: $danger;
+    }
+  }
+  &.is-info {
+    fill: $info;
+    .image svg * {
+      fill: $info;
+    }
+  }
+  &.is-success {
+    fill: $success;
+    svg * {
+      fill: $success;
+    }
+  }
+  &.is-dark {
+    fill: $dark-blue;
+    svg * {
+      fill: $dark-blue;
+    }
+  }
+}
 </style>

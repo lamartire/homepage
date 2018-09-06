@@ -25,41 +25,53 @@
 
           <div class="column is-one-third">
             <feature-card class="has-text-danger">
-              <template slot="title">Say goodbye to stuck transactions</template>
+              <span slot="image" class="icon"
+                v-html="require('~/assets/svg/ban.svg')"></span>
+              <span class="has-text-danger" slot="title">Say goodbye to stuck transactions</span>
             </feature-card>
           </div>
 
           <div class="column is-one-third">
-            <feature-card class="has-text-success">
-              <template slot="title">Automatic ERC20
-                      token airdrop import</template>
+            <feature-card class="">
+              <span slot="image" class="icon is-success"
+                v-html="require('~/assets/svg/bullhorn.svg')"></span>
+              <span class="has-text-success" slot="title">Automatic ERC20
+                      token airdrop import</span>
             </feature-card>
           </div>
 
 
           <div class="column is-one-third">
-            <feature-card class="has-text-danger">
-              <template slot="title">You control your
-                      private keys</template>
+            <feature-card class="">
+              <span slot="image" class="icon"
+                v-html="require('~/assets/svg/key.svg')"></span>
+              <span class="has-text-dark" slot="title">You control your
+                      private keys</span>
             </feature-card>
           </div>
 
           <div class="column is-one-third">
-            <feature-card class="has-text-info">
-              <template slot="title">Secure encrypted
-                      cloud backup and sync</template>
+            <feature-card class="">
+              <span slot="image" class="icon is-info"
+                v-html="require('~/assets/svg/cloud-upload.svg')"></span>
+              <span class="has-text-info" slot="title">Secure encrypted
+                      cloud backup and sync</span>
             </feature-card>
           </div>
 
           <div class="column is-one-third">
-            <feature-card class="has-text-orange">
-              <template slot="title">Single wallet for all of your
-                devices</template>
+            <feature-card class="">
+              <span slot="image" class="icon"
+                v-html="require('~/assets/svg/tablet.svg')"></span>
+              <span slot="title" class="has-text-orange">Single wallet for all of your
+                devices</span>
             </feature-card>
           </div>
 
           <div class="column is-one-third">
             <feature-card class="has-text-dark">
+              <span slot="image" class="icon has-text-dark"
+                v-html="require('~/assets/svg/network.svg')"></span>
               <template slot="title">Open source and open protocols</template>
             </feature-card>
           </div>
