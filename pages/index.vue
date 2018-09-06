@@ -4,7 +4,7 @@
   	<hero-banner class="is-dark">
       <div class="hero-inner">
         <h1 class="title has-text-centered is-size-1">The next generation Ethereum and token
-        wallet is here.</h1>
+        cloud wallet is here.</h1>
         <div class="subtitle-box is-centered">
           <p class="subtitle">Endpass is a web wallet that puts your
             in control of your keys, secures your funds, and automatically
@@ -18,63 +18,55 @@
   	</hero-banner>
 
 
-  	<div class="section how-it-works is-dark">
+  	<div class="section feature-cards is-dark">
   		<div class="container">
-  			<h2 class="is-size-3 has-text-centered">How It Works</h2>
-  			<div class="columns boxes">
+  			<h2 class="is-size-3 has-text-centered">Features</h2>
+        <div class="columns is-multiline boxes">
 
-  				<div class="column">
-  					<div class="card">
-  						<div class="card-header">
-  							<h3 class="card-header-title">1. Login with Blockchain</h3>
-  						</div>
-  						<div class="card-image">
-  							<div class="image grow">
-  								<img src="~/assets/img/screen-wallet-login.png" alt="Login with your blockchain id">
-  							</div>
-  						</div>
-  						<div class="card-content">
-  							<p class="content">Use the same blockchain identity to
-  							connect to Web3 dApps and traditional web apps.</p>
-  						</div>
-  					</div>
-  				</div>
+          <div class="column is-one-third">
+            <feature-card class="has-text-danger">
+              <template slot="title">Say goodbye to stuck transactions</template>
+            </feature-card>
+          </div>
 
-  				<div class="column">
-  					<div class="card">
-  						<div class="card-header">
-  							<h3 class="card-header-title">2. Authorize access to your data</h3>
-  						</div>
-  						<div class="card-image">
-  							<div class="image grow">
-  								<img src="~/assets/img/screen-share-data.png" alt="Authorize access to data">
-  							</div>
-  						</div>
-  						<div class="card-content">
-  							<p class="content">Decide exactly what personal
-  						information will be shared and how it can be used.</p>
-  						</div>
-  					</div>
-  				</div>
+          <div class="column is-one-third">
+            <feature-card class="has-text-success">
+              <template slot="title">Automatic ERC20
+                      token airdrop import</template>
+            </feature-card>
+          </div>
 
-  				<div class="column">
-  					<div class="card">
-  						<div class="card-header">
-  							<h3 class="card-header-title">3. Create on-demand identities</h3>
-  						</div>
-  						<div class="card-image">
-  							<div class="image grow">
-  								<img src="~/assets/img/screen-persona-select.png" alt="Create multiple personas">
-  							</div>
-  						</div>
-  						<div class="card-content">
-  							<p class="content">Create as many personas as you want to
-  						protect your privacy.</p>
-  						</div>
-  					</div>
-  				</div>
 
-  			</div>
+          <div class="column is-one-third">
+            <feature-card class="has-text-danger">
+              <template slot="title">You control your
+                      private keys</template>
+            </feature-card>
+          </div>
+
+          <div class="column is-one-third">
+            <feature-card class="has-text-info">
+              <template slot="title">Secure encrypted
+                      cloud backup and sync</template>
+            </feature-card>
+          </div>
+
+          <div class="column is-one-third">
+            <feature-card class="has-text-orange">
+              <template slot="title">Single wallet for all of your
+                devices</template>
+            </feature-card>
+          </div>
+
+          <div class="column is-one-third">
+            <feature-card class="has-text-dark">
+              <template slot="title">Open source and open protocols</template>
+            </feature-card>
+          </div>
+
+        </div>
+
+
   		</div>
   	</div>
 
@@ -139,12 +131,16 @@
 import HeroBanner from '~/components/HeroBanner.vue'
 import EmailForm from '~/components/EmailForm.vue'
 import FeatureBullet from '~/components/FeatureBullet.vue'
+import FeatureCard from '~/components/FeatureCard.vue'
+import VCard from '~/components/VCard.vue'
 
 export default {
   components: {
   	HeroBanner,
   	EmailForm,
-  	FeatureBullet
+  	FeatureBullet,
+  	FeatureCard,
+    VCard,
   }
 }
 </script>

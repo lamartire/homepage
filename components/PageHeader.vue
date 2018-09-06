@@ -68,6 +68,17 @@ export default {
       color: $white;
       border: none;
     }
+
+    .navbar-start, .navbar-end {
+      a.navbar-item, a.navbar-link {
+        color: darken($white, 20%);
+      }
+      a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover,
+      a.navbar-link.is-active {
+        background: none;
+        color: $white;
+      }
+    }
   }
 
   .navbar-burger span {

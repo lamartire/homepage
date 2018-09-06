@@ -33,6 +33,21 @@ export default {
 .is-grey {
 	background-color: $light-grey;
 }
+.is-dark {
+  background-color: $dark-blue;
+  color: $white;
+}
+.has-text-dark {
+  color: $dark-blue;
+}
+
+.has-text-orange {
+  color: $orange;
+}
+.is-orange {
+  background-color: $orange;
+  color: $white;
+}
 
 .container.is-narrow {
 	max-width: 960px;
