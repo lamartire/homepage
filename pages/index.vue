@@ -24,8 +24,8 @@
         <div class="columns is-multiline boxes">
 
           <div class="column is-one-third">
-            <feature-card class="has-text-danger">
-              <span slot="image" class="icon has-text-danger"
+            <feature-card class="">
+              <span slot="image" class="icon has-text-red is-red"
                 v-html="require('~/assets/svg/loop.svg')"></span>
               <span class="has-text-dark" slot="title">Say goodbye to stuck transactions</span>
             </feature-card>
@@ -33,17 +33,25 @@
 
           <div class="column is-one-third">
             <feature-card class="">
-              <span slot="image" class="icon is-success"
+              <span slot="image" class="icon is-green"
                 v-html="require('~/assets/svg/bullhorn.svg')"></span>
               <span class="has-text-dark" slot="title">Automatic ERC20
-                      token airdrop import</span>
+                      token airdrop notifications</span>
             </feature-card>
           </div>
 
+          <div class="column is-one-third">
+            <feature-card class="">
+              <span slot="image" class="icon is-blue has-text-blue"
+                v-html="require('~/assets/svg/cloud-transfer-upload.svg')"></span>
+              <span class="has-text-dark" slot="title">Secure encrypted
+                      cloud backup and sync</span>
+            </feature-card>
+          </div>
 
           <div class="column is-one-third">
             <feature-card class="">
-              <span slot="image" class="icon"
+              <span slot="image" class="icon is-orange"
                 v-html="require('~/assets/svg/key.svg')"></span>
               <span class="has-text-dark" slot="title">You control your
                       private keys</span>
@@ -52,16 +60,7 @@
 
           <div class="column is-one-third">
             <feature-card class="">
-              <span slot="image" class="icon is-info"
-                v-html="require('~/assets/svg/cloud-upload.svg')"></span>
-              <span class="has-text-dark" slot="title">Secure encrypted
-                      cloud backup and sync</span>
-            </feature-card>
-          </div>
-
-          <div class="column is-one-third">
-            <feature-card class="">
-              <span slot="image" class="icon"
+              <span slot="image" class="icon is-cyan"
                 v-html="require('~/assets/svg/tablet.svg')"></span>
               <span slot="title" class="has-text-dark">Single wallet for all of your
                 devices</span>
@@ -69,8 +68,8 @@
           </div>
 
           <div class="column is-one-third">
-            <feature-card class="has-text-dark">
-              <span slot="image" class="icon has-text-dark"
+            <feature-card class="">
+              <span slot="image" class="icon is-dark-blue"
                 v-html="require('~/assets/svg/network.svg')"></span>
               <span slot="title" class="has-text-dark">Open source and open protocols</span>
             </feature-card>
@@ -82,57 +81,15 @@
   		</div>
   	</div>
 
-  	<feature-bullet title="Protect your personal data">
+  	<feature-bullet class="is-reversed">
+      <span slot="title">Resend stuck transactions with one click.</span>
   		<img slot="image" src="~/assets/img/decentralized-identity.svg"
   		alt="Self-Sovereign Identity">
-  		<p>You own your personal data. Your personal information is stored
-  		with you - not big companies that want to mine it for profit.
-  		Self-sovereign identity eliminates single points of failure that are
-  		vulnerable to hacks and data breaches.</p>
-  	</feature-bullet>
-
-  	<feature-bullet title="Password-free login everywhere" reversed>
-  		<img slot="image" src="~/assets/img/passwordless-login.svg"
-  		alt="Passwordless login">
-  		<p>Experience one-tap passwordless sign on to the next generation of
-  		decentralized apps. Never worry about managing or forgetting multiple
-  		passwords. Stop phishing attacks before they happen. One
-  		blockchain identity signs you in across all of your devices.</p>
-  	</feature-bullet>
-
-
-  	<feature-bullet title="Flexible Personas">
-  		<img slot="image" src="~/assets/img/flexible-personas.svg"
-  		alt="Flexible Personas">
-  		<p>Create as many identities as you want and easily switch between
-  		them. All of your accounts are in one place. Unilimited disposable
-  		one-time use accounts can be created to enhance privacy. </p>
-  	</feature-bullet>
-
-  	<feature-bullet title="Total Data Security" reversed>
-  		<img slot="image" src="~/assets/img/data-security.svg"
-  		alt="Total Data Security">
-  		<p>Endpass ensures all of your personal data is encrypted and stored
-  		only on your device. You're the only one with the key
-  		to unlock it. Your sensitive personal information is always protected
-  		from data breaches.</p>
-  	</feature-bullet>
-
-
-  	<feature-bullet title="Complete Privacy">
-  		<img slot="image" src="~/assets/img/absolute-privacy.svg"
-  		alt="Complete Privacy">
-  		<p> Decide how much personal information you want to share and who is
-  		allowed to see it. Without your permission, your personal data
-  		is completely invisible.</p>
-  	</feature-bullet>
-
-  	<feature-bullet title="Open Standards" reversed>
-  		<img slot="image" src="~/assets/img/open-standards.svg"
-  		alt="Open Standards">
-  		<p>We are building open protocols for the future of decentralized
-  		identity. Endpass is built on top of widely accepted industry
-  		standards and open-source technologies.</p>
+      <p>Don't worry about choosing the right gas price. Simply choose a
+        priority level for your transaction and the wallet's prediction
+        algorithms will select the optimal gas price. If a trasnaction does
+        get stuck, you can resend it with a higher fee or cancel it in one
+        click.</p>
   	</feature-bullet>
 
   </div>

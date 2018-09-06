@@ -29,26 +29,6 @@ export default {
   grid-template-rows: auto 1fr auto;
 }
 
-// Global style helpers
-.is-grey {
-	background-color: $light-grey;
-}
-.is-dark {
-  background-color: $dark-blue;
-  color: $white;
-}
-.has-text-dark {
-  color: $dark-blue;
-}
-
-.has-text-orange {
-  color: $orange;
-}
-.is-orange {
-  background-color: $orange;
-  color: $white;
-}
-
 .container.is-narrow {
 	max-width: 960px;
 }
@@ -98,100 +78,6 @@ p.lead {
   svg {
     width: 100%;
     height: auto;
-  }
-
-  &.is-orange {
-    fill: $orange;
-    svg * {
-      fill: $orange;
-    }
-  }
-
-  &.is-primary {
-    fill: $primary;
-    svg * {
-      fill: $primary;
-    }
-  }
-
-  &.is-warning {
-    fill: $warning;
-    svg * {
-      fill: $warning;
-    }
-  }
-
-  &.is-danger {
-    fill: $danger;
-    svg * {
-      fill: $danger;
-    }
-  }
-  &.is-info {
-    fill: $info;
-    svg * {
-      fill: $info;
-    }
-  }
-  &.is-success {
-    fill: $success;
-    svg * {
-      fill: $success;
-    }
-  }
-  &.is-dark {
-    fill: $dark-blue;
-    svg * {
-      fill: $dark-blue;
-    }
-  }
-
-  &.has-text-orange {
-    stroke: $orange;
-    svg * {
-      stroke: $orange;
-    }
-  }
-  &.has-text-dark {
-    stroke: $dark-blue;
-    svg * {
-      stroke: $dark-blue;
-    }
-  }
-
-  &.has-text-primary {
-    stroke: $primary;
-    svg * {
-      stroke: $primary;
-    }
-  }
-
-  &.has-text-warning {
-    stroke: $warning;
-    svg * {
-      stroke: $warning;
-    }
-  }
-
-  &.has-text-danger {
-    stroke: $danger;
-    svg * {
-      stroke: $danger;
-    }
-  }
-
-  &.has-text-success {
-    stroke: $success;
-    svg * {
-      stroke: $success;
-    }
-  }
-
-  &.has-text-info {
-    stroke: $info;
-    svg * {
-      stroke: $info;
-    }
   }
 }
 </style>

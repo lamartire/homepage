@@ -1,0 +1,24 @@
+// Color classes
+@each $name, $color in $colors {
+  .has-text-#{$name} {
+    color: $color;
+    &>svg.iconic {
+      .iconic-property-stroke {
+        stroke: $color;
+      }
+    }
+  }
+  .is-#{$name} {
+    background-color: $color;
+    color: $white;
+    &.icon {
+      background-color: transparent;
+      color: unset;
+    }
+    &>svg.iconic {
+      .iconic-property-fill {
+        fill: $color;
+      }
+    }
+  }
+}

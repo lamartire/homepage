@@ -1,20 +1,38 @@
-$light-grey: #ecf0f1;
-$dark-grey: #4a4a4a;
-$purple: #4b0472;
-$light-purple: rgba(75, 4, 114, 0.6);
-$white: #ecf0f1;
-$dark-blue: #2c3e50;
-$orange: #fa492b;
+$colors: (
+  light-grey: #ecf0f1,
+  dark-grey: #4a4a4a,
+  purple: #4b0472,
+  white: #ecf0f1,
+  blue: #209cee,
+  dark-blue: #2c3e50,
+  dark: #2c3e50,
+  light-blue: #f6f9fc,
+  cyan: #209cee,
+  green: #1ccc70,
+  red: #ff385f,
+  orange: #fa492b,
+  yellow: #ffdd57
+);
 
-$success: #fa492b;
-$warning: #fa492b;
-$danger: #fa492b;
 
-$primary: $purple;
-$warning: #ffdd57;
-$danger: #ff3860;
-$success: #1CCC70;
-$link: #3273dc;
-$info: #209cee;
+$light-grey: map-get($colors, light-grey);
+$dark-grey: map-get($colors, dark-grey);
+$purple: map-get($colors, purple);
+$white: map-get($colors, white);
+$blue: map-get($colors, blue);
+$dark-blue: map-get($colors, dark-blue);
+$light-blue: map-get($colors, light-blue);
+$cyan: map-get($colors, cyan);
+$green: map-get($colors, green);
+$red: map-get($colors, red);
+$orange: map-get($colors, orange);
+$yellow: map-get($colors, yellow);
+
+$primary: map-get($colors, purple);
+$warning: map-get($colors, yellow);
+$danger: map-get($colors, red);
+$success: map-get($colors, green);
+$link: map-get($colors, blue);
+$info: map-get($colors, cyan);
 
 $heading-font-family: 'Proxima Nova', 'Open Sans', 'Helvetica Neue', sans-serif;

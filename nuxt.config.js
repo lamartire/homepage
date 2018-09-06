@@ -70,7 +70,8 @@ module.exports = {
     ['@nuxtjs/google-analytics', { id: process.env.ANALYTICS_SITE_ID }]
   ],
   sassResources: [
+    resolve(__dirname, 'assets/css/_settings.scss'),
+    resolve(__dirname, 'assets/css/_mixins.scss'),
     resolve(__dirname, 'assets/css/global.scss'),
-    resolve(__dirname, 'assets/css/_settings.scss')
   ]
 }
