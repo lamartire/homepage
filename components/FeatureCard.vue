@@ -32,67 +32,6 @@ export default {
 
 <style lang="scss">
 .feature-card {
-  &.has-text-orange {
-    .image svg * {
-      stroke: $orange;
-    }
-    .media-content {
-      color: $orange;
-    }
-  }
-  &.has-text-dark {
-    .image svg * {
-      stroke: $dark-blue;
-    }
-    .media-content {
-      color: $dark-blue;
-    }
-  }
-
-  &.has-text-primary {
-    .image svg * {
-      stroke: $primary;
-    }
-    .media-content {
-      color: $primary;
-    }
-  }
-
-  &.has-text-warning {
-    .image svg * {
-      stroke: $warning;
-    }
-    .media-content {
-      color: $warning;
-    }
-  }
-
-  &.has-text-danger {
-    .image svg * {
-      stroke: $danger;
-    }
-    .media-content {
-      color: $danger;
-    }
-  }
-
-  &.has-text-success {
-    .image svg * {
-      stroke: $success;
-    }
-    .media-content {
-      color: $success;
-    }
-  }
-
-  &.has-text-info {
-    .image svg * {
-      stroke: $info;
-    }
-    .media-content {
-      color: $info;
-    }
-  }
 
 }
 </style>

@@ -102,34 +102,34 @@ p.lead {
 
   &.is-orange {
     fill: $orange;
-    .image svg * {
+    svg * {
       fill: $orange;
     }
   }
 
   &.is-primary {
     fill: $primary;
-    .image svg * {
+    svg * {
       fill: $primary;
     }
   }
 
   &.is-warning {
     fill: $warning;
-    .image svg * {
+    svg * {
       fill: $warning;
     }
   }
 
   &.is-danger {
     fill: $danger;
-    .image svg * {
+    svg * {
       fill: $danger;
     }
   }
   &.is-info {
     fill: $info;
-    .image svg * {
+    svg * {
       fill: $info;
     }
   }
@@ -143,6 +143,54 @@ p.lead {
     fill: $dark-blue;
     svg * {
       fill: $dark-blue;
+    }
+  }
+
+  &.has-text-orange {
+    stroke: $orange;
+    svg * {
+      stroke: $orange;
+    }
+  }
+  &.has-text-dark {
+    stroke: $dark-blue;
+    svg * {
+      stroke: $dark-blue;
+    }
+  }
+
+  &.has-text-primary {
+    stroke: $primary;
+    svg * {
+      stroke: $primary;
+    }
+  }
+
+  &.has-text-warning {
+    stroke: $warning;
+    svg * {
+      stroke: $warning;
+    }
+  }
+
+  &.has-text-danger {
+    stroke: $danger;
+    svg * {
+      stroke: $danger;
+    }
+  }
+
+  &.has-text-success {
+    stroke: $success;
+    svg * {
+      stroke: $success;
+    }
+  }
+
+  &.has-text-info {
+    stroke: $info;
+    svg * {
+      stroke: $info;
     }
   }
 }
