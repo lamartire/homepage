@@ -1,6 +1,6 @@
 <template>
   <div class="page-container">
-  	<page-header class="page-header"/>
+  	<page-header class="page-header is-dark"/>
     <div class="page-content">
     	<nuxt/>
     </div>

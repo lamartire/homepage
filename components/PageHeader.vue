@@ -3,7 +3,8 @@
 		<div class="navbar-brand">
 			<div class="navbar-item">
 				<nuxt-link class="logo" to="/" exact>
-					<img src="~/assets/img/logo-light.png" alt="endpass">
+					<img class="is-hidden-dark" src="~/assets/img/logo-light.png" alt="endpass">
+					<img class="is-hidden-light" src="~/assets/img/logo-dark-blue.png" alt="endpass">
 				</nuxt-link>
 				<nuxt-link to="/careers">
 					<span class="tag badge is-danger">We're Hiring!</span>
@@ -43,8 +44,35 @@ export default {
 </script>
 
 <style lang="scss">
-.navbar-item .logo img {
-	max-height: 3rem;
+.navbar {
+  .navbar-item .logo img {
+    max-height: 3rem;
+  }
+
+  .is-hidden-light {
+    display: none;
+  }
+
+  &.is-dark {
+    background-color: $dark-blue;
+    color: $white;
+
+    .is-hidden-light {
+      display: unset;
+    }
+    .is-hidden-dark {
+      display: none;
+    }
+    .navbar-burger {
+      background-color: $dark-blue;
+      color: $white;
+      border: none;
+    }
+  }
+
+  .navbar-burger span {
+    height: 2px;
+  }
 }
 
 </style>

@@ -1,32 +1,22 @@
 <template>
   <div class="index-page">
 
-  	<hero-banner>
-  		<div class="columns">
-  			<div class="column is-two-thirds">
-  				<h1 class="title is-size-1" slot="title">Take back control of your digital identity</h1>
-  				<h2 class="subtitle" slot="subtitle">Endpass is a
-  					decentralized identity platform that puts people first. Use
-  					your Endpass blockchain identity to secure your personal data
-  					and precisely control access to it.</h2>
-					<div class="cta-box">
-  					<h3 class="is-size-4">Join the private beta</h3>
-  					<email-form
-  						action="https://endpass.us17.list-manage.com/subscribe/post?u=dc533bf673bb80437899f12d5&id=ea7d114d13"
-  						cta="Get Started">
-  					</email-form>
-  				</div>
-
-
-  			</div>
-  			<div class="column">
-  				<div class="image hero-image is-hidden-touch">
-  					<img src="~/assets/img/id-card.svg" alt="Control your digital identity">
-  				</div>
-  			</div>
-  		</div>
+  	<hero-banner class="is-dark">
+      <div class="hero-inner">
+        <h1 class="title has-text-centered is-size-1">The next generation Ethereum and token
+        wallet is here.</h1>
+        <div class="subtitle-box is-centered">
+          <p class="subtitle">Endpass is a web wallet that puts your
+            in control of your keys, secures your funds, and automatically
+            optimizes transactions.
+            </p>
+        </div>
+      </div>
+      <div class="buttons cta-box is-centered">
+        <a href="https://wallet.endpass.com" class="button is-medium is-success">Get Started</a>
+      </div>
   	</hero-banner>
-  	
+
 
   	<div class="section how-it-works is-dark">
   		<div class="container">
@@ -102,7 +92,7 @@
   		alt="Passwordless login">
   		<p>Experience one-tap passwordless sign on to the next generation of
   		decentralized apps. Never worry about managing or forgetting multiple
-  		passwords. Stop phishing attacks before they happen. One 
+  		passwords. Stop phishing attacks before they happen. One
   		blockchain identity signs you in across all of your devices.</p>
   	</feature-bullet>
 
