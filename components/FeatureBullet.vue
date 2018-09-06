@@ -8,6 +8,9 @@
 					</div>
 				</div>
 				<div class="column">
+          <span class="heading" v-if="$slots.caption">
+            <slot name="caption"></slot>
+          </span>
 					<h2 class="subtitle is-size-2">
             <slot name="title"></slot>
           </h2>
@@ -44,6 +47,11 @@ export default {
     .reversible {
       flex-direction: row-reverse;
     }
+  }
+
+  .heading {
+    font-family: $heading-font-family;
+    font-weight: 600;
   }
 }
 
