@@ -24,7 +24,7 @@
 <style lang="scss">
 .action-bar {
   .columns {
-    justify-content: center;
+    align-items: center;
   }
   min-height: 4rem;
   padding: 1rem 1.5rem;

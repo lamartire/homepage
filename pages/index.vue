@@ -3,8 +3,8 @@
 
   	<hero-banner class="is-dark">
       <div class="hero-inner">
-        <h1 class="title has-text-centered is-size-1">The next generation Ethereum and token
-        cloud wallet is here.</h1>
+        <h1 class="title has-text-centered is-size-1">Finally, an Ethereum
+        and token wallet you'll be delighted to use.</h1>
         <div class="subtitle-box is-centered">
           <p class="subtitle">Endpass is a web wallet that puts your
             in control of your keys, secures your funds, and automatically
@@ -100,7 +100,7 @@
   	     <span slot="caption" class="has-text-green">
   	       Automatic token detection
   	     </span>
-  	     <span slot="title">Instantly find all tokens at your address</span>
+  	     <span slot="title">Instantly discover all tokens in your wallet.</span>
   	  	<img slot="image" class="screenshot" src="~/assets/img/tokens-list.png"
   	  	alt="Self-Sovereign Identity">
   	     <p>Endpass Wallet automatically tracks all tokens at any Ethereum
@@ -127,7 +127,7 @@
   	     <span slot="caption" class="has-text-orange">
   	       Your keys belong to you
   	     </span>
-  	     <span slot="title">Manage all of your accounts in one place. Export
+  	     <span slot="title">Manage all your accounts from one place. Export
   	       private keys any time.</span>
   	  	<img slot="image" class="screenshot" src="~/assets/img/manage-accounts.png"
   	  	alt="Self-Sovereign Identity">
@@ -142,7 +142,7 @@
   	     <span slot="caption" class="has-text-blue">
   	       Works in any modern browser
   	     </span>
-  	     <span slot="title">Sync your wallet to all devices. No software to
+  	     <span slot="title">Sync your wallet to all your devices. No software to
   	       download.</span>
   	  	<img slot="image" src="~/assets/img/flexible-personas.svg"
   	  	alt="Self-Sovereign Identity">

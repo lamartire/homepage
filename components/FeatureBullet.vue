@@ -37,17 +37,11 @@ export default {
 
   }
 	.image {
-		@media screen and (max-width: 1023px) {
-			padding-top: 50%;
-		}
 		img {
 			max-height: 400px;
 			width: auto;
 			margin: auto;
 
-			@media screen and (max-width: 1023px) {
-				max-height: 100px;
-			}
       &.is-small {
         max-height: 200px;
       }

@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'endpass Decentralized Identity Platform',
+    title: 'endpass Decentralized Cloud Wallet',
     titleTemplate: '%s | endpass',
     meta: [
       { charset: 'utf-8' },
