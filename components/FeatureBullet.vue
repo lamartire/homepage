@@ -2,7 +2,7 @@
 	<div class="feature section">
 		<div class="container is-narrow">
 			<div class="columns reversible">
-				<div class="column is-one-quarter has-text-centered">
+				<div class="column side-column is-two-fifths has-text-centered">
 					<div class="image is-square">
 						<slot name="image"></slot>
 					</div>
@@ -14,7 +14,9 @@
 					<h2 class="subtitle is-size-2">
             <slot name="title"></slot>
           </h2>
-					<slot></slot>
+					<div class="content">
+					  <slot></slot>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -28,19 +30,31 @@ export default {
 
 <style lang="scss">
 .feature {
+  &.has-small-image {
+    .side-column {
+      width: 20%;
+    }
+
+  }
 	.image {
 		@media screen and (max-width: 1023px) {
 			padding-top: 50%;
 		}
 		img {
-			max-height: 200px;
+			max-height: 400px;
 			width: auto;
 			margin: auto;
 
 			@media screen and (max-width: 1023px) {
 				max-height: 100px;
 			}
+      &.is-small {
+        max-height: 200px;
+      }
 		}
+    img.screenshot {
+      box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    }
 	}
 
   &.is-reversed {
@@ -52,6 +66,12 @@ export default {
   .heading {
     font-family: $heading-font-family;
     font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .content {
+    font-size: 1.3rem;
+    color: lighten($dark-grey, 15%);
   }
 }
 
