@@ -2,7 +2,7 @@
   <div class="index-page">
 
   	<hero-banner class="is-dark">
-      <div class="hero-inner">
+      <div class="hero-inner animated fadeInDown">
         <h1 class="title has-text-centered is-size-1">Finally, an Ethereum
         and token wallet you'll be delighted to use.</h1>
         <div class="subtitle-box is-centered">
@@ -11,9 +11,9 @@
             optimizes transactions.
             </p>
         </div>
-      </div>
-      <div class="buttons cta-box is-centered">
-        <a href="https://wallet.endpass.com" class="button is-medium is-success">Get Started</a>
+        <div class="buttons cta-box is-centered">
+          <a href="https://wallet.endpass.com" class="button is-medium is-success">Get Started</a>
+        </div>
       </div>
   	</hero-banner>
 
