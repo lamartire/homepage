@@ -18,7 +18,7 @@ module.exports = {
 			{ name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-    	{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css' },
+    	{ rel: 'stylesheet', href: '/bulma.0.7.1.min.css' },
     	{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' },
 			{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
 			{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
