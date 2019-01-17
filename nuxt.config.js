@@ -42,15 +42,6 @@ module.exports = {
       }
     },
     extend (config, ctx) {
-      // Includes /assets/svg for svg-sprite-loader
-      config.module.rules.push({
-        test: /\.svg$/,
-        include: [
-          resolve(__dirname, 'assets/svg')
-        ],
-        use: 'svg-inline-loader'
-      })
-
       // Uncomment line below to view webpack rules
       // console.dir(config.module.rules)
     },
