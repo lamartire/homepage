@@ -25,16 +25,16 @@
 
           <div class="column is-one-third">
             <feature-card target="#feature-fee" class="">
-              <span slot="image" class="icon has-text-red is-red"
-                v-html="require('~/assets/svg/loop.svg')"></span>
+              <span slot="image" class="icon has-text-red is-red"><img
+                src="~/assets/svg/loop.svg"></span>
               <span class="has-text-dark" slot="title">Say goodbye to stuck transactions</span>
             </feature-card>
           </div>
 
           <div class="column is-one-third">
             <feature-card target="#feature-tokens" class="">
-              <span slot="image" class="icon is-green"
-                v-html="require('~/assets/svg/bullhorn.svg')"></span>
+              <span slot="image" class="icon is-green"><img
+                src="~/assets/svg/bullhorn.svg"></span>
               <span class="has-text-dark" slot="title">Automatic ERC20
                       token airdrop notifications</span>
             </feature-card>
@@ -42,8 +42,8 @@
 
           <div class="column is-one-third">
             <feature-card target="#feature-cloud" class="">
-              <span slot="image" class="icon is-blue has-text-blue"
-                v-html="require('~/assets/svg/cloud-transfer-upload.svg')"></span>
+              <span slot="image" class="icon is-blue has-text-blue"><img
+                src="~/assets/svg/cloud-transfer-upload.svg"></span>
               <span class="has-text-dark" slot="title">Secure encrypted
                       cloud backup and sync</span>
             </feature-card>
@@ -51,8 +51,8 @@
 
           <div class="column is-one-third">
             <feature-card target="#feature-keys" class="">
-              <span slot="image" class="icon is-orange"
-                v-html="require('~/assets/svg/key.svg')"></span>
+              <span slot="image" class="icon is-orange"><img
+                src="~/assets/svg/key.svg"></span>
               <span class="has-text-dark" slot="title">You control your
                       private keys</span>
             </feature-card>
@@ -60,8 +60,8 @@
 
           <div class="column is-one-third">
             <feature-card target="#feature-devices" class="">
-              <span slot="image" class="icon is-cyan"
-                v-html="require('~/assets/svg/tablet.svg')"></span>
+              <span slot="image" class="icon is-cyan"><img
+                src="~/assets/svg/tablet.svg"></span>
               <span slot="title" class="has-text-dark">Single wallet for all of your
                 devices</span>
             </feature-card>
@@ -69,8 +69,8 @@
 
           <div class="column is-one-third">
             <feature-card target="#feature-security" class="">
-              <span slot="image" class="icon has-text-dark-blue is-dark-blue"
-                v-html="require('~/assets/svg/lock-locked.svg')"></span>
+              <span slot="image" class="icon has-text-dark-blue
+              is-dark-blue"><img src="~/assets/svg/lock-locked.svg"></span>
               <span slot="title" class="has-text-dark">Multifactor security
               and bank-grade encryption</span>
             </feature-card>
