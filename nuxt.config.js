@@ -41,6 +41,7 @@ module.exports = {
         'postcss-custom-properties': false
       }
     },
+    extractCSS: true,
     extend (config, ctx) {
       // Uncomment line below to view webpack rules
       // console.dir(config.module.rules)
