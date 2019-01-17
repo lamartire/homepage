@@ -36,19 +36,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: {
-    	allChunks: true
-    },
     postcss: {
       plugins: {
         'postcss-custom-properties': false
       }
     },
     extend (config, ctx) {
-      // Excludes /assets/svg from url-loader
-      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
-      urlLoader.exclude = /(assets\/svg)/
-
       // Includes /assets/svg for svg-sprite-loader
       config.module.rules.push({
         test: /\.svg$/,
