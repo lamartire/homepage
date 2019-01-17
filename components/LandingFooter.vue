@@ -1,12 +1,14 @@
 <template>
   <div class="landing-footer">
-    <div class="section section-cta">
+    <div class="section section-cta is-dark">
       <div class="container">
         <div class="columns">
           <div class="column">
-            <h2 class="subtitle">
-              Create your free wallet today!
+            <h2 class="subtitle is-size-4">
+              Create your free Ethereum and token wallet today!
             </h2>
+            <p class="subtitle is-size-5">Store all of your crypto tokens in
+            one place and maintain control of your private keys.</p>
           </div>
           <div class="column is-one-third">
             <a class="button is-medium is-success"
@@ -28,3 +30,11 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss">
+.is-dark {
+  .subtitle {
+    color: $light-grey;
+  }
+}
+</style>
