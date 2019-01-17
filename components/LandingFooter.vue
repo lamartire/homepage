@@ -4,7 +4,7 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-            <h2 class="subtitle is-size-4">
+            <h2 class="subtitle is-size-4 has-text-warning">
               Create your free Ethereum and token wallet today!
             </h2>
             <p class="subtitle is-size-5">Store all of your crypto tokens in

@@ -40,6 +40,15 @@
     }
   }
 
+
+  &.is-light {
+    background: $light-blue;
+    color: $dark-grey;
+    .title {
+      color: $purple;
+    }
+  }
+
   .subtitle-box {
     margin-bottom: 1rem;
   }
