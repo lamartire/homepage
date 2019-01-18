@@ -7,13 +7,13 @@
     </coin-header>
 
 
-      <div class="section text-section">
+      <div class="section text-section description" v-if="description">
         <div class="container">
           <div class="columns">
             <div class="column">
               <h2 class="subtitle is-size-3 has-text-centered">About {{name}}</h2>
-              <p class="is-size-5">{{name}}, traded with the symbol {{symbol}}
-                is an ERC20 token on the Ethereum blockchain.</p>
+              <div class="description-content" v-html="description">
+              </div>
             </div>
           </div>
         </div>
@@ -59,17 +59,20 @@ export default {
   async asyncData ({ params, error, payload }) {
     // name is in format coin-name-sym ex. "binance-coin-bnb"
     let token = parseName(params.name)
+    let content = {}
     if (payload) {
       token = {
         ...token,
         ...payload.token
       }
+      content = payload.content || {}
     }
 
     return {
       name : token.name,
       symbol: token.symbol,
       logo: token.logo || '',
+      description: content.description,
     }
   },
   layout: 'landing',
