@@ -65,7 +65,7 @@ module.exports = {
           route: `/coin/${token.name}-${token.symbol}`,
           payload: {
             token,
-            content: tokenContents[token.symbol],
+            content: tokenContents.find(c => c.symbol === token.symbol),
           },
         }
       })
