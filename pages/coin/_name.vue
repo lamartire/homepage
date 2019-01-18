@@ -56,11 +56,12 @@ export default {
       title: `Free ${this.name} ${this.symbol} Wallet`
     }
   },
-  data () {
+  async asyncData ({ params, error, payload }) {
+    let name = params.name
     return {
-      symbol: "BNB",
-      name: "Binance Coin",
-      logo: "https://tokeninfo.endpass.com/img/0xb8c77482e45f1f44de1745f52c74426c631bdd52.png",
+      name,
+      symbol: token.symbol,
+      logo: token.logo || '',
     }
   },
   layout: 'landing',

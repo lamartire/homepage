@@ -1,5 +1,9 @@
 require('dotenv').config()
 const resolve = require('path').resolve
+const axios = require('axios')
+
+
+const TOKEN_INFO_URL='https://tokeninfo.endpass.com/api/v1/tokens'
 
 module.exports = {
   /*
@@ -49,6 +53,18 @@ module.exports = {
   },
   generate: {
     interval: 100,
+    routes: function () {
+      return axios.get(TOKEN_INFO_URL)
+      .then(res => {
+        let tokens = res.data.filter(t => t.symbol); // not empty symbol
+        return tokens.map(token => {
+          return {
+            route: '/coin/' + symbol.toLowerCase(),
+            payload: token,
+          }
+        })
+      })
+    },
   },
   router: {
   	linkActiveClass: 'is-active'
