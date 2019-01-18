@@ -56,10 +56,12 @@ module.exports = {
     routes: function () {
       return axios.get(TOKEN_INFO_URL)
       .then(res => {
-        let tokens = res.data.filter(t => t.symbol); // not empty symbol
+        let tokens = res.data.filter(t => t.symbol && t.name); // not empty symbol
         return tokens.map(token => {
+          let name = token.name.replace(/[\W_]/g,' ').trim().replace(/\s+/g, '-').toLowerCase();
+          let symbol = token.symbol.split(' ')[0].toLowerCase();
           return {
-            route: '/coin/' + symbol.toLowerCase(),
+            route: `/coin/${name}-${symbol}`,
             payload: { token },
           }
         })

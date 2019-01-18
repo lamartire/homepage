@@ -57,12 +57,8 @@ export default {
     }
   },
   async asyncData ({ params, error, payload }) {
-    let name = parseName(params.name)
-    let token = {
-      name,
-      symbol: '',
-      logo: '',
-    }
+    // name is in format coin-name-sym ex. "binance-coin-bnb"
+    let token = parseName(params.name)
     if (payload) {
       token = {
         ...token,
@@ -71,23 +67,40 @@ export default {
     }
 
     return {
-      name,
+      name : token.name,
       symbol: token.symbol,
       logo: token.logo || '',
     }
   },
   layout: 'landing',
+  methods: {
+  },
   components: {
     CoinHeader,
   },
 }
 
-// kebak case to capitalized words
-function parseName(str) {
+
+// name is in format coin-name-sym ex. "binance-coin-bnb" for SEO
+function parseName (rawName) {
+  let parts = rawName.split('-')
+  if ( parts.length < 2 ) {
+    return {name: unKebab(rawName), symbol: ''}
+  }
+  // pop off symbol
+  let symbol = parts.pop().toUpperCase()
+  let name = unKebab(parts.join('-'))
+  return {name, symbol}
+}
+
+// kebab case to capitalized words
+function unKebab (str) {
   return str.replace(/-/g, ' ').replace(/\w\S*/g, function(word) {
-      return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
+return word.charAt(0).toUpperCase()
++ word.substr(1).toLowerCase();
   });
 }
+
 </script>
 
 
