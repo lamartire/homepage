@@ -1,10 +1,8 @@
 require('dotenv').config()
 const resolve = require('path').resolve
-const axios = require('axios')
 
-
-const TOKEN_INFO_URL='https://tokeninfo.endpass.com/api/v1/tokens'
-const CONTENT_URL='https://cockpit.endpass.com/api'
+import cockpit from './plugins/cockpit.js'
+import endpass from './plugins/endpass.js'
 
 module.exports = {
   /*
@@ -56,13 +54,13 @@ module.exports = {
     interval: 100,
     routes: async function () {
       let routes = []
-      let tokens = await getTokens()
-      let tokenContents = await getTokenContent()
+      let tokens = await endpass.getTokens()
+      let tokenContents = await cockpit.getCollection('coins')
 
 
       let tokenRoutes = tokens.map(token => {
         return {
-          route: `/coin/${token.name}-${token.symbol}`,
+          route: `/coin/${token.name}-${token.symbol}`.toLowerCase(),
           payload: {
             token,
             content: tokenContents.find(c => c.symbol === token.symbol),
@@ -90,32 +88,4 @@ module.exports = {
     resolve(__dirname, 'assets/css/_mixins.scss'),
     resolve(__dirname, 'assets/css/global.scss'),
   ]
-}
-
-// Get token data from endpass API
-// Returns promise
-function getTokens() {
-  return axios.get(TOKEN_INFO_URL)
-  .then(res => {
-    let tokens = res.data.filter(t => t.symbol && t.name); // not empty symbol
-    return tokens.map(token => {
-      token.name = token.name.replace(/[\W_]/g,' ').trim().replace(/\s+/g, '-').toLowerCase();
-      token.symbol = token.symbol.split(' ')[0].toLowerCase();
-      return token
-    })
-  })
-}
-
-// Fetches content about tokens from headless CRM
-// Returns promise which resolves to an object of content keyed by uppercase
-// token symbol
-function getTokenContent() {
-  let apiKey = process.env.COCKPIT_API_KEY
-  if (!apiKey) {
-    return Promise.reject('$COCKPIT_API_KEY is empty, cannot fetch content')
-  }
-  return axios.get(`${CONTENT_URL}/collections/get/coins?token=${apiKey}`)
-  .then(res => {
-    return res.data.entries
-  })
 }
