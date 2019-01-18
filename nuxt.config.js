@@ -47,14 +47,20 @@ module.exports = {
       // console.dir(config.module.rules)
     },
   },
+  generate: {
+    interval: 100,
+  },
   router: {
   	linkActiveClass: 'is-active'
   },
 	modules: [
 		'@nuxtjs/dotenv',
     'nuxt-sass-resources-loader',
-    ['@nuxtjs/google-analytics', { id: process.env.ANALYTICS_SITE_ID }]
+    ['@nuxtjs/google-analytics', { id: process.env.ANALYTICS_SITE_ID }],
+    '@nuxtjs/axios',
   ],
+  axios: {
+  },
   sassResources: [
     resolve(__dirname, 'assets/css/_settings.scss'),
     resolve(__dirname, 'assets/css/_mixins.scss'),
