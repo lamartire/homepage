@@ -60,7 +60,7 @@ module.exports = {
         return tokens.map(token => {
           return {
             route: '/coin/' + symbol.toLowerCase(),
-            payload: token,
+            payload: { token },
           }
         })
       })

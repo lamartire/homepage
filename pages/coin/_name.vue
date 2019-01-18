@@ -57,7 +57,19 @@ export default {
     }
   },
   async asyncData ({ params, error, payload }) {
-    let name = params.name
+    let name = parseName(params.name)
+    let token = {
+      name,
+      symbol: '',
+      logo: '',
+    }
+    if (payload) {
+      token = {
+        ...token,
+        ...payload.token
+      }
+    }
+
     return {
       name,
       symbol: token.symbol,
@@ -68,6 +80,13 @@ export default {
   components: {
     CoinHeader,
   },
+}
+
+// kebak case to capitalized words
+function parseName(str) {
+  return str.replace(/-/g, ' ').replace(/\w\S*/g, function(word) {
+      return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
+  });
 }
 </script>
 
