@@ -59,21 +59,28 @@ export default {
   async asyncData ({ params, error, payload }) {
     // name is in format coin-name-sym ex. "binance-coin-bnb"
     let token = parseName(params.name)
-    let content = {}
     if (payload) {
       token = {
         ...token,
         ...payload.token
       }
-      content = payload.content || {}
     }
 
     return {
       name : token.name,
       symbol: token.symbol,
       logo: token.logo || '',
-      description: content.description,
+      content: payload.content,
     }
+  },
+  computed: {
+    // parsed from markdown API result
+    description() {
+      if (!this.content || !this.content.description) {
+        return
+      }
+      return this.$md.render(this.content.description)
+    },
   },
   layout: 'landing',
   methods: {

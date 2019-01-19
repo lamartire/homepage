@@ -80,8 +80,14 @@ module.exports = {
     'nuxt-sass-resources-loader',
     ['@nuxtjs/google-analytics', { id: process.env.ANALYTICS_SITE_ID }],
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
   ],
   axios: {
+  },
+  markdownit: {
+    preset: 'default',
+    breaks: true,
+    injected: true,
   },
   sassResources: [
     resolve(__dirname, 'assets/css/_settings.scss'),
