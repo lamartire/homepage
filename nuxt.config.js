@@ -60,7 +60,7 @@ module.exports = {
 
       let tokenRoutes = tokens.map(token => {
         return {
-          route: `/coin/${token.name}-${token.symbol}`.toLowerCase(),
+          route: `/coin/${token.slug}-${token.symbol}`.toLowerCase(),
           payload: {
             token,
             content: tokenContents.find(c => c.symbol === token.symbol),
