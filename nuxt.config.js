@@ -69,7 +69,7 @@ module.exports = {
       })
       routes = routes.concat(tokenRoutes)
 
-      let features = await cockpit.getCollection('features')
+      let features = await cockpit.getCollection('features', {filter: { published: true }})
       let featureRoutes = features.map(feature => {
         return {
           route: `/feature/${feature.title_slug}`,
