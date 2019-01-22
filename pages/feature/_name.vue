@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="feature-page">
     <hero-banner class="is-light">
       <div class="hero-inner">
         <div class="columns">
@@ -10,9 +10,9 @@
                href="https://wallet.endpass.com">{{cta_text}}</a>
           </div>
           <div class="column is-two-fifths has-text-centered"
-               v-if="screenshot_url">
+               v-if="screenshot && screenshot.path">
             <div class="image is-square">
-              <img class="screenshot" :src="screenshot_url"
+              <img class="screenshot" :src="screenshot.path"
                    :alt="headline" >
             </div>
           </div>
@@ -34,52 +34,25 @@
       </div>
     </div>
 
-    <div class="section text-section" v-if="feature_1_title">
+    <div class="section text-section" v-for="feat in features">
       <div class="container">
         <div class="columns">
           <div class="column">
-            <h2 class="subtitle is-size-3">{{feature_1_title}}</h2>
-            <div v-if="feature_1_body" v-html="$md.render(feature_1_body)"></div>
-            <div class="column is-one-fifth is-hidden-mobile">
+            <h2 class="subtitle is-size-3">{{feat.value.title}}</h2>
+            <div v-if="feature_1_body"
+              v-html="$md.render(feat.value.content)"></div>
+            <div class="column is-one-fifth is-hidden-mobile"
+              v-if="feat.value.image">
               <div class="image">
-                <img src="~/assets/img/flexible-personas.svg" alt="Beginner friendly">
+                <img :src="feat.value.image.path" :title="feat.value.title">
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="section text-section" v-if="feature_2_title">
-        <div class="container">
-          <div class="columns">
-            <div class="column">
-              <h2 class="subtitle is-size-3">{{feature_2_title}}</h2>
-              <div v-if="feature_2_body" v-html="$md.render(feature_2_body)"></div>
-              <div class="column is-one-fifth is-hidden-mobile">
-                <div class="image">
-                  <img src="~/assets/img/flexible-personas.svg" alt="Beginner friendly">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section text-section" v-if="feature_3_title">
-          <div class="container">
-            <div class="columns">
-              <div class="column">
-                <h2 class="subtitle is-size-3">{{feature_3_title}}</h2>
-                <div v-if="feature_3_body" v-html="$md.render(feature_3_body)"></div>
-                <div class="column is-one-fifth is-hidden-mobile">
-                  <div class="image">
-                    <img src="~/assets/img/flexible-personas.svg" alt="Beginner friendly">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+  </div>
 </template>
 
 <script>
