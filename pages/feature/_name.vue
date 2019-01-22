@@ -36,16 +36,18 @@
 
     <div class="section text-section" v-for="feat in features">
       <div class="container">
-        <div class="columns">
+        <div class="columns feature-bullet">
+
           <div class="column">
             <h2 class="subtitle is-size-3">{{feat.value.title}}</h2>
             <div v-if="feature_1_body"
               v-html="$md.render(feat.value.content)"></div>
-            <div class="column is-one-fifth is-hidden-mobile"
-              v-if="feat.value.image">
-              <div class="image">
-                <img :src="feat.value.image.path" :title="feat.value.title">
-              </div>
+          </div>
+
+          <div class="column is-one-fifth is-hidden-mobile"
+               v-if="feat.value.image">
+            <div class="image">
+              <img :src="feat.value.image.path" :title="feat.value.title">
             </div>
           </div>
         </div>
@@ -81,3 +83,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.feature-page {
+  .section:nth-child(odd) .feature-bullet {
+    flex-direction: row-reverse;
+  }
+}
+</style>
