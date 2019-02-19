@@ -173,7 +173,7 @@
   	  	<img slot="image" src="~/assets/img/open-standards.svg"
   	  	alt="Self-Sovereign Identity">
   	     <p>We believe in transparency, engaging with the community and
-  	       statndards-driven, open source development. All of the wallet code
+  	       standards-driven, open source development. All of the wallet code
   	       is available on Github to inspect. </p>
   	     <p>The wallet is built on the brand-new Open Keystore Protocol, an
   	       easy to way to use your own key server with the wallet software.</p>
