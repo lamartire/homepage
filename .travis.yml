@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '10'
+cache:
+  directories:
+  - "~/.cache"
+install: yarn install --frozen-lockfile
+script:
+- yarn generate
+deploy:
+  provider: s3
+  bucket: endpass.com
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: dynamic-generate
+notifications:
+  slack:
+    secure: T0o5DOjioKagWugBDLnUrq/Wq7rA2DjxdOaWNZu/PAG/qUNnGGRQ8L6V7JrtiByWwV5uyC02SV4A/EZZpj+DasL8g7JOWFTxNadx1U+ot1nJi3urhSBMWsgJgcNzgUFmOY+Gni8T5O0bBbRrc+PBsyX+gEJWFuRbJ97c1vFtAEOdVneHY1hmBpvtLYeurpsx2FXQQ9bki80Ysph1somxnSg0FPzC68lP0Wq67q2yMKTmFvEBvkL3TF0XGUwNkb3LApV3Hy46k6g73hcvYFmjO8Yva1+CMKeljJnwhsEWgofkKSA3QAiOKmqTHTLIQWo/+2u3D9b6TycZIrE60+tZ12qS3b2GkbKshMz7WA3/ACB1WWcctPBUV/zj6sfujn/dgTExaCB7Nha1LxPbnPJ5BjbLpvtpoVI/fyTPYidebeGQhVKzW8r87UcJqg5zQwOTN/us38ikYZTmvfEJ2y54Fepl/zKDHFcZoQE0xurBb3PkFMDk0tcjS3GzMJKMa1izWIsePExul6A7Mib3gfzRWYVr0YpRBFR1Hzgba3kiFdWX/9KNYp+6KDLlb91iwDGG5G1SoA1KZKIjbCt/K0PNE4r3FWVQn1c6APD7F5PItrjH7nc4CzpiAzWNkj26tt+EWKTtfVuYeLzP7LeQcpeneb/oxmzAfh9++VRvNqR4WcM=
