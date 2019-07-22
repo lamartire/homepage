@@ -5,7 +5,7 @@
 		<div class="navbar-end">
 			<nuxt-link class="navbar-item" to="/about" exact>About</nuxt-link>
 			<nuxt-link class="navbar-item" to="/careers" exact>Careers</nuxt-link>
-      <a class="navbar-item has-text-success" href="https://wallet.endpass.com">Wallet</a>
+      <nuxt-link class="navbar-item" to="/wallet" exact>Wallet</nuxt-link>
 		</div>
 	</div>
 </template>
