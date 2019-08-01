@@ -19,8 +19,6 @@
     <div class="container">
   	  <feature-bullet id="feature-personal" class="is-reversed">
   	     <span slot="title">Control access to your personal information</span>
-  	  	<img slot="image" class="screenshot" src="~/assets/img/priority-select.png"
-  	  	alt="Self-Sovereign Identity">
   	     <p>Decide exactly which personal data to share with each app you
            choose to give access.</p>
   	  </feature-bullet>
