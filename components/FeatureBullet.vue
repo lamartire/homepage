@@ -14,9 +14,9 @@
           <span class="heading" v-if="$slots.caption">
             <slot name="caption"></slot>
           </span>
-					<h2 class="subtitle is-size-2">
+					<span class="subtitle is-size-2">
             <slot name="title"></slot>
-          </h2>
+          </span>
 					<div class="content">
 					  <slot></slot>
 					</div>

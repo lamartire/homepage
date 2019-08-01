@@ -21,39 +21,40 @@
     <section id="section-features" class="section">
       <div class="container">
 
-        <div class="feature">
-          <div class="columns">
-            <div class="column is-four-fifths">
-              <h2 class="subtitle is-size-2 has-text-center">
-                Super-simple user onboarding for your dApp
-              </h2>
-              <p class="lead">
-                Make signing up for your app as easy for users as joining Facebook.
-                No wallets to download or software to install. No more worrying
-                about web3 compatibility or software updates. Just click and go.
-              </p>
-            </div>
-            <div class="column"></div>
-          </div>
-        </div>
+        <feature-bullet id="feature-onboarding" class="">
+          <h2 slot="title">
+            Super-simple user onboarding for your dApp
+          </h2>
+          <p class="lead">
+            Make signing up for your app as easy for users as joining Facebook.
+            No wallets to download or software to install. No more worrying
+            about web3 compatibility or software updates. Just click and go.
+          </p>
+        </feature-bullet>
+
+        <feature-bullet id="feature-mobile" class="is-reversed">
+          <h2 slot="title">
+            Your dapp, running natively on mobile. No wallet app required.
+          </h2>
+          <p class="lead">
+            Endpass-enabled dapps work natively in standard web browsers.
+            Users are not required to leave your site to install a dApp browser
+            app or run any additional software to use your app.
+          </p>
+        </feature-bullet>
 
 
-        <div class="feature">
-          <div class="columns">
-            <div class="column is-four-fifths">
-              <h2 class="subtitle is-size-2 has-text-center">
-                Protect your users with enterprise-grade security
-              </h2>
-              <p class="lead">
-                Secure your app and user funds without writing any additional
-                code. Endpass Connect adds multiple forms of two factor
-                authentication, like OTP, phone verification, email
-                verification, and more.
-              </p>
-            </div>
-            <div class="column"></div>
-          </div>
-        </div>
+        <feature-bullet id="feature-security" class="">
+          <h2 slot="title">
+            Protect your users with enterprise-grade security
+          </h2>
+          <p class="lead">
+            Secure your app and user funds without writing any additional
+            code. Endpass Connect adds multiple forms of two factor
+            authentication, like OTP, phone verification, email
+            verification, and more.
+          </p>
+        </feature-bullet>
 
       </div>
     </section>
@@ -64,6 +65,7 @@
 
 <script>
 import HeroBanner from '~/components/HeroBanner.vue'
+import FeatureBullet from '~/components/FeatureBullet.vue'
 
 export default {
 	head () {
@@ -74,6 +76,7 @@ export default {
 
   components: {
     HeroBanner,
+    FeatureBullet,
   }
 }
 </script>
