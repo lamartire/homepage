@@ -12,11 +12,13 @@
         </div>
       </div>
       <ul class="columns is-variable is-4 is-vcentered welcome-part-controls">
-        <li class="column is-3 welcome-part-controls-item">
+        <li class="column is-2 welcome-part-controls-item">
           <v-button skin="tertiary">Request a demo</v-button>
         </li>
         <li class="column is-2 welcome-part-controls-item">
-          <a>Learn more</a>
+          <v-more-link>
+            Learn more
+          </v-more-link>
         </li>
       </ul>
     </div>
@@ -25,10 +27,12 @@
 
 <script>
 import VButton from "@endpass/ui/kit/VButton";
+import VMoreLink from '~/components/VMoreLink'
 
 export default {
   components: {
-    VButton
+    VButton,
+    VMoreLink
   }
 };
 </script>
@@ -61,6 +65,7 @@ export default {
 .welcome-part-content h1 {
   margin-bottom: 32px;
   font-size: 48px;
+  font-weight: bold;
   line-height: 1.15;
 }
 

@@ -29,6 +29,10 @@ module.exports = {
       { rel: "stylesheet", href: "/bulma.0.7.1.min.css" },
       {
         rel: "stylesheet",
+        href: "https://use.typekit.net/yiq0llk.css"
+      },
+      {
+        rel: "stylesheet",
         href:
           "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
       },
@@ -124,7 +128,8 @@ module.exports = {
       resolve(__dirname, "assets/css/_external.scss"),
       resolve(__dirname, "assets/css/_utilities.scss"),
       resolve(__dirname, "assets/css/_overrides.scss"),
-      resolve(__dirname, "assets/css/global.scss"),
+      resolve(__dirname, "assets/css/_typography.scss"),
+      resolve(__dirname, "assets/css/global.scss")
     ]
   }
 };

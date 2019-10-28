@@ -32,7 +32,7 @@
             eventually pinpoint fraudsters and forgers at their original source,
             stopping cybercrime in its tracks.
           </p>
-          <a href="#">Join us in the fight against global fraud</a>
+          <v-more-link href="#">Join us in the fight against global fraud</v-more-link>
         </div>
       </section>
     </v-card>
@@ -42,13 +42,15 @@
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VCard from "@endpass/ui/kit/VCard";
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   name: "MissionBlock",
 
   components: {
     VSvgIcon,
-    VCard
+    VCard,
+    VMoreLink
   }
 };
 </script>

@@ -9,9 +9,9 @@
             users to sign in or register with the option to use Endpass Single
             Sign On?
           </p>
-          <a href="#"
+          <v-more-link href="#"
             >Learn more about the benefits and how easy it is to install our
-            API</a
+            API</v-more-link
           >
         </div>
       </div>
@@ -20,8 +20,14 @@
 </template>
 
 <script>
+import VMoreLink from "~/components/VMoreLink";
+
 export default {
-  name: "ApiBlock"
+  name: "ApiBlock",
+
+  components: {
+    VMoreLink
+  }
 };
 </script>
 

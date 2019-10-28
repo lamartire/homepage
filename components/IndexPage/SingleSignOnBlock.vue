@@ -50,7 +50,7 @@
           </ul>
           <p>
             We also offer secure Single Sign On options with Endpass.
-            <a>Learn more</a>
+            <v-more-link>Learn more</v-more-link>
           </p>
         </section>
       </section>
@@ -59,8 +59,14 @@
 </template>
 
 <script>
+import VMoreLink from '~/components/VMoreLink'
+
 export default {
-  name: "SignleSignOnBlock"
+  name: "SignleSignOnBlock",
+
+  components: {
+    VMoreLink,
+  }
 };
 </script>
 
