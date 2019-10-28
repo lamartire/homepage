@@ -10,8 +10,5 @@ npm-debug.log
 # Nuxt generate
 dist
 
-# Environment variables
-.env
-
 # Dev tools
 .tern-port
