@@ -8,8 +8,11 @@
   padding-bottom: 0 !important;
 }
 
-@include mobile {
+@include touch {
   .container {
     padding: 0 23px;
+    margin: 0;
+    width: 100% !important;
+    max-width: none !important;
   }
 }

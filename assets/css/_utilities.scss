@@ -6,8 +6,8 @@
   align-items: flex-end;
 }
 
-@include mobile {
-  .columns.is-mobile-reverse {
+@include tablet {
+  .columns.is-tablet-reverse {
     flex-direction: row-reverse;
   }
 }

@@ -2,7 +2,7 @@
   <section class="summary-block">
     <section class="container">
       <div class="columns is-variable is-4 summary-block-content">
-        <div class="column is-5 is-12-mobile is-offset-1 is-offset-0-mobile">
+        <div class="column is-5 is-12-touch is-offset-1-desktop is-offset-0">
           <h3>Always stay compliant, event when you're on vacation.</h3>
           <p>
             Endpass automatically analyzes your customers’ documents and
@@ -20,9 +20,7 @@
             laundering laws.
           </p>
         </div>
-        <div
-          class="column is-5 is-12-mobile is-offset-1 is-offset-0-mobile summary-block-image"
-        >
+        <div class="column is-5 is-12-touch is-offset-1-desktop is-offset-0">
           <image-card class="summary-block-image"></image-card>
         </div>
       </div>
@@ -45,7 +43,7 @@ export default {
 <style lang="scss">
 .summary-block {
   padding-bottom: 120px;
-  background-color: var(--color-bg-grey);
+  background-color: $bg-light-grey;
   background-image: url(../../assets/img/backgrounds/summary-block.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -71,7 +69,7 @@ export default {
   height: 477px;
 }
 
-@include mobile {
+@include touch {
   .summary-block {
     padding: 32px 0 60px;
     background-image: none;
@@ -86,7 +84,7 @@ export default {
     height: 320px;
     width: 100%;
     max-width: 340px;
-    margin: 24px 0 auto;
+    margin: 24px auto 0;
   }
 
   .summary-block p {

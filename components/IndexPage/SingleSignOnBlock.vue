@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-variable is-4">
         <section
-          class="column is-10 is-12-mobile is-offset-1 is-offset-0-mobile is-centered single-sign-on-block-header"
+          class="column is-10 is-12-touch is-offset-1-desktop is-offset-0 single-sign-on-block-header"
         >
           <h3>
             Smart automation means smoother customer onboarding, happier
@@ -17,7 +17,7 @@
 
       <section class="columns is-variable is-4 single-sign-on-block-content">
         <section
-          class="column is-5 is-12-mobile is-offset-1 is-offset-0 single-sign-on-block-description"
+          class="column is-5 is-12-touch is-offset-1-desktop is-offset-0 single-sign-on-block-description"
         >
           <p>
             We know you have to verify your customers’ identities to meet KYC
@@ -37,7 +37,7 @@
             institutions with a single click.
           </p>
         </section>
-        <section class="column is-6 is-12-mobule single-sign-on-block-lists">
+        <section class="column is-6 is-12-touch single-sign-on-block-lists">
           <p>This means:</p>
           <ul>
             <li>Reducing customer friction for a faster onboarding process</li>
@@ -131,7 +131,7 @@ export default {
   margin-bottom: 30px;
 }
 
-@include mobile {
+@include touch {
   .single-sign-on-block {
     padding: 60px 0 70px;
   }

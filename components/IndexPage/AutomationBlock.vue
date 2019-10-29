@@ -2,12 +2,12 @@
   <section class="automation-block">
     <section class="container automation-block-content">
       <div class="columns is-variable is-4">
-        <div class="column is-5 is-offset-1">
+        <div class="column is-5 is-12-touch is-offset-1-desktop">
           <h2>The case for true automation in financial compliance</h2>
         </div>
       </div>
       <div class="columns is-variable is-4">
-        <section class="column is-5 is-offset-1 automation-block-description">
+        <section class="column is-5 is-12-touch is-offset-1-desktop automation-block-description">
           <h3>When was the last time you looked at the santions list?</h3>
           <p>
             The data is unstructured and full of inconsistent formatting that
@@ -44,8 +44,8 @@
             </li>
           </ul>
         </section>
-        <div class="column is-5 is-offset-1 automation-block-image">
-          <image-card></image-card>
+        <div class="column is-5 is-12-touch is-offset-1-desktop">
+          <image-card class="automation-block-image"></image-card>
         </div>
       </div>
     </section>
@@ -69,7 +69,7 @@ export default {
 <style lang="scss">
 .automation-block {
   padding: 120px 0 130px;
-  background-color: var(--color-bg-grey);
+  background-color: $bg-light-grey;
   background-image: url(../../assets/img/backgrounds/automation-block.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -127,7 +127,7 @@ export default {
   width: calc(100% + 40px);
 }
 
-@include mobile {
+@include touch {
   .automation-block {
     padding: 50px 0;
     background-image: none;

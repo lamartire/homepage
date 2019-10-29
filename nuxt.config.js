@@ -123,7 +123,6 @@ module.exports = {
       resolve(__dirname, "assets/css/_external.scss"),
       resolve(__dirname, "assets/css/_utilities.scss"),
       resolve(__dirname, "assets/css/_overrides.scss"),
-      resolve(__dirname, "assets/css/_root.scss"),
       resolve(__dirname, "assets/css/_typography.scss"),
       resolve(__dirname, "assets/css/global.scss")
     ]

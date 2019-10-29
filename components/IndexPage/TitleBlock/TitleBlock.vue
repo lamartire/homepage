@@ -34,7 +34,7 @@ export default {
   background-position: bottom left;
 }
 
-@include mobile {
+@include touch {
   .title-block {
     background-position: center;
     background-size: cover;

@@ -65,7 +65,7 @@ export default {
   color: var(--endpass-ui-color-white);
 }
 
-@include mobile {
+@include touch {
   .api-block {
     padding: 30px 0 70px;
   }

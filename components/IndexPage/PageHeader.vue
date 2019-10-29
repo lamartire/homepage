@@ -62,7 +62,7 @@ export default {
   color: var(--endpass-ui-color-white);
 }
 
-@include mobile {
+@include touch {
   .page-header {
     padding: 26px 23px;
   }

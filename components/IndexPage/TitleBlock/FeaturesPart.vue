@@ -2,14 +2,14 @@
   <div class="container features-part">
     <v-card class="features-part-card">
       <div class="columns is-variable is-4">
-        <div class="column is-6 is-offset-1">
+        <div class="column is-6 is-12-touch is-offset-1-desktop">
           <h3>
             How we delight you and your customers:
           </h3>
         </div>
       </div>
       <ul class="columns is-variable is-4 features-part-list">
-        <li class="column is-3 is-12-mobile is-offset-1 is-offset-0-mobile">
+        <li class="column is-3 is-12-touch is-offset-1-desktop is-offset-0">
           <div class="features-part-icon">
             <v-svg-icon name="feature-1"></v-svg-icon>
           </div>
@@ -17,13 +17,13 @@
             Single click KYC verification for seamless customer onboarding
           </p>
         </li>
-        <li class="column is-3 is-12-mobile">
+        <li class="column is-3 is-12-touch">
           <div class="features-part-icon">
             <v-svg-icon name="feature-2"></v-svg-icon>
           </div>
           <p>Truly automated compliance without confusing setup</p>
         </li>
-        <li class="column is-3 is-12-mobile">
+        <li class="column is-3 is-12-touch">
           <div class="features-part-icon">
             <v-svg-icon name="feature-3"></v-svg-icon>
           </div>
@@ -102,7 +102,7 @@ export default {
   margin-bottom: 30px;
 }
 
-@include mobile {
+@include touch {
   .container.features-part {
     padding: 0;
   }

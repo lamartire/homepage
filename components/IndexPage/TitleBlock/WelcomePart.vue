@@ -3,7 +3,7 @@
     <div class="welcome-part-mockup"></div>
     <div class="container welcome-part-content">
       <div class="columns is-variable is-4">
-        <div class="column is-7 is-12-mobile">
+        <div class="column is-7 is-12-touch">
           <h1>
             The identity verification AI that keeps financial comliance
             delightful.
@@ -93,7 +93,7 @@ export default {
   color: var(--endpass-ui-color-white);
 }
 
-@include mobile {
+@include touch {
   .welcome-part {
     padding: 34px 0 50px;
     margin-bottom: 0;

@@ -3,7 +3,7 @@
     <v-card class="container mission-block-card">
       <div class="columns is-variable is-4">
         <section
-          class="column is-10 is-offset-1 is-12-mobile is-offset-0-mobile mission-block-header"
+          class="column is-10 is-offset-1-desktop is-12-touch is-offset-0 mission-block-header"
         >
           <div class="mission-block-icon">
             <v-svg-icon name="feature-6"></v-svg-icon>
@@ -13,7 +13,7 @@
         </section>
       </div>
       <section class="columns is-variable is-4 mission-block-content">
-        <div class="column is-5 is-12-mobile is-offset-1">
+        <div class="column is-5 is-12-touch is-offset-1-desktop">
           <p>
             <strong
               >We believe better identity verification and more secure data
@@ -27,7 +27,7 @@
             are who they say they are.
           </p>
         </div>
-        <div class="column is-5 is-12-mobile">
+        <div class="column is-5 is-12-touch">
           <p>
             As our AI reviews documents and detects instances of fraud, it
             develops “digital fingerprints” that can be used to correlate and
@@ -62,7 +62,7 @@ export default {
 <style lang="scss">
 .mission-block {
   padding: 105px 0 120px;
-  background-color: var(--color-bg-grey);
+  background-color: $bg-light-grey;
   background-image: url(../../assets/img/backgrounds/mission-block.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,7 +104,7 @@ export default {
   margin-bottom: 28px;
 }
 
-@include mobile {
+@include touch {
   .mission-block {
     padding: 0;
     background-image: none;
