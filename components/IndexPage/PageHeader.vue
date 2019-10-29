@@ -18,15 +18,15 @@
 </template>
 
 <script>
-import VSvgIcon from '@endpass/ui/kit/VSvgIcon'
+import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 
 export default {
-  name: 'Header',
+  name: "Header",
 
   components: {
     VSvgIcon
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -60,5 +60,15 @@ export default {
   font-size: 16px;
   line-height: 1.5;
   color: var(--endpass-ui-color-white);
+}
+
+@include mobile {
+  .page-header {
+    padding: 26px 23px;
+  }
+
+  .page-header-menu {
+    display: none;
+  }
 }
 </style>

@@ -2,7 +2,9 @@
   <section class="mission-block">
     <v-card class="container mission-block-card">
       <div class="columns is-variable is-4">
-        <section class="column is-10 is-offset-1 is-centered mission-block-header">
+        <section
+          class="column is-10 is-offset-1 is-12-mobile is-offset-0-mobile mission-block-header"
+        >
           <div class="mission-block-icon">
             <v-svg-icon name="feature-6"></v-svg-icon>
           </div>
@@ -11,7 +13,7 @@
         </section>
       </div>
       <section class="columns is-variable is-4 mission-block-content">
-        <div class="column is-5 is-offset-1">
+        <div class="column is-5 is-12-mobile is-offset-1">
           <p>
             <strong
               >We believe better identity verification and more secure data
@@ -25,14 +27,16 @@
             are who they say they are.
           </p>
         </div>
-        <div class="column is-5">
+        <div class="column is-5 is-12-mobile">
           <p>
             As our AI reviews documents and detects instances of fraud, it
             develops “digital fingerprints” that can be used to correlate and
             eventually pinpoint fraudsters and forgers at their original source,
             stopping cybercrime in its tracks.
           </p>
-          <v-more-link href="#">Join us in the fight against global fraud</v-more-link>
+          <v-more-link href="#"
+            >Join us in the fight against global fraud</v-more-link
+          >
         </div>
       </section>
     </v-card>
@@ -58,14 +62,14 @@ export default {
 <style lang="scss">
 .mission-block {
   padding: 105px 0 120px;
-  background-color: #f8f9fb;
+  background-color: var(--color-bg-grey);
   background-image: url(../../assets/img/backgrounds/mission-block.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.mission-block-card {
+.mission-block .mission-block-card {
   padding: 48px 0 70px;
 }
 
@@ -98,5 +102,36 @@ export default {
 
 .mission-block-content p {
   margin-bottom: 28px;
+}
+
+@include mobile {
+  .mission-block {
+    padding: 0;
+    background-image: none;
+  }
+
+  .mission-block .mission-block-card {
+    padding: 43px 22px 63px;
+  }
+
+  .mission-block-header {
+    text-align: left;
+  }
+
+  .mission-block-icon {
+    margin: 0 0 32px;
+  }
+
+  .mission-block-header h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .mission-block-header h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
 }
 </style>

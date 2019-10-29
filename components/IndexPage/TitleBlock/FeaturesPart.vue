@@ -9,7 +9,7 @@
         </div>
       </div>
       <ul class="columns is-variable is-4 features-part-list">
-        <li class="column is-3 is-offset-1">
+        <li class="column is-3 is-12-mobile is-offset-1 is-offset-0-mobile">
           <div class="features-part-icon">
             <v-svg-icon name="feature-1"></v-svg-icon>
           </div>
@@ -17,13 +17,13 @@
             Single click KYC verification for seamless customer onboarding
           </p>
         </li>
-        <li class="column is-3">
+        <li class="column is-3 is-12-mobile">
           <div class="features-part-icon">
             <v-svg-icon name="feature-2"></v-svg-icon>
           </div>
           <p>Truly automated compliance without confusing setup</p>
         </li>
-        <li class="column is-3">
+        <li class="column is-3 is-12-mobile">
           <div class="features-part-icon">
             <v-svg-icon name="feature-3"></v-svg-icon>
           </div>
@@ -82,7 +82,7 @@ export default {
 
 .features-part-card h3 {
   font-size: 32px;
-  line-height: 1.25;
+  line-height: 1.5;
   margin-bottom: 60px;
 }
 
@@ -100,5 +100,41 @@ export default {
   width: 46px;
   height: 46px;
   margin-bottom: 30px;
+}
+
+@include mobile {
+  .container.features-part {
+    padding: 0;
+  }
+
+  .features-part-card h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+
+  .features-part-list li p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .features-part .v-card.features-part-card {
+    padding: 44px 23px 55px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .features-part-list {
+    flex-wrap: wrap;
+  }
+
+  .features-part-list li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .features-part-card:before,
+  .features-part-card:after {
+    display: none;
+  }
 }
 </style>

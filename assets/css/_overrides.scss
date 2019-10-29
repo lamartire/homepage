@@ -7,3 +7,9 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+@include mobile {
+  .container {
+    padding: 0 23px;
+  }
+}

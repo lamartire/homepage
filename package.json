@@ -12,17 +12,19 @@
     "deploy": "./deploy.sh"
   },
   "dependencies": {
-    "@endpass/ui": "^0.15.58",
+    "@endpass/ui": "^0.15.59",
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/google-analytics": "^2.2.1",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^1.0.0",
+    "animate.css": "^3.7.2",
+    "bulma": "^0.8.0",
     "nuxt": "^2.10.2"
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
-    "fsevents": "1.2.9",
+    "fsevents": "2.1.1",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "svg-inline-loader": "^0.8.0"

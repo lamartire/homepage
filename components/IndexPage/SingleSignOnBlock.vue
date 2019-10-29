@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-variable is-4">
         <section
-          class="column is-10 is-offset-1 is-centered single-sign-on-block-header"
+          class="column is-10 is-12-mobile is-offset-1 is-offset-0-mobile is-centered single-sign-on-block-header"
         >
           <h3>
             Smart automation means smoother customer onboarding, happier
@@ -17,7 +17,7 @@
 
       <section class="columns is-variable is-4 single-sign-on-block-content">
         <section
-          class="column is-5 is-offset-1 single-sign-on-blockd-description"
+          class="column is-5 is-12-mobile is-offset-1 is-offset-0 single-sign-on-block-description"
         >
           <p>
             We know you have to verify your customers’ identities to meet KYC
@@ -37,7 +37,7 @@
             institutions with a single click.
           </p>
         </section>
-        <section class="column is-6 single-sign-on-block-lists">
+        <section class="column is-6 is-12-mobule single-sign-on-block-lists">
           <p>This means:</p>
           <ul>
             <li>Reducing customer friction for a faster onboarding process</li>
@@ -59,13 +59,13 @@
 </template>
 
 <script>
-import VMoreLink from '~/components/VMoreLink'
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   name: "SignleSignOnBlock",
 
   components: {
-    VMoreLink,
+    VMoreLink
   }
 };
 </script>
@@ -129,5 +129,47 @@ export default {
 
 .single-sign-on-block-lists p:first-child {
   margin-bottom: 30px;
+}
+
+@include mobile {
+  .single-sign-on-block {
+    padding: 60px 0 70px;
+  }
+
+  .single-sign-on-block-lists ul {
+    columns: initial;
+  }
+
+  .single-sign-on-block-header {
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  .single-sign-on-block-lists ul {
+    margin-bottom: 30px;
+  }
+
+  .single-sign-on-block-description {
+    margin-bottom: 35px;
+  }
+
+  .single-sign-on-block-header h3 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .single-sign-on-block-header p {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .single-sign-on-block-content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .single-sign-on-block-lists li {
+    margin-bottom: 20px;
+  }
 }
 </style>

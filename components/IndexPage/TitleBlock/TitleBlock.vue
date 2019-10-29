@@ -33,4 +33,12 @@ export default {
   background-size: 100%;
   background-position: bottom left;
 }
+
+@include mobile {
+  .title-block {
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 0;
+  }
+}
 </style>

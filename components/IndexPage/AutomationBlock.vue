@@ -44,10 +44,8 @@
             </li>
           </ul>
         </section>
-        <div class="column is-5 is-offset-1">
-          <section class="automation-block-image">
-            <image-card></image-card>
-          </section>
+        <div class="column is-5 is-offset-1 automation-block-image">
+          <image-card></image-card>
         </div>
       </div>
     </section>
@@ -71,7 +69,7 @@ export default {
 <style lang="scss">
 .automation-block {
   padding: 120px 0 130px;
-  background-color: #f8f9fb;
+  background-color: var(--color-bg-grey);
   background-image: url(../../assets/img/backgrounds/automation-block.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -127,5 +125,49 @@ export default {
 .automation-block-image {
   height: 525px;
   width: calc(100% + 40px);
+}
+
+@include mobile {
+  .automation-block {
+    padding: 50px 0;
+    background-image: none;
+  }
+
+  .automation-block-list-icon {
+    position: static;
+    margin-bottom: 16px;
+  }
+
+  .automation-block-list {
+    margin-bottom: 24px;
+  }
+
+  .automation-block-list li:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .automation-block-image {
+    height: 320px;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .automation-block-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .automation-block h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .automation-block h3 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 32px;
+  }
 }
 </style>

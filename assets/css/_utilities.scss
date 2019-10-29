@@ -5,3 +5,9 @@
 .columns.is-vend {
   align-items: flex-end;
 }
+
+@include mobile {
+  .columns.is-mobile-reverse {
+    flex-direction: row-reverse;
+  }
+}

@@ -3,7 +3,7 @@
     <div class="welcome-part-mockup"></div>
     <div class="container welcome-part-content">
       <div class="columns is-variable is-4">
-        <div class="column is-7">
+        <div class="column is-7 is-12-mobile">
           <h1>
             The identity verification AI that keeps financial comliance
             delightful.
@@ -11,11 +11,11 @@
           <p>Meet AML and KYC obligations with a single click.</p>
         </div>
       </div>
-      <ul class="columns is-variable is-4 is-vcentered welcome-part-controls">
-        <li class="column is-2 welcome-part-controls-item">
+      <ul class="welcome-part-controls">
+        <li class="welcome-part-controls-item">
           <v-button skin="tertiary">Request a demo</v-button>
         </li>
-        <li class="column is-2 welcome-part-controls-item">
+        <li class="welcome-part-controls-item">
           <v-more-link>
             Learn more
           </v-more-link>
@@ -27,7 +27,7 @@
 
 <script>
 import VButton from "@endpass/ui/kit/VButton";
-import VMoreLink from '~/components/VMoreLink'
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   components: {
@@ -74,18 +74,39 @@ export default {
 }
 
 .welcome-part-controls {
+  display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.welcome-part-controls-item {
+  flex: 0 0 auto;
+}
+
+.welcome-part-controls-item:not(:last-child) {
+  margin-right: 32px;
 }
 
 .welcome-part-controls-item a {
   color: var(--endpass-ui-color-white);
 }
 
-@media (min-width: 1440px) {
+@include mobile {
+  .welcome-part {
+    padding: 34px 0 50px;
+    margin-bottom: 0;
+  }
+
   .welcome-part-mockup {
-    right: 0;
+    display: none;
+  }
+
+  .welcome-part-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.3;
   }
 }
 </style>

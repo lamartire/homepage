@@ -64,4 +64,26 @@ export default {
   line-height: 1.55;
   color: var(--endpass-ui-color-white);
 }
+
+@include mobile {
+  .api-block {
+    padding: 30px 0 70px;
+  }
+
+  .api-block-content {
+    text-align: left;
+  }
+
+  .api-block-content h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .api-block-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
 </style>

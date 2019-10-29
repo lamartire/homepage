@@ -1,8 +1,8 @@
 <template>
   <section class="summary-block">
     <section class="container">
-      <div class="columns is-variable is-4">
-        <div class="column is-5 is-offset-1">
+      <div class="columns is-variable is-4 summary-block-content">
+        <div class="column is-5 is-12-mobile is-offset-1 is-offset-0-mobile">
           <h3>Always stay compliant, event when you're on vacation.</h3>
           <p>
             Endpass automatically analyzes your customers’ documents and
@@ -20,7 +20,9 @@
             laundering laws.
           </p>
         </div>
-        <div class="column is-5 is-offset-1">
+        <div
+          class="column is-5 is-12-mobile is-offset-1 is-offset-0-mobile summary-block-image"
+        >
           <image-card class="summary-block-image"></image-card>
         </div>
       </div>
@@ -43,7 +45,7 @@ export default {
 <style lang="scss">
 .summary-block {
   padding-bottom: 120px;
-  background-color: #f8f9fb;
+  background-color: var(--color-bg-grey);
   background-image: url(../../assets/img/backgrounds/summary-block.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -67,5 +69,29 @@ export default {
 
 .summary-block-image {
   height: 477px;
+}
+
+@include mobile {
+  .summary-block {
+    padding: 32px 0 60px;
+    background-image: none;
+  }
+
+  .summary-block-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .summary-block-image {
+    height: 320px;
+    width: 100%;
+    max-width: 340px;
+    margin: 24px 0 auto;
+  }
+
+  .summary-block p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 </style>
