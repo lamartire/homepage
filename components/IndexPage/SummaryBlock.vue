@@ -3,22 +3,26 @@
     <section class="container">
       <div class="columns is-variable is-4 summary-block-content">
         <div class="column is-5 is-12-touch is-offset-1-desktop is-offset-0">
-          <h3>Always stay compliant, event when you're on vacation.</h3>
-          <p>
-            Endpass automatically analyzes your customers’ documents and
-            information to verify their identities with global databases.
-          </p>
-          <p>
-            Our AI-powered data normalization and advanced validation logic has
-            250% higher match accuracy, giving you world-class compliance with
-            far less manual work.
-          </p>
-          <p>
-            Unlike most compliance solutions that only check sanctions lists
-            during registration, we continuously monitor all lists to ensure
-            none of your customers are violating sanctions or anti money
-            laundering laws.
-          </p>
+          <h3 class="v-page-subtitle">
+            Always stay compliant, event when you're on vacation.
+          </h3>
+          <div class="v-page-content">
+            <p>
+              Endpass automatically analyzes your customers’ documents and
+              information to verify their identities with global databases.
+            </p>
+            <p>
+              Our AI-powered data normalization and advanced validation logic
+              has 250% higher match accuracy, giving you world-class compliance
+              with far less manual work.
+            </p>
+            <p>
+              Unlike most compliance solutions that only check sanctions lists
+              during registration, we continuously monitor all lists to ensure
+              none of your customers are violating sanctions or anti money
+              laundering laws.
+            </p>
+          </div>
         </div>
         <div class="column is-5 is-12-touch is-offset-1-desktop is-offset-0">
           <image-card class="summary-block-image"></image-card>
@@ -51,14 +55,7 @@ export default {
 }
 
 .summary-block h3 {
-  font-size: 32px;
-  line-height: 1.25;
   margin-bottom: 44px;
-}
-
-.summary-block p {
-  font-size: 18px;
-  line-height: 1.55;
 }
 
 .summary-block p:not(:last-child) {
@@ -85,11 +82,6 @@ export default {
     width: 100%;
     max-width: 340px;
     margin: 24px auto 0;
-  }
-
-  .summary-block p {
-    font-size: 16px;
-    line-height: 1.5;
   }
 }
 </style>

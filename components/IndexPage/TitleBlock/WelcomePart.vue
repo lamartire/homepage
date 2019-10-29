@@ -4,11 +4,11 @@
     <div class="container welcome-part-content">
       <div class="columns is-variable is-4">
         <div class="column is-7 is-12-touch">
-          <h1>
+          <h1 class="v-page-title">
             The identity verification AI that keeps financial comliance
             delightful.
           </h1>
-          <p>Meet AML and KYC obligations with a single click.</p>
+          <p class="v-page-intro">Meet AML and KYC obligations with a single click.</p>
         </div>
       </div>
       <ul class="welcome-part-controls">
@@ -64,9 +64,6 @@ export default {
 
 .welcome-part-content h1 {
   margin-bottom: 32px;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1.15;
 }
 
 .welcome-part-content p {
@@ -101,12 +98,6 @@ export default {
 
   .welcome-part-mockup {
     display: none;
-  }
-
-  .welcome-part-content h1 {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.3;
   }
 }
 </style>

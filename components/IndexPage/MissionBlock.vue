@@ -8,11 +8,11 @@
           <div class="mission-block-icon">
             <v-svg-icon name="feature-6"></v-svg-icon>
           </div>
-          <h2>Our mission against global fraud and cybercriminals</h2>
-          <h3>Fraud and cybercrime are becoming more rampant than ever</h3>
+          <h2 class="v-page-subtitle">Our mission against global fraud and cybercriminals</h2>
+          <h3 class="v-page-intro">Fraud and cybercrime are becoming more rampant than ever</h3>
         </section>
       </div>
-      <section class="columns is-variable is-4 mission-block-content">
+      <section class="columns is-variable is-4 mission-block-content v-page-content">
         <div class="column is-5 is-12-touch is-offset-1-desktop">
           <p>
             <strong
@@ -84,20 +84,11 @@ export default {
 }
 
 .mission-block-header h2 {
-  font-size: 32px;
-  line-height: 1.25;
   margin-bottom: 8px;
 }
 
 .mission-block-header h3 {
-  font-size: 24px;
-  line-height: 1.15;
   margin-bottom: 40px;
-}
-
-.mission-block-content {
-  font-size: 18px;
-  line-height: 1.55;
 }
 
 .mission-block-content p {
@@ -123,14 +114,10 @@ export default {
   }
 
   .mission-block-header h2 {
-    font-size: 24px;
-    line-height: 1.3;
     margin-bottom: 8px;
   }
 
   .mission-block-header h3 {
-    font-size: 16px;
-    line-height: 1.5;
     margin-bottom: 30px;
   }
 }

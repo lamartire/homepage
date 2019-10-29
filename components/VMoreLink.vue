@@ -1,9 +1,9 @@
 <template>
   <a class="v-more-link" v-bind="$attrs">
     <slot></slot>
-    <div class="v-more-link-icon">
+    <span class="v-more-link-icon">
       <v-svg-icon name="arrow-right" />
-    </div>
+    </span>
   </a>
 </template>
 

@@ -3,7 +3,7 @@
     <v-card class="features-part-card">
       <div class="columns is-variable is-4">
         <div class="column is-6 is-12-touch is-offset-1-desktop">
-          <h3>
+          <h3 class="v-page-subtitle">
             How we delight you and your customers:
           </h3>
         </div>
@@ -81,8 +81,6 @@ export default {
 }
 
 .features-part-card h3 {
-  font-size: 32px;
-  line-height: 1.5;
   margin-bottom: 60px;
 }
 
@@ -108,8 +106,6 @@ export default {
   }
 
   .features-part-card h3 {
-    font-size: 24px;
-    line-height: 1.3;
     margin-bottom: 40px;
   }
 

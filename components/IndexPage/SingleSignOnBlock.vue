@@ -5,17 +5,17 @@
         <section
           class="column is-10 is-12-touch is-offset-1-desktop is-offset-0 single-sign-on-block-header"
         >
-          <h3>
+          <h3 class="v-page-subtitle">
             Smart automation means smoother customer onboarding, happier
             customers, and lower costs for your business.
           </h3>
-          <p>
+          <p class="v-page-intro">
             Unlike fraudsters, the identities of valid customers don’t change.
           </p>
         </section>
       </div>
 
-      <section class="columns is-variable is-4 single-sign-on-block-content">
+      <section class="columns is-variable is-4 single-sign-on-block-content v-page-content">
         <section
           class="column is-5 is-12-touch is-offset-1-desktop is-offset-0 single-sign-on-block-description"
         >
@@ -82,19 +82,7 @@ export default {
 }
 
 .single-sign-on-block-header h3 {
-  font-size: 32px;
-  line-height: 1.25;
   margin-bottom: 16px;
-}
-
-.single-sign-on-block-header p {
-  font-size: 24px;
-  line-height: 1.15;
-}
-
-.single-sign-on-block-content {
-  font-size: 18px;
-  line-height: 1.55;
 }
 
 .single-sign-on-block-description p:not(:last-child) {
@@ -151,21 +139,6 @@ export default {
 
   .single-sign-on-block-description {
     margin-bottom: 35px;
-  }
-
-  .single-sign-on-block-header h3 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  .single-sign-on-block-header p {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-
-  .single-sign-on-block-content {
-    font-size: 16px;
-    line-height: 1.5;
   }
 
   .single-sign-on-block-lists li {
