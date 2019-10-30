@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="landing">
     <title-block />
     <summary-block />
     <single-sign-on-block />
