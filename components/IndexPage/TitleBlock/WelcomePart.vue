@@ -5,7 +5,7 @@
       <div class="columns is-variable is-4">
         <div class="column is-7 is-12-touch">
           <h1 class="v-page-title">
-            The identity verification AI that keeps financial comliance
+            The identity verification AI that keeps financial compliance
             delightful.
           </h1>
           <p class="v-page-intro">Meet AML and KYC obligations with a single click.</p>
