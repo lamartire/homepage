@@ -1,7 +1,7 @@
 <template>
   <section class="single-sign-on-block">
     <div class="container">
-      <div class="columns is-variable is-4">
+      <div class="columns is-variable is-8">
         <section
           class="column is-10 is-12-touch is-offset-1-desktop is-offset-0 single-sign-on-block-header"
         >
@@ -15,7 +15,9 @@
         </section>
       </div>
 
-      <section class="columns is-variable is-4 single-sign-on-block-content v-page-content">
+      <section
+        class="columns is-variable is-8 single-sign-on-block-content v-page-content"
+      >
         <section
           class="column is-5 is-12-touch is-offset-1-desktop is-offset-0 single-sign-on-block-description"
         >
@@ -130,7 +132,7 @@ export default {
 
   .single-sign-on-block-header {
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 
   .single-sign-on-block-lists ul {
@@ -141,7 +143,11 @@ export default {
     margin-bottom: 35px;
   }
 
-  .single-sign-on-block-lists li {
+  .single-sign-on-block-lists li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .single-sign-on-block-lists p:first-child {
     margin-bottom: 20px;
   }
 }

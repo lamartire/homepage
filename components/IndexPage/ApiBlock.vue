@@ -63,7 +63,7 @@ export default {
 
 @include touch {
   .api-block {
-    padding: 30px 0 70px;
+    padding: 31px 0 68px;
   }
 
   .api-block-content {

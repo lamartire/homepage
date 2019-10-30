@@ -141,7 +141,7 @@ export default {
     z-index: 10;
     width: 100%;
     height: 100%;
-    padding-top: 62px;
+    padding-top: 125px;
     display: block;
     background-image: url(../../assets/img/backgrounds/api-block.svg);
     background-repeat: no-repeat;
