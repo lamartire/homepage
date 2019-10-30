@@ -1,28 +1,7 @@
-
-@font-face {
- font-family: 'Proxima Nova';
- font-style: normal;
- font-weight: 200;
- src: url(~@/assets/fonts/proxima-nova-light-webfont.woff) format('woff');
-}
-
-@font-face {
- font-family: 'Proxima Nova';
- font-style: normal;
- font-weight: 400;
- src: url(~@/assets/fonts/proxima-nova-regular-webfont.woff) format('woff');
-}
-
-@font-face {
- font-family: 'Proxima Nova';
- font-style: normal;
- font-weight: 500;
- src: url(~@/assets/fonts/proxima-nova-semibold-webfont.woff) format('woff');
-}
-
-@font-face {
- font-family: 'Proxima Nova';
- font-style: normal;
- font-weight: 600;
- src: url(~@/assets/fonts/proxima-nova-bold-webfont.woff) format('woff');
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "din-2014", sans-serif;
 }

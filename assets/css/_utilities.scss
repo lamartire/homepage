@@ -1,0 +1,13 @@
+.columns.is-vstart {
+  align-items: flex-start;
+}
+
+.columns.is-vend {
+  align-items: flex-end;
+}
+
+@include tablet {
+  .columns.is-tablet-reverse {
+    flex-direction: row-reverse;
+  }
+}

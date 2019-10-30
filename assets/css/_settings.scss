@@ -1,4 +1,5 @@
 $colors: (
+  bg-light-grey: #F8F9FB,
   light-grey: #ecf0f1,
   dark-grey: #4a4a4a,
   purple: #4b0472,
@@ -14,7 +15,7 @@ $colors: (
   yellow: #ffdd57
 );
 
-
+$bg-light-grey: map-get($colors, bg-light-grey);
 $light-grey: map-get($colors, light-grey);
 $dark-grey: map-get($colors, dark-grey);
 $purple: map-get($colors, purple);
@@ -35,4 +36,4 @@ $success: map-get($colors, green);
 $link: map-get($colors, blue);
 $info: map-get($colors, cyan);
 
-$heading-font-family: 'Proxima Nova', 'Open Sans', 'Helvetica Neue', sans-serif;
+$heading-font-family: 'din-2014', 'Open Sans', 'Helvetica Neue', sans-serif;
