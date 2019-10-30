@@ -38,7 +38,6 @@ export default {
 <style lang="scss">
 .api-block {
   padding: 110px 0 120px;
-  background-color: #f8f9fb;
   background-image: url(../../assets/img/backgrounds/api-block.svg);
   background-repeat: no-repeat;
   background-size: cover;

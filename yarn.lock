@@ -784,10 +784,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@endpass/ui@^0.15.59":
-  version "0.15.59"
-  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.59.tgz#03d6c9de15dba2b49e865c90bd185e9dd5669865"
-  integrity sha512-OIt7o/bYYVZ5rTB0EnHkGv7sc4ipNq8Gab3fHIvmfzlpZwIaNLo4LrVStJ9PfjgiQIYo49APWR9itJoqCPUR+A==
+"@endpass/ui@^0.15.61":
+  version "0.15.61"
+  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.61.tgz#3d4c68b59b6c1c0ef4d242211aaa9411f9b38a82"
+  integrity sha512-9gIcddbVTONGGHFz11Xqr9iXvxfNtejrf+tm67IxyD97q96o2by2fGNPQBH35R/N8Ts6iSsngMKlTJHQUhSVJA==
   dependencies:
     "@endpass/utils" "^1.8.2"
     vue "^2.5.21"

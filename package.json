@@ -12,7 +12,7 @@
     "deploy": "./deploy.sh"
   },
   "dependencies": {
-    "@endpass/ui": "^0.15.59",
+    "@endpass/ui": "^0.15.61",
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-analytics": "^2.2.1",

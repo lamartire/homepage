@@ -3,6 +3,8 @@
     <v-icon-button
       class="page-header-menu-trigger"
       :icon="triggerButonIcon"
+      width="24"
+      height="20"
       @click="onTriggerClick"
     ></v-icon-button>
     <section class="page-header-menu">
@@ -39,7 +41,7 @@ export default {
   computed: {
     triggerButonIcon() {
       if (!this.isMenuVisible) {
-        return "menu";
+        return "menu-alt";
       }
 
       return "close";
@@ -140,18 +142,19 @@ export default {
     width: 100%;
     height: 100%;
     padding-top: 62px;
-    background: #fff;
     display: block;
+    background-image: url(../../assets/img/backgrounds/api-block.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .page-header.with-menu .page-header-menu-list {
     display: block;
   }
 
-  .page-header.with-menu .page-header-menu-list a,
-  .page-header.with-menu .page-header-logo,
   .page-header.with-menu .page-header-menu-trigger {
-    color: #000;
+    position: fixed;
   }
 
   .page-header.with-menu .page-header-menu-list li {
@@ -159,12 +162,18 @@ export default {
     text-align: center;
   }
 
+  .page-header.with-menu .page-header-menu-list li a {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
   .page-header.with-menu .page-header-menu-list li:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 24px;
   }
 
   .page-header.with-menu .page-header-menu-list:not(:last-child) {
-    margin-bottom: 48px;
+    margin-bottom: 80px;
   }
 
   .page-header-logo {
@@ -175,7 +184,7 @@ export default {
 
   .page-header-menu-trigger {
     display: block;
-    position: fixed;
+    position: absolute;
     right: 23px;
     top: 23px;
     z-index: 11;
