@@ -4,7 +4,7 @@
       <div class="columns is-variable is-4 summary-block-content">
         <div class="column is-5 is-12-touch is-offset-1-desktop is-offset-0">
           <h3 class="v-page-subtitle">
-            Always stay compliant, event when you're on vacation.
+            Always stay compliant, even when you're on vacation.
           </h3>
           <div class="v-page-content">
             <p>
