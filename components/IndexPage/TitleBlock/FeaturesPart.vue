@@ -4,7 +4,7 @@
       <div class="columns is-variable is-4">
         <div class="column is-6 is-12-touch is-offset-1-desktop">
           <h3 class="v-page-subtitle">
-            How we delight you and your customers:
+            How we delight you & your customers:
           </h3>
         </div>
       </div>
