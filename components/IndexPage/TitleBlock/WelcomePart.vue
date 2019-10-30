@@ -8,7 +8,9 @@
             The identity verification AI that keeps financial compliance
             delightful.
           </h1>
-          <p class="v-page-intro">Meet AML and KYC obligations with a single click.</p>
+          <p class="v-page-intro">
+            Meet AML and KYC obligations with a single click.
+          </p>
         </div>
       </div>
       <ul class="welcome-part-controls">
@@ -46,8 +48,8 @@ export default {
 
 .welcome-part-mockup {
   position: absolute;
-  right: -10%;
   top: -80px;
+  right: -10%;
   z-index: 4;
   width: 624px;
   height: 870px;
@@ -88,6 +90,12 @@ export default {
 
 .welcome-part-controls-item a {
   color: var(--endpass-ui-color-white);
+}
+
+@include desktop-only {
+  .welcome-part-mockup {
+    right: -20%;
+  }
 }
 
 @include touch {

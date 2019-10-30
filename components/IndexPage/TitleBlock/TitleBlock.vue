@@ -34,6 +34,13 @@ export default {
   background-position: bottom left;
 }
 
+@include tablet {
+  .title-block {
+    background-position: top left;
+  }
+
+}
+
 @include touch {
   .title-block {
     background-position: center;

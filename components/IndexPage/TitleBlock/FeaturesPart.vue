@@ -102,7 +102,7 @@ export default {
 
 @include touch {
   .container.features-part {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .features-part-card h3 {
@@ -126,6 +126,10 @@ export default {
 
   .features-part-list li:not(:last-child) {
     margin-bottom: 40px;
+  }
+
+  .features-part-icon {
+    margin-bottom: 24px;
   }
 
   .features-part-card:before,

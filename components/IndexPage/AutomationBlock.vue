@@ -128,7 +128,7 @@ export default {
 
 @include touch {
   .automation-block {
-    padding: 50px 0;
+    padding: 50px 0 83px;
     background-image: none;
   }
 
@@ -150,6 +150,10 @@ export default {
     width: 100%;
     max-width: 340px;
     margin: 0 auto;
+  }
+
+  .automation-block-content > p {
+    margin-bottom: 24px;
   }
 
   .automation-block h2 {
