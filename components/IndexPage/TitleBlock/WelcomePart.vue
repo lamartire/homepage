@@ -92,7 +92,7 @@ export default {
 
 @include touch {
   .welcome-part {
-    padding: 34px 0 50px;
+    padding: 116px 0 50px;
     margin-bottom: 0;
   }
 

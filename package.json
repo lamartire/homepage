@@ -20,7 +20,8 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "animate.css": "^3.7.2",
     "bulma": "^0.8.0",
-    "nuxt": "^2.10.2"
+    "nuxt": "^2.10.2",
+    "throttle-debounce": "^2.1.0"
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
