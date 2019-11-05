@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import TitleBlock from "~/components/IndexPage/TitleBlock";
-import SummaryBlock from "~/components/IndexPage/SummaryBlock";
-import ApiBlock from "~/components/IndexPage/ApiBlock.vue";
-import MissionBlock from "~/components/IndexPage/MissionBlock.vue";
-import SingleSignOnBlock from "~/components/IndexPage/SingleSignOnBlock.vue";
-import AutomationBlock from "~/components/IndexPage/AutomationBlock.vue";
+import TitleBlock from "~/components/Landing/TitleBlock";
+import SummaryBlock from "~/components/Landing/SummaryBlock";
+import ApiBlock from "~/components/Landing/ApiBlock";
+import MissionBlock from "~/components/Landing/MissionBlock";
+import SingleSignOnBlock from "~/components/Landing/SingleSignOnBlock";
+import AutomationBlock from "~/components/Landing/AutomationBlock";
 
 export default {
   name: "LandingPage",

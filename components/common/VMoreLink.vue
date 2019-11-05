@@ -23,6 +23,7 @@ export default {
 .v-more-link {
   display: inline-flex;
   align-items: center;
+  color: #034ada;
 }
 
 .v-more-link-icon {

@@ -15,10 +15,10 @@
       </div>
       <ul class="welcome-part-controls">
         <li class="welcome-part-controls-item">
-          <v-button skin="tertiary">Request a demo</v-button>
+          <v-button href="#" skin="tertiary">Request a demo</v-button>
         </li>
         <li class="welcome-part-controls-item">
-          <v-more-link>
+          <v-more-link class="v-color-white">
             Learn more
           </v-more-link>
         </li>
@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import VButton from "@endpass/ui/kit/VButton";
-import VMoreLink from "~/components/VMoreLink";
+import VButton from "~/components/common/VButton";
+import VMoreLink from "~/components/common/VMoreLink";
 
 export default {
   components: {
@@ -86,10 +86,6 @@ export default {
 
 .welcome-part-controls-item:not(:last-child) {
   margin-right: 32px;
-}
-
-.welcome-part-controls-item a {
-  color: var(--endpass-ui-color-white);
 }
 
 @include desktop-only {

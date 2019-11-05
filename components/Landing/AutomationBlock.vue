@@ -62,7 +62,7 @@
 
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
-import ImageCard from "~/components/ImageCard";
+import ImageCard from "~/components/common/ImageCard";
 
 export default {
   name: "AutomationBlock",

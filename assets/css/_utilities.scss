@@ -6,6 +6,10 @@
   align-items: flex-end;
 }
 
+.v-color-white {
+  color: var(--endpass-ui-color-white);
+}
+
 @include tablet {
   .columns.is-tablet-reverse {
     flex-direction: row-reverse;
