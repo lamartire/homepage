@@ -12,7 +12,7 @@
             Sign On?
           </p>
           <div class="v-page-content">
-            <v-more-link href="#"
+            <v-more-link href="#" class="v-color-white"
               >Learn more about the benefits and how easy it is to install our
               API</v-more-link
             >
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import VMoreLink from "~/components/VMoreLink";
+import VMoreLink from "~/components/common/VMoreLink";
 
 export default {
   name: "ApiBlock",
@@ -55,10 +55,6 @@ export default {
 
 .api-block-content p {
   margin-bottom: 32px;
-}
-
-.api-block-content a {
-  color: var(--endpass-ui-color-white);
 }
 
 @include touch {

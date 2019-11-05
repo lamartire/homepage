@@ -54,7 +54,7 @@
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VCard from "@endpass/ui/kit/VCard";
-import VMoreLink from "~/components/VMoreLink";
+import VMoreLink from "~/components/common/VMoreLink";
 
 export default {
   name: "MissionBlock",

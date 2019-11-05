@@ -9,7 +9,7 @@
     ></v-icon-button>
     <section class="page-header-menu">
       <div class="page-header-logo">
-        <v-svg-icon name="endpass"></v-svg-icon>
+        <v-logo></v-logo>
       </div>
       <nav class="page-header-menu-list">
         <li><a href="#">Pricing</a></li>
@@ -30,6 +30,7 @@
 import { debounce } from "throttle-debounce";
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VIconButton from "@endpass/ui/kit/VIconButton";
+import VLogo from '~/components/common/VLogo'
 
 export default {
   name: "Header",
@@ -75,6 +76,7 @@ export default {
 
   components: {
     VSvgIcon,
+    VLogo,
     VIconButton
   }
 };
@@ -82,6 +84,8 @@ export default {
 
 <style lang="scss">
 .page-header {
+  position: relative;
+  z-index: 20;
   padding: 27px 50px;
 }
 
@@ -95,12 +99,6 @@ export default {
   justify-content: space-between;
 }
 
-.page-header-logo {
-  width: 35px;
-  height: 45px;
-  color: var(--endpass-ui-color-white);
-}
-
 .page-header-menu-list {
   display: flex;
   align-items: center;
@@ -112,6 +110,10 @@ export default {
 
 .page-header-menu-list li:not(:last-child) {
   margin-right: 42px;
+}
+
+.page-header-logo {
+  flex: 0 0 auto;
 }
 
 .page-header-menu-list a {
