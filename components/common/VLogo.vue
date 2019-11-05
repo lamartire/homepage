@@ -10,7 +10,7 @@ import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 export default {
   computed: {
     componentTag() {
-      if ($nuxt.$route.name !== "landing") {
+      if (this.$route.name !== "landing") {
         return "a";
       }
 
