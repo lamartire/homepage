@@ -1,22 +1,17 @@
 <template>
-  <section class="api-block">
-    <section class="container api-block-content">
+  <section class="centered-text--block">
+    <section class="container centered-text--block-content">
       <div class="columns is-variable is-4">
         <div class="column is-8 is-offset-2 is-centered">
           <h2 class="v-page-title">
-            Great security shouldn't be complicated to use or setup
+            <slot name="title" />
           </h2>
           <p class="v-page-intro">
-            Why not fortify your company’s security while making it easier for
-            users to sign in or register with the option to use Endpass Single
-            Sign On?
+            <slot name="content"></slot>
           </p>
-          <div class="v-page-content">
-            <v-more-link href="#" class="v-color-white"
-              >Learn more about the benefits and how easy it is to install our
-              API</v-more-link
-            >
-          </div>
+          <v-more-link href="#" class="v-color-white centered-text--block-link">
+            <slot name="link"></slot>
+          </v-more-link>
         </div>
       </div>
     </section>
@@ -36,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
-.api-block {
+.centered-text--block {
   padding: 110px 0 120px;
   background-image: url(../../assets/img/backgrounds/api-block.svg);
   background-repeat: no-repeat;
@@ -44,33 +39,38 @@ export default {
   background-position: center;
 }
 
-.api-block-content {
+.centered-text--block-content {
   text-align: center;
   color: var(--endpass-ui-color-white);
 }
 
-.api-block-content h2 {
+.centered-text--block-content h2 {
   margin-bottom: 16px;
 }
 
-.api-block-content p {
+.centered-text--block-content p {
   margin-bottom: 32px;
 }
 
+.centered-text--block-link {
+  display: flex;
+  justify-content: center;
+}
+
 @include touch {
-  .api-block {
+  .centered-text--block {
     padding: 31px 0 68px;
   }
 
-  .api-block-content {
+  .centered-text--block-content {
     text-align: left;
   }
 
-  .api-block-content h2 {
+  .centered-text--block-content h2 {
     margin-bottom: 16px;
   }
 
-  .api-block-content p {
+  .centered-text--block-content p {
     margin-bottom: 16px;
   }
 }

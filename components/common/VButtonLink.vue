@@ -1,27 +1,10 @@
 <template>
-  <component :is="componentTag" v-bind="$attrs" class="v-button">
+  <a v-bind="$attrs" class="v-button">
     <slot />
-  </component>
+  </a>
 </template>
 
-<script>
-export default {
-  name: "VButton",
-
-  computed: {
-    componentTag() {
-      if (this.$attrs.href) {
-        return 'a'
-      }
-
-      return 'button'
-    }
-  }
-};
-</script>
-
 <style lang="scss">
-button.v-button,
 a.v-button {
   display: inline-block;
   vertical-align: middle;

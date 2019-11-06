@@ -5,21 +5,22 @@
       <div class="columns is-variable is-4">
         <div class="column is-7 is-12-touch">
           <h1 class="v-page-title">
-            The identity verification AI that keeps financial compliance
-            delightful.
+            <slot name="title" />
           </h1>
           <p class="v-page-intro">
-            Meet AML and KYC obligations with a single click.
+            <slot name="subtitle" />
           </p>
         </div>
       </div>
       <ul class="welcome-part-controls">
         <li class="welcome-part-controls-item">
-          <v-button href="#" skin="tertiary">Request a demo</v-button>
+          <v-button-link href="#" skin="tertiary">
+            <slot name="button" />
+          </v-button-link>
         </li>
         <li class="welcome-part-controls-item">
           <v-more-link class="v-color-white">
-            Learn more
+            <slot name="link" />
           </v-more-link>
         </li>
       </ul>
@@ -28,12 +29,12 @@
 </template>
 
 <script>
-import VButton from "~/components/common/VButton";
+import VButtonLink from "~/components/common/VButtonLink";
 import VMoreLink from "~/components/common/VMoreLink";
 
 export default {
   components: {
-    VButton,
+    VButtonLink,
     VMoreLink
   }
 };

@@ -1,30 +1,14 @@
 <template>
-  <component :is="componentTag" :href="logoLink" class="v-logo">
+  <a  href="/landing" class="v-logo">
     <v-svg-icon name="endpass"></v-svg-icon>
-  </component>
+  </a>
 </template>
 
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 
 export default {
-  computed: {
-    componentTag() {
-      if (this.$route.name !== "landing") {
-        return "a";
-      }
-
-      return "div";
-    },
-
-    logoLink() {
-      if (this.componentTag !== "a") {
-        return null;
-      }
-
-      return "/landing";
-    }
-  },
+  name: 'VLogo',
 
   components: {
     VSvgIcon

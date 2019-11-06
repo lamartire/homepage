@@ -1,7 +1,9 @@
-body,
-input,
-textarea,
-select,
-button {
-  font-family: "din-2014", sans-serif;
+// Landing page temp styles
+.landing *,
+.landing body,
+.landing input,
+.landing textarea,
+.landing select,
+.landing button {
+  font-family: "din-2014", sans-serif !important;
 }
