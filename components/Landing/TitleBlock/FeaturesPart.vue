@@ -4,31 +4,12 @@
       <div class="columns is-variable is-4">
         <div class="column is-6 is-12-touch is-offset-1-desktop">
           <h3 class="v-page-subtitle">
-            How we delight you & your customers:
+            <slot name="title" />
           </h3>
         </div>
       </div>
       <ul class="columns is-variable is-4 features-part-list">
-        <li class="column is-3 is-12-touch is-offset-1-desktop is-offset-0">
-          <div class="features-part-icon">
-            <v-svg-icon name="feature-1"></v-svg-icon>
-          </div>
-          <p>
-            Single click KYC verification for seamless customer onboarding
-          </p>
-        </li>
-        <li class="column is-3 is-12-touch">
-          <div class="features-part-icon">
-            <v-svg-icon name="feature-2"></v-svg-icon>
-          </div>
-          <p>Truly automated compliance without confusing setup</p>
-        </li>
-        <li class="column is-3 is-12-touch">
-          <div class="features-part-icon">
-            <v-svg-icon name="feature-3"></v-svg-icon>
-          </div>
-          <p>Superpower your fraud detection with advanced AI</p>
-        </li>
+        <slot name="features" />
       </ul>
     </v-card>
   </div>
@@ -37,13 +18,15 @@
 <script>
 import VCard from "@endpass/ui/kit/VCard";
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
+import Feature from "~/components/common/Feature";
 
 export default {
   name: "FeaturesPart",
 
   components: {
     VCard,
-    VSvgIcon
+    VSvgIcon,
+    Feature
   }
 };
 </script>
@@ -89,29 +72,13 @@ export default {
   align-items: flex-start;
 }
 
-.features-part-list li p {
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-.features-part-icon {
-  width: 46px;
-  height: 46px;
-  margin-bottom: 30px;
-}
-
 @include touch {
   .container.features-part {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .features-part-card h3 {
     margin-bottom: 40px;
-  }
-
-  .features-part-list li p {
-    font-size: 16px;
-    line-height: 1.5;
   }
 
   .features-part .v-card.features-part-card {

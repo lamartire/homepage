@@ -5,19 +5,22 @@
       <div class="columns is-variable is-4">
         <div class="column is-7 is-12-touch">
           <h1 class="v-page-title">
-            The identity verification AI that keeps financial compliance
-            delightful.
+            <slot name="title" />
           </h1>
-          <p class="v-page-intro">Meet AML and KYC obligations with a single click.</p>
+          <p class="v-page-intro">
+            <slot name="subtitle" />
+          </p>
         </div>
       </div>
       <ul class="welcome-part-controls">
         <li class="welcome-part-controls-item">
-          <v-button skin="tertiary">Request a demo</v-button>
+          <v-button-link href="#" skin="tertiary">
+            <slot name="button" />
+          </v-button-link>
         </li>
         <li class="welcome-part-controls-item">
-          <v-more-link>
-            Learn more
+          <v-more-link class="v-color-white">
+            <slot name="link" />
           </v-more-link>
         </li>
       </ul>
@@ -26,12 +29,12 @@
 </template>
 
 <script>
-import VButton from "@endpass/ui/kit/VButton";
-import VMoreLink from "~/components/VMoreLink";
+import VButtonLink from "~/components/common/VButtonLink";
+import VMoreLink from "~/components/common/VMoreLink";
 
 export default {
   components: {
-    VButton,
+    VButtonLink,
     VMoreLink
   }
 };
@@ -46,8 +49,8 @@ export default {
 
 .welcome-part-mockup {
   position: absolute;
-  right: -10%;
   top: -80px;
+  right: -10%;
   z-index: 4;
   width: 624px;
   height: 870px;
@@ -86,8 +89,10 @@ export default {
   margin-right: 32px;
 }
 
-.welcome-part-controls-item a {
-  color: var(--endpass-ui-color-white);
+@include desktop-only {
+  .welcome-part-mockup {
+    right: -20%;
+  }
 }
 
 @include touch {

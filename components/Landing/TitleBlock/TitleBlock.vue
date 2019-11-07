@@ -3,8 +3,16 @@
     <section class="title-block-header">
       <page-header></page-header>
     </section>
-    <welcome-part></welcome-part>
-    <features-part></features-part>
+    <welcome-part>
+      <slot name="title" slot="title" />
+      <slot name="subtitle" slot="subtitle" />
+      <slot name="button" slot="button" />
+      <slot name="link" slot="link" />
+    </welcome-part>
+    <features-part>
+      <slot name="features-title" slot="title" />
+      <slot name="features" slot="features" />
+    </features-part>
   </section>
 </template>
 
@@ -19,7 +27,7 @@ export default {
   components: {
     PageHeader,
     WelcomePart,
-    FeaturesPart,
+    FeaturesPart
   }
 };
 </script>
@@ -27,17 +35,16 @@ export default {
 <style lang="scss">
 .title-block {
   padding-bottom: 152px;
-  background-color: #F8F9FB;
+  background-color: #f8f9fb;
   background-image: url(../../../assets/img/backgrounds/title-block.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom left;
+  background-size: cover;
+  background-position: bottom center;
 }
 
 @include touch {
   .title-block {
     background-position: center;
-    background-size: cover;
     padding-bottom: 0;
   }
 }
