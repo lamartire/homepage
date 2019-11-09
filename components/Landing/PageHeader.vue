@@ -16,10 +16,11 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Blog</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="https://developers.endpass.com/"
+        target="_blank">Developers</a></li>
       </nav>
       <ul class="page-header-menu-list">
-        <li><a href="https://help.endpass.com/">Support</a></li>
+        <li><a href="https://help.endpass.com/" target="_blank">Support</a></li>
         <li><a href="https://vault.endpass.com/">Sign in</a></li>
       </ul>
     </section>
