@@ -19,8 +19,8 @@
         <li><a href="#">Contacts</a></li>
       </nav>
       <ul class="page-header-menu-list">
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Sign in</a></li>
+        <li><a href="https://help.endpass.com/">Support</a></li>
+        <li><a href="https://vault.endpass.com/">Sign in</a></li>
       </ul>
     </section>
   </header>
