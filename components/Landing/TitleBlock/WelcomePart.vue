@@ -14,9 +14,9 @@
       </div>
       <ul class="welcome-part-controls">
         <li class="welcome-part-controls-item">
-          <v-button-link href="#" skin="tertiary">
-            <slot name="button" />
-          </v-button-link>
+          <call-to-action>
+            Request demo
+          </call-to-action>
         </li>
         <li class="welcome-part-controls-item">
           <v-more-link class="v-color-white">
@@ -31,9 +31,11 @@
 <script>
 import VButtonLink from "~/components/common/VButtonLink";
 import VMoreLink from "~/components/common/VMoreLink";
+import CallToAction from "~/components/Landing/LeadForm/CallToAction.vue";
 
 export default {
   components: {
+    CallToAction,
     VButtonLink,
     VMoreLink
   }

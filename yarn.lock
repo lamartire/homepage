@@ -785,9 +785,9 @@
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
 "@endpass/ui@^0.15.63":
-  version "0.15.63"
-  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.63.tgz#a27f4115fb915c5cfc6fa6157f480b65528df8f8"
-  integrity sha512-ZwKx/MKLv3+i/PMNI4yhOe0qLLi6ogs3lePpuE4PVdKqqOuT/03kPQVDKtVpHL+zwi7cxeh88QvVAPAY/nYboA==
+  version "0.15.64"
+  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.64.tgz#98693cb572ffe9b155b07e2997d46757c5bf8b84"
+  integrity sha512-rhncMUdIffplg9ZV+2QUXHjsSAg7wFUVwUzccLz1UPlS1ssAwGT4A9q0tqf1tb34PUw3FS5NPi/zLQPsuWwvzg==
   dependencies:
     dayjs "^1.8.16"
     vue "^2.5.21"
@@ -2867,9 +2867,9 @@ date-now@^0.1.4:
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
 dayjs@^1.8.16:
-  version "1.8.16"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.16.tgz#2a3771de537255191b947957af2fd90012e71e64"
-  integrity sha512-XPmqzWz/EJiaRHjBqSJ2s6hE/BUoCIHKgdS2QPtTQtKcS9E4/Qn0WomoH1lXanWCzri+g7zPcuNV4aTZ8PMORQ==
+  version "1.8.17"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.17.tgz#53ec413f2a7b02afbea1846d61bb260fa8567cea"
+  integrity sha512-47VY/htqYqr9GHd7HW/h56PpQzRBSJcxIQFwqL3P20bMF/3az5c3PWdVY3LmPXFl6cQCYHL7c79b9ov+2bOBbw==
 
 de-indent@^1.0.2:
   version "1.0.2"
