@@ -1,6 +1,9 @@
 <template>
   <v-modal class="lead-form-modal">
-    <v-modal-card is-closable >
+    <v-modal-card
+      is-closable
+      @close="handleClose"
+    >
       <template slot="title">
         <slot name="title">Learn More About Endpass</slot>
       </template>
@@ -16,6 +19,11 @@ import LeadForm from "~/components/Landing/LeadForm/LeadForm.vue";
 
 export default {
   name: 'LeadFormModal',
+  methods: {
+    handleClose() {
+      this.$emit('close');
+    },
+  },
   components: {
     VModal,
     VModalCard,

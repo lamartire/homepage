@@ -1,27 +1,96 @@
 <template>
   <div class="lead-form">
-		<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <v-form
+      @submit="handleSubmit"
+      v-if="!formSubmitted"
+    >
 
-			<input type=hidden name="oid" value="00D1U000000xyTE">
-			<input type=hidden name="retURL" value="https://endpass.com">
+      <v-input
+        v-model="email"
+        name="email"
+        label="Work Email"
+      />
 
-			<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+      <v-input
+        v-model="firstName"
+        name="first_name"
+        label="First Name"
+      />
 
-			<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+      <v-input
+        v-model="lastName"
+        name="last_name"
+        label="Last Name"
+      />
 
-			<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+      <v-input
+        v-model="company"
+        name="company"
+        label="Company"
+      />
 
-			<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
 
-			<input class="btc is-primary" type="submit" name="submit">
+      <div class="controls">
+        <v-button
+          @click="handleSubmit"
+          class="button"
+          >
+          Request Demo
+        </v-button>
+      </div>
 
-		</form>
+    </v-form>
+
+    <div class="lead-form-confirm" v-else>
+    </div>
 
   </div>
 </template>
 
 <script>
+import VForm from '@endpass/ui/components/VForm';
+import VInput from '@endpass/ui/kit/VInput';
+import VButton from '@endpass/ui/kit/VButton';
+
 export default {
   name: 'LeadForm',
+  data() {
+    return {
+      formSubmitted: false,
+      email: '',
+      firstName: '',
+      lastName: '',
+      company: '',
+    };
+  },
+  methods: {
+    handleSubmit() {
+      // let formUrl = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
+      let formUrl = 'https://httpbin.org/post';
+      let params = {
+        // SFDC form object id
+        oid: "00D1U000000xyTE",
+        // required by SFDC, not used for ajax
+        retURL: "https://endpass.com",
+        email: this.email,
+        first_name: this.firstName,
+        last_name: this.last,
+        company: this.company
+      };
+    }
+  },
+  components: {
+    VForm,
+    VInput,
+    VButton,
+  }
 }
 </script>
+
+<style lang="scss">
+.lead-form {
+  .controls {
+    margin: 1em 0;
+  }
+}
+</style>
