@@ -1,9 +1,5 @@
 <template>
   <div class="lead-form">
-    <v-form
-      @submit="handleSubmit"
-      v-if="!formSubmitted"
-    >
 
       <v-input
         v-model="email"
@@ -33,30 +29,28 @@
       <div class="controls">
         <v-button
           @click="handleSubmit"
+          :disabled="isSubmitting"
           class="button"
           >
           Request Demo
         </v-button>
       </div>
 
-    </v-form>
-
-    <div class="lead-form-confirm" v-else>
-    </div>
-
   </div>
 </template>
 
 <script>
-import VForm from '@endpass/ui/components/VForm';
 import VInput from '@endpass/ui/kit/VInput';
 import VButton from '@endpass/ui/kit/VButton';
+
+import qs from 'qs';
+import axios from 'axios';
 
 export default {
   name: 'LeadForm',
   data() {
     return {
-      formSubmitted: false,
+      isSubmitting: false,
       email: '',
       firstName: '',
       lastName: '',
@@ -65,22 +59,38 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // let formUrl = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
-      let formUrl = 'https://httpbin.org/post';
+      this.isSubmitting = true;
+      let formUrl = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
       let params = {
         // SFDC form object id
         oid: "00D1U000000xyTE",
         // required by SFDC, not used for ajax
         retURL: "https://endpass.com",
+        lead_source: "Web",
         email: this.email,
         first_name: this.firstName,
-        last_name: this.last,
-        company: this.company
+        last_name: this.lastName,
+        company: this.company,
       };
+
+      let options = {
+        method: 'POST',
+        url: formUrl,
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        data: qs.stringify(params),
+      }
+      axios(options)
+      .catch(err => {
+      })
+      .finally(()=> {
+        // always emit, there will be a CORS error but the lead will still
+        // be submitted
+        this.isSubmitting = false;
+        this.$emit('submit');
+      });
     }
   },
   components: {
-    VForm,
     VInput,
     VButton,
   }
