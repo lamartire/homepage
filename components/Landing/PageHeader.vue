@@ -1,6 +1,7 @@
 <template>
   <header :class="{ 'page-header': true, 'with-menu': isMenuVisible }">
     <v-icon-button
+      v-if="false"
       class="page-header-menu-trigger"
       :icon="triggerButonIcon"
       width="24"
@@ -11,7 +12,7 @@
       <div class="page-header-logo">
         <v-logo></v-logo>
       </div>
-      <nav class="page-header-menu-list">
+      <nav v-if="false" class="page-header-menu-list">
         <li><a href="#">Pricing</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Careers</a></li>
