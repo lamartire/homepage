@@ -25,7 +25,7 @@
           </div>
         </section>
         <div class="column is-5 is-12-touch is-offset-1-desktop">
-          <image-card :src="imageSrc" class="two-cols-features-block-image"></image-card>
+          <slot name="image"></slot>
         </div>
       </div>
     </section>
@@ -34,22 +34,13 @@
 
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
-import ImageCard from "~/components/common/ImageCard";
 import Feature from "~/components/common/Feature";
 
 export default {
   name: "TwoColsFeaturesBlock",
 
-  props: {
-    imageSrc: {
-      type: String,
-      default: ''
-    }
-  },
-
   components: {
     VSvgIcon,
-    ImageCard,
     Feature
   }
 };

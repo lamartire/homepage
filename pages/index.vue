@@ -23,18 +23,19 @@
           </feature>
         </li>
         <li class="column is-3 is-12-touch">
-          <feature icon="feature-2" is-big>
+          <feature icon="feature-8" is-big>
             Truly automated compliance without confusing setup
           </feature>
         </li>
         <li class="column is-3 is-12-touch">
-          <feature icon="feature-3" is-big>
+          <feature icon="feature-7" is-big>
             Superpower your fraud detection with advanced AI
           </feature>
         </li>
       </template>
     </title-block>
-    <two-cols-image-block image-src="#">
+    <two-cols-image-block>
+      <img src="~/assets/img/compliant-image.png" slot="image">
       <template slot="title">
         Always stay compliant, even when you're on vacation.
       </template>
@@ -102,7 +103,8 @@
         Learn more
       </template>
     </two-cols-with-list-block>
-    <two-cols-features-block image-src="#">
+    <two-cols-features-block>
+      <img src="~/assets/img/automation-image.png" slot="image">
       <template slot="title">
         The case for true automation in financial compliance
       </template>
@@ -185,6 +187,11 @@
         Join us in the fight against global fraud
       </template>
     </two-cols-card-block>
+    <page-footer>
+      <template slot="copyright">
+        Endpass. All rights reserved
+      </template>
+    </page-footer>
   </div>
 </template>
 
@@ -195,6 +202,7 @@ import CenteredTextBlock from "~/components/Landing/CenteredTextBlock";
 import TwoColsCardBlock from "~/components/Landing/TwoColsCardBlock";
 import TwoColsWithListBlock from "~/components/Landing/TwoColsWithListBlock";
 import TwoColsFeaturesBlock from "~/components/Landing/TwoColsFeaturesBlock";
+import PageFooter from '~/components/Landing/PageFooter'
 
 import Feature from "~/components/common/Feature";
 
@@ -210,7 +218,7 @@ export default {
     TwoColsCardBlock,
     TwoColsWithListBlock,
     TwoColsFeaturesBlock,
-
+    PageFooter,
     Feature
   }
 };

@@ -52,11 +52,10 @@ export default {
 .welcome-part-mockup {
   position: absolute;
   top: -80px;
-  right: -10%;
   z-index: 4;
   width: 624px;
   height: 870px;
-  background-image: url(../../../assets/img/tablet-mockup.png);
+  background-image: url(../../../assets/img/tablet.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -105,6 +104,18 @@ export default {
 
   .welcome-part-mockup {
     display: none;
+  }
+}
+
+@include widescreen {
+  .welcome-part-mockup {
+    right: -5%;
+  }
+}
+
+@include fullhd {
+  .welcome-part-mockup {
+    right: 0;
   }
 }
 </style>

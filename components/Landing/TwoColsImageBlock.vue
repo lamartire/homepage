@@ -10,32 +10,15 @@
             <slot name="content" />
           </div>
         </div>
-        <div class="column is-5 is-12-touch is-offset-1-desktop is-offset-0">
-          <image-card :src="imageSrc" class="two-cols-image-block-image"></image-card>
+        <div class="column is-6 is-12-touch">
+          <div class="two-cols-image-block-picture">
+            <slot name="image"></slot>
+          </div>
         </div>
       </div>
     </section>
   </section>
 </template>
-
-<script>
-import ImageCard from "~/components/common/ImageCard";
-
-export default {
-  name: "TwoColsImageBlock",
-
-  props: {
-    imageSrc: {
-      type: String,
-      default: ''
-    }
-  },
-
-  components: {
-    ImageCard
-  }
-};
-</script>
 
 <style lang="scss">
 .two-cols-image-block {
@@ -55,8 +38,15 @@ export default {
   margin-bottom: 28px;
 }
 
-.two-cols-image-block-image {
-  height: 477px;
+.two-cols-image-block-picture {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.two-cols-image-block-picture img {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 360px;
 }
 
 @include touch {
