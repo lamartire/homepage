@@ -89,7 +89,7 @@
       This means:</template>
       <template slot="list">
         <li>Reducing customer friction for a faster onboarding process</li>
-        <li>No back and forth with your support team</li>
+        <li>Way less back and forth with your support team</li>
         <li>Cutting onboarding costs</li>
         <li>Lower abandonment during registration process</li>
         <li>Happier customers with higher NPS scores</li>
@@ -112,8 +112,8 @@
         When was the last time you looked at the santions list?
       </template>
       <template slot="description">
-        The data is unstructured and full of inconsistent formatting that are a
-        recipe for inaccuracy.
+        The data is unstructured and full of inconsistent formatting, creating a
+        recipe for inaccuracy and mistakes.
       </template>
       <template slot="features">
         <li>
@@ -123,8 +123,7 @@
             is-horizontal
           >
             While most solutions fail to account for these issues, Endpass’ AI
-            both normalizes the data and applies advanced validation logic to
-            give you the highest degree of certainty that you haven’t
+            both normalizes the data and applies advanced validation logic, giving you the highest degree of certainty that you haven’t
             accidentally missed something.
           </feature>
         </li>
@@ -135,7 +134,7 @@
             is-horizontal
           >
             Not only does true automation allow for a smoother customer
-            onboarding experience, but it protects your business from potential
+            onboarding experience, it also protects your business from potential
             fines or government enforcement actions that could come from
             inaccurate checks.
           </feature>
@@ -156,10 +155,10 @@
     </centered-text-block>
     <two-cols-card-block>
       <template slot="title">
-        Our mission against global fraud and cybercriminals
+        Our mission against global fraud and cybercriminals:
       </template>
       <template slot="subtitle">
-        Fraud and cybercrime are becoming more rampant than ever
+        Fraud and cybercrime are becoming more rampant than ever.
       </template>
       <template slot="col-1">
         <p>
@@ -178,7 +177,7 @@
       <template slot="col-2">
         <p>
           As our AI reviews documents and detects instances of fraud, it
-          develops “digital fingerprints” that can be used to correlate and
+          develops “digital fingerprints” that can be used to correlate, and
           eventually pinpoint fraudsters and forgers at their original source,
           stopping cybercrime in its tracks.
         </p>
