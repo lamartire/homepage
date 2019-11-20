@@ -784,12 +784,13 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@endpass/ui@^0.15.63":
-  version "0.15.64"
-  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.64.tgz#98693cb572ffe9b155b07e2997d46757c5bf8b84"
-  integrity sha512-rhncMUdIffplg9ZV+2QUXHjsSAg7wFUVwUzccLz1UPlS1ssAwGT4A9q0tqf1tb34PUw3FS5NPi/zLQPsuWwvzg==
+"@endpass/ui@^0.15.72":
+  version "0.15.72"
+  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.72.tgz#b12b2cb961463f452b0658c1f6d772b7395eed21"
+  integrity sha512-bZTssPlhdNhUFd6MIGe4CYRx+em5xoQdSMIwt4AzJpAbB11GSXyFxxh7tjZH3h2iJ5SwTj0f0w48MlHU2Go42w==
   dependencies:
     dayjs "^1.8.16"
+    lodash.chunk "^4.2.0"
     vue "^2.5.21"
 
 "@nuxt/babel-preset-app@2.10.2":
@@ -4819,6 +4820,11 @@ lodash._reinterpolate@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+
+lodash.chunk@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.chunk/-/lodash.chunk-4.2.0.tgz#66e5ce1f76ed27b4303d8c6512e8d1216e8106bc"
+  integrity sha1-ZuXOH3btJ7QwPYxlEujRIW6BBrw=
 
 lodash.debounce@^4.0.8:
   version "4.0.8"

@@ -11,7 +11,7 @@
       <div class="page-header-logo">
         <v-logo></v-logo>
       </div>
-      <nav class="page-header-menu-list">
+      <nav v-if="false" class="page-header-menu-list">
         <li><a href="#">Pricing</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Careers</a></li>
