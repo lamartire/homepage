@@ -1,89 +1,199 @@
 <template>
-	<nav class="navbar">
-		<div class="navbar-brand">
-			<div class="navbar-item">
-				<nuxt-link class="logo" to="/" exact>
-					<img class="is-hidden-dark" src="~/assets/img/logo-light.png" alt="endpass">
-					<img class="is-hidden-light" src="~/assets/img/logo-dark-blue.png" alt="endpass">
-				</nuxt-link>
-				<nuxt-link to="/careers">
-					<span class="tag badge is-danger">We're Hiring!</span>
-				</nuxt-link>
-			</div>
-
-			<button class="button navbar-burger" :class="{ 'is-active':
-			navMenuActive }" @click="toggleNavMenu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-		</div>
-
-		<nav-menu :is-active="navMenuActive"></nav-menu>
-	</nav>
+  <header :class="{ 'page-header': true, 'with-menu': isMenuVisible }">
+    <v-icon-button
+      class="page-header-menu-trigger"
+      :icon="triggerButonIcon"
+      width="24"
+      height="20"
+      @click="onTriggerClick"
+    ></v-icon-button>
+    <section class="page-header-menu">
+      <div class="page-header-logo">
+        <v-logo></v-logo>
+      </div>
+      <nav v-if="false" class="page-header-menu-list">
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="https://developers.endpass.com/"
+        target="_blank">Developers</a></li>
+      </nav>
+      <ul class="page-header-menu-list">
+        <li><a href="https://help.endpass.com/" target="_blank">Support</a></li>
+        <li><a href="https://vault.endpass.com/">Sign in</a></li>
+      </ul>
+    </section>
+  </header>
 </template>
 
 <script>
-import NavMenu from '~/components/NavMenu.vue'
+import { debounce } from "throttle-debounce";
+import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
+import VIconButton from "@endpass/ui/kit/VIconButton";
+import VLogo from '~/components/common/VLogo'
 
 export default {
-	components: {
-		NavMenu
-	},
-	data () {
-		return {
-			navMenuActive: false
-		}
-	},
-	methods: {
-		toggleNavMenu() {
-			this.navMenuActive = !this.navMenuActive
-		}
-	}
-}
+  name: "Header",
+
+  data: () => ({
+    isMenuVisible: false
+  }),
+
+  computed: {
+    triggerButonIcon() {
+      if (!this.isMenuVisible) {
+        return "menu-alt";
+      }
+
+      return "close";
+    }
+  },
+
+  watch: {
+    isMenuVisible(val) {
+      if (val) {
+        window.addEventListener("resize", this.debouncedScreenResizeHandler);
+        return;
+      }
+
+      window.removeEventListener("resize", this.debouncedScreenResizeHandler);
+    }
+  },
+
+  methods: {
+    onTriggerClick() {
+      this.isMenuVisible = !this.isMenuVisible;
+    },
+
+    onScreenResize() {},
+
+    debouncedScreenResizeHandler() {
+      debounce(150, () => {
+        console.log(this);
+      });
+    }
+  },
+
+  components: {
+    VSvgIcon,
+    VLogo,
+    VIconButton
+  }
+};
 </script>
 
 <style lang="scss">
-.navbar {
-  .navbar-item .logo img {
-    max-height: 3rem;
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  padding: 27px 50px;
+}
+
+.page-header-menu-trigger {
+  display: none;
+}
+
+.page-header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header-menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header-menu-list li:not(:last-child) {
+  margin-right: 42px;
+}
+
+.page-header-logo {
+  flex: 0 0 auto;
+}
+
+.page-header-menu-list a {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--endpass-ui-color-white);
+}
+
+.page-header-menu-trigger {
+  color: var(--endpass-ui-color-white);
+}
+
+@include touch {
+  .page-header {
+    position: relative;
+    padding: 0;
   }
 
-  .is-hidden-light {
+  .page-header-menu-list {
     display: none;
   }
 
-  &.is-dark {
-    background-color: $dark-blue;
-    color: $white;
-
-    .is-hidden-light {
-      display: unset;
-    }
-    .is-hidden-dark {
-      display: none;
-    }
-    .navbar-burger {
-      background-color: $dark-blue;
-      color: $white;
-      border: none;
-    }
-
-    .navbar-start, .navbar-end {
-      a.navbar-item, a.navbar-link {
-        color: darken($white, 20%);
-      }
-      a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover,
-      a.navbar-link.is-active {
-        background: none;
-        color: $white;
-      }
-    }
+  .page-header.with-menu .page-header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding-top: 125px;
+    display: block;
+    background-image: url(../assets/img/backgrounds/api-block.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
-  .navbar-burger span {
-    height: 2px;
+  .page-header.with-menu .page-header-menu-list {
+    display: block;
+  }
+
+  .page-header.with-menu .page-header-menu-trigger {
+    position: fixed;
+  }
+
+  .page-header.with-menu .page-header-menu-list li {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .page-header.with-menu .page-header-menu-list li a {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .page-header.with-menu .page-header-menu-list li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .page-header.with-menu .page-header-menu-list:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  .page-header-logo {
+    position: absolute;
+    left: 23px;
+    top: 23px;
+  }
+
+  .page-header-menu-trigger {
+    display: block;
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    z-index: 11;
   }
 }
-
 </style>

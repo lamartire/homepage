@@ -1,56 +1,232 @@
 <template>
-	<div class="about-page">
-  	<section class="about-us section">
-  		<div class="container is-narrow">
-    		<h1 class="title">Our Mission</h1>
-    		<p class="lead">
-    		Our goal is to give people power over their personal data. We believe
-    		that your personal data doesn't belong to greedy corporations or
-    		surveillance states &mdash; it belongs to you!</p>
-    		<p class="lead">That's why we're building a self-sovereign identity platform that
-    		gives users control over personal information, without entrusting it
-    		to third parties. Individual control over identity massively
-    		increases privacy and security, protecting against data breaches and
-    		hackers.
-    		The future of identity is decentralized.
-    		</p>
-			<p class="lead">
-				<nuxt-link to="/careers">We're hiring for our remote team - join us!</nuxt-link>
-			</p>
-  		</div>
-  	</section>
-
-  	<section id="contact-us" class="contact-us section">
-  		<div class="container is-narrow">
-    		<h1 class="title">Contact Us</h1>
-    		<div class="columns">
-    			<div class="column">
-    				<p>Endpass is located in New York City.</p>
-    				<address>
-    					Endpass, Inc<br>
-    					101 W 23rd St Ste 122<br>
-    					New York, NY, 10011<br>
-    					USA<br>
-    				</address>
-    				<p>Email us: <strong>contact [at] endpass.com</strong></p>
-    			</div>
-    			<div class="column">
-    				<div class="map-image">
-    					<img src="~/assets/img/map.png" height="200" width="200" alt="Endpass office location">
-    				</div>
-    			</div>
-    		</div>
-  		</div>
-  	</section>
-	</div>
+  <div class="about-page">
+    <div class="about-page-content">
+      <div class="container">
+        <two-cols-block class="about-page-intro">
+          <div slot="left">
+            <h2 class="about-page-title big">About Endpass</h2>
+          </div>
+          <div slot="right" class="about-page-intro-content">
+            <p><strong>How Endpass Was Born</strong></p>
+            <p>
+              Endpass CEO Heather R Morgan was inspired to create a better
+              solution for identity verification after she experienced the
+              clunky and confusing processes being used by cryptocurrency
+              exchanges and online banks.
+            </p>
+            <p>
+              Not only did she feel it hurt the customer experience, she worried
+              that current identity verification methods were inaccurate and
+              costly for financial institutions.
+            </p>
+            <p>
+              Read Heather’s blog post to hear the full story and learn how
+              automating financial compliance with Artificial Intelligence can
+              both delight customers and prevent financial crime and identity
+              theft:
+            </p>
+          </div>
+        </two-cols-block>
+        <two-cols-block class="about-page-founders">
+          <div slot="left">
+            <h2 class="about-page-title">
+              <strong>About the Endpass founders</strong>
+            </h2>
+            <p>
+              Both founders are serial entrepreneurs, investors in high growth
+              B2B software companies, and industry experts in multiple fields,
+              as they have an appetite for growth and solving complex problems.
+            </p>
+          </div>
+          <div slot="right">
+            <div class="columns is-variable is-4">
+              <div class="column is-6">
+                <Person>
+                  <img src="../assets/img/Heather.jpg" alt="" slot="image" />
+                  <p slot="name">Heather R Morgan</p>
+                  <p slot="title">CEO</p>
+                  <template>
+                    <p>
+                      is a former economist, writer for both Forbes and Inc
+                      magazine, top B2B sales and marketing expert, and even
+                      raps. Before starting Endpass, she was the solo-founder of
+                      profitable startup, SalesFolk. Under her leadership,
+                      SalesFolk helped more than 830 companies optimize their
+                      sales and marketing email campaigns, and pioneered many of
+                      the standards and best practices for modern inside sales.
+                    </p>
+                    <p>
+                      During her time as an economist, Heather specialized in
+                      game theory and imperfect information, investigating
+                      corruption and black markets in emerging markets.
+                    </p>
+                  </template>
+                </Person>
+              </div>
+              <div class="column is-6">
+                <Person>
+                  <img src="../assets/img/Ilya.jpg" alt="" slot="image" />
+                  <p slot="name">Dutch (Ilya) Lichtenstein</p>
+                  <p slot="title">CTO</p>
+                  <p>
+                    is a security expert and technology enthusiast who is
+                    obsessed with automation, who has been reverse engineering
+                    hardware and writing code since age 9. Prior to Endpass, he
+                    was the CEO of Mixrank, a Y Combinator startup backed by
+                    investors such as Mark Cuban and Data Collective (DCVC).
+                    Mixrank was one of the earliest sales automation tools of
+                    its kind, acting as a powerful customer discovery platform
+                    for sales teams.
+                  </p>
+                </Person>
+              </div>
+            </div>
+          </div>
+        </two-cols-block>
+        <two-cols-block class="about-page-mission">
+          <div slot="left">
+            <h2 class="about-page-title">
+              Our Mission: <br />
+              <strong>Fighting Global Fraud & Cybercrime</strong>
+            </h2>
+          </div>
+          <div slot="right" class="about-page-mission-text">
+            <p>
+              <strong>
+                Technology is constantly advancing life quality and business
+                efficiency.
+              </strong>
+            </p>
+            <p>
+              However, identity theft and other cybercrime are more rampant than
+              the stagecoach and train robberies of the 1800’s. Unfortunately,
+              government and its borders are not equipped to protect citizens
+              from malicious actors around the world.
+            </p>
+            <p>
+              Just as entrepreneurs have always risen to solve problems that
+              governments and large organizations cannot, Endpass aims to make a
+              dent in cybercrime and money laundering with Artificial
+              Intelligence.
+            </p>
+            <p>
+              We believe better identity verification methods and security
+              protocols are the answer to defeating fraud and other identity
+              theft.
+            </p>
+            <p>
+              As the world becomes increasingly more digital, identity theft
+              will only become a bigger global crisis.
+            </p>
+            <p>
+              We’re building better automated financial compliance tools to help
+              banks and cryptocurrency exchanges to more accurately and
+              efficiently validate of identities. This means a seamless
+              onboarding experience for legitimate customers doing KYC and AML,
+              and stopping fraudsters and terrorists from slipping through the
+              cracks.
+            </p>
+            <p>But this is just the start.</p>
+            <p>
+              Ultimately our AI will be able to develop
+              <strong>“digital fingerprints”</strong> that correlate fraudulent
+              documents and accounts to the original source, making a dent in
+              global black markets. Not only can this be used by financial
+              institutions, but by law enforcement and governments, as well as
+              any organization that needs to validate the identity of its
+              customers, vendors, and employees.
+            </p>
+          </div>
+        </two-cols-block>
+      </div>
+    </div>
+    <purple-block>
+      Join us in the fight against global fraud
+    </purple-block>
+    <page-footer skin="dull">
+      <template slot="copyright">
+        Endpass. All rights reserved
+      </template>
+    </page-footer>
+  </div>
 </template>
 
 <script>
+import TwoColsBlock from "~/components/About/TwoColsBlock";
+import PurpleBlock from "~/components/About/PurpleBlock";
+import Person from "~/components/About/Person";
+import PageFooter from "~/components/PageFooter";
+
 export default {
-	head () {
-		return {
-			title: 'About'
-		}
-	}
-}
+  name: "AboutPage",
+
+  head() {
+    return {
+      title: "About"
+    };
+  },
+
+  layout: "new",
+
+  components: {
+    TwoColsBlock,
+    Person,
+    PurpleBlock,
+    PageFooter
+  }
+};
 </script>
+
+<style lang="scss">
+.about-page-content {
+  padding: 170px 0;
+  background-image: url(../assets/img/backgrounds/about-page.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+.about-page-title {
+  font-size: 32px;
+  line-height: 1.25;
+
+  &.big {
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--endpass-ui-color-white);
+  }
+}
+
+.about-page-title:not(:only-child) {
+  margin-bottom: 33px;
+}
+
+.about-page-intro {
+  margin-bottom: 270px;
+}
+
+.about-page-intro-content {
+  padding-top: 106px;
+}
+
+.about-page-intro p,
+.about-page-intro strong {
+  color: var(--endpass-ui-color-white);
+}
+
+.about-page-intro p:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.about-page-founders {
+  margin-bottom: 200px;
+}
+
+.about-page-mission {
+  margin-bottom: 220px;
+}
+
+.about-page-mission-text p:not(:last-child) {
+  margin-bottom: 28px;
+}
+</style>
