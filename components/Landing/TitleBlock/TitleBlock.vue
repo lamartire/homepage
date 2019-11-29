@@ -1,8 +1,5 @@
 <template>
   <section class="title-block">
-    <section class="title-block-header">
-      <page-header></page-header>
-    </section>
     <welcome-part>
       <slot name="title" slot="title" />
       <slot name="subtitle" slot="subtitle" />
@@ -17,7 +14,6 @@
 </template>
 
 <script>
-import PageHeader from "../PageHeader";
 import WelcomePart from "./WelcomePart.vue";
 import FeaturesPart from "./FeaturesPart.vue";
 
@@ -25,7 +21,6 @@ export default {
   name: "TitleBlock",
 
   components: {
-    PageHeader,
     WelcomePart,
     FeaturesPart
   }
@@ -34,7 +29,7 @@ export default {
 
 <style lang="scss">
 .title-block {
-  padding-bottom: 152px;
+  padding: 120px 0 152px;
   background-color: #f8f9fb;
   background-image: url(../../../assets/img/backgrounds/title-block.svg);
   background-repeat: no-repeat;

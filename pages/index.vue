@@ -1,5 +1,5 @@
 <template>
-  <div class="landing">
+  <div class="landing-page">
     <title-block>
       <template slot="title">
         The identity verification AI that keeps financial compliance delightful.
@@ -35,7 +35,7 @@
       </template>
     </title-block>
     <two-cols-image-block>
-      <img src="~/assets/img/compliant-image.png" slot="image">
+      <img src="~/assets/img/compliant-image.png" slot="image" />
       <template slot="title">
         Always stay compliant, even when you're on vacation.
       </template>
@@ -85,8 +85,8 @@
         </p>
       </template>
       <template slot="list-annotation">
-
-      This means:</template>
+        This means:</template
+      >
       <template slot="list">
         <li>Reducing customer friction for a faster onboarding process</li>
         <li>Way less back and forth with your support team</li>
@@ -104,7 +104,7 @@
       </template>
     </two-cols-with-list-block>
     <two-cols-features-block>
-      <img src="~/assets/img/automation-image.png" slot="image">
+      <img src="~/assets/img/automation-image.png" slot="image" />
       <template slot="title">
         The case for true automation in financial compliance
       </template>
@@ -123,7 +123,8 @@
             is-horizontal
           >
             While most solutions fail to account for these issues, Endpass’ AI
-            both normalizes the data and applies advanced validation logic, giving you the highest degree of certainty that you haven’t
+            both normalizes the data and applies advanced validation logic,
+            giving you the highest degree of certainty that you haven’t
             accidentally missed something.
           </feature>
         </li>
@@ -201,9 +202,8 @@ import CenteredTextBlock from "~/components/Landing/CenteredTextBlock";
 import TwoColsCardBlock from "~/components/Landing/TwoColsCardBlock";
 import TwoColsWithListBlock from "~/components/Landing/TwoColsWithListBlock";
 import TwoColsFeaturesBlock from "~/components/Landing/TwoColsFeaturesBlock";
-import PageFooter from '~/components/Landing/PageFooter'
-
 import Feature from "~/components/common/Feature";
+import PageFooter from "~/components/PageFooter";
 
 export default {
   name: "LandingPage",
@@ -217,8 +217,8 @@ export default {
     TwoColsCardBlock,
     TwoColsWithListBlock,
     TwoColsFeaturesBlock,
-    PageFooter,
-    Feature
+    Feature,
+    PageFooter
   }
 };
 </script>
