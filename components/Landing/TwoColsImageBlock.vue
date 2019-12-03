@@ -22,12 +22,26 @@
 
 <style lang="scss">
 .two-cols-image-block {
+  overflow: hidden;
+  position: relative;
   padding-bottom: 120px;
-  background-color: $bg-light-grey;
-  background-image: url(../../assets/img/backgrounds/summary-block.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center bottom;
+}
+.two-cols-image-block-content {
+  position: relative;
+  z-index: 2;
+}
+
+.two-cols-image-block:after {
+  content: "";
+  position: absolute;
+	right: 0;
+	bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+	transform: skewY(-30deg);
+  transform-origin: bottom right;
+  background-image: linear-gradient(128deg, #8035e2 10%, #6003db 97%);
 }
 
 .two-cols-image-block h3 {

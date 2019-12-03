@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4788px" height="1734px" viewBox="0 0 4788 1734" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>Endpass Innner</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.7787975%" y1="27.6590793%" x2="27.8690025%" y2="67.1834503%" id="linearGradient-1">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.7379744%" y1="31.3786879%" x2="78.6849426%" y2="96.3256418%" id="linearGradient-2">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="106.70076%" y1="26.6841918%" x2="25.0605598%" y2="82.9900135%" id="linearGradient-3">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#721FDF" offset="40.75%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="78.2361753%" y1="27.6590793%" x2="28.2862808%" y2="67.1834503%" id="linearGradient-4">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="78.7737422%" y1="27.6590793%" x2="27.87289%" y2="67.1834503%" id="linearGradient-5">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.7443442%" y1="31.3786879%" x2="78.6799038%" y2="96.3256418%" id="linearGradient-6">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="106.70076%" y1="26.6872559%" x2="25.0605598%" y2="82.985678%" id="linearGradient-7">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#721FDF" offset="40.75%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-2.49956469%" y1="33.3272516%" x2="82.4019522%" y2="84.799715%" id="linearGradient-8">
+            <stop stop-color="#DFCCF8" offset="0%"></stop>
+            <stop stop-color="#B288E9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Endpass-Intro-Copy" fill-rule="nonzero">
+            <g id="bgendpass" transform="translate(2936.000000, -4644.000000)">
+                <polygon id="Path" fill="url(#linearGradient-1)" points="1119 4980.55982 2238 4253 2236.69135 4980.55982 1119 5706"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-2)" points="1119 4979.89575 0 4252.3994 1.3085085 4979.89575 1119 5705.3994"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-3)" opacity="0.75" points="2033 3199.3994 204 4387.02497 1118.55157 4981.3994 2033 4386.61827"></polygon>
+            </g>
+            <g id="bgendpass" transform="translate(1232.000000, -3462.000000)">
+                <polygon id="Path" fill="url(#linearGradient-4)" points="546 2052.57904 3673 0 3669.34304 2052.57904 546 4099.17817"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-5)" points="853 3801.38176 1707 3246.07285 1706.00127 3801.38176 853 4355.07285"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-6)" points="854 3801.33331 0 3246.07285 0.998629363 3801.33331 854 4355.07285"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-7)" opacity="0.75" points="1552 2442 156 3348.40588 854.039364 3802.03747 1552 3348.09548"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-8)" opacity="0.18687221" points="671 2559 1973 3404.06736 1322.02876 3827 671 3403.77726"></polygon>
+            </g>
+            <g id="bgendpass" transform="translate(-1003.000000, -4642.000000)">
+                <polygon id="Path" fill="url(#linearGradient-1)" points="1119 4980.55982 2238 4253 2236.69135 4980.55982 1119 5706"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-2)" points="1119 4979.89575 0 4252.3994 1.3085085 4979.89575 1119 5705.3994"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-3)" opacity="0.75" points="2033 3199.3994 204 4387.02497 1118.55157 4981.3994 2033 4386.61827"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

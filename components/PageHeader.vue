@@ -1,28 +1,35 @@
 <template>
   <header :class="{ 'page-header': true, 'with-menu': isMenuVisible }">
-    <v-icon-button
-      class="page-header-menu-trigger"
-      :icon="triggerButonIcon"
-      width="24"
-      height="20"
-      @click="onTriggerClick"
-    ></v-icon-button>
-    <section class="page-header-menu">
-      <div class="page-header-logo">
-        <v-logo></v-logo>
-      </div>
-      <nav v-if="false" class="page-header-menu-list">
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="https://developers.endpass.com/"
-        target="_blank">Developers</a></li>
-      </nav>
-      <ul class="page-header-menu-list">
-        <li><a href="https://help.endpass.com/" target="_blank">Support</a></li>
-        <li><a href="https://vault.endpass.com/">Sign in</a></li>
-      </ul>
+    <section class="container">
+      <v-icon-button
+        class="page-header-menu-trigger"
+        :icon="triggerButonIcon"
+        width="24"
+        height="20"
+        @click="onTriggerClick"
+      ></v-icon-button>
+      <section class="page-header-menu">
+        <div class="page-header-logo">
+          <v-logo></v-logo>
+        </div>
+        <nav class="page-header-menu-list">
+          <!-- <li><a href="#">Pricing</a></li> -->
+          <li><a href="/about">About</a></li>
+          <!-- <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li> -->
+          <!-- <li>
+            <a href="https://developers.endpass.com/" target="_blank"
+              >Developers</a
+            >
+          </li> -->
+        </nav>
+        <ul class="page-header-menu-list">
+          <li>
+            <a href="https://help.endpass.com/" target="_blank">Support</a>
+          </li>
+          <li><a href="https://vault.endpass.com/">Sign in</a></li>
+        </ul>
+      </section>
     </section>
   </header>
 </template>
@@ -31,7 +38,7 @@
 import { debounce } from "throttle-debounce";
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VIconButton from "@endpass/ui/kit/VIconButton";
-import VLogo from '~/components/common/VLogo'
+import VLogo from "~/components/common/VLogo";
 
 export default {
   name: "Header",
@@ -66,13 +73,15 @@ export default {
       this.isMenuVisible = !this.isMenuVisible;
     },
 
-    onScreenResize() {},
+    debouncedScreenResizeHandler: debounce(150, function(e) {
+      if (e.target.innerWidth >= 1024) {
+        this.isMenuVisible = false
+      }
+    }),
+  },
 
-    debouncedScreenResizeHandler() {
-      debounce(150, () => {
-        console.log(this);
-      });
-    }
+  beforeDestroy() {
+    window.removeEventListener("resize", this.debouncedScreenResizeHandler);
   },
 
   components: {

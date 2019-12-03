@@ -1,5 +1,5 @@
 <template>
-  <a  href="/landing" class="v-logo">
+  <a  href="/" class="v-logo">
     <v-svg-icon name="endpass"></v-svg-icon>
   </a>
 </template>
