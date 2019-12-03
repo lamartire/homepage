@@ -10,7 +10,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "endpass Decentralized Cloud Wallet",
+    title: "automated identity verification",
     titleTemplate: "Endpass: %s",
     meta: [
       { charset: "utf-8" },
@@ -18,7 +18,7 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Endpass is a decentralized identity platform."
+        content: "Endpass is a automated identity verification."
       },
       { name: "apple-mobile-web-app-title", content: "Endpass" },
       { name: "application-name", content: "Endpass" },

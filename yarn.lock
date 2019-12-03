@@ -784,12 +784,12 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@endpass/ui@^0.15.72":
-  version "0.15.72"
-  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.72.tgz#b12b2cb961463f452b0658c1f6d772b7395eed21"
-  integrity sha512-bZTssPlhdNhUFd6MIGe4CYRx+em5xoQdSMIwt4AzJpAbB11GSXyFxxh7tjZH3h2iJ5SwTj0f0w48MlHU2Go42w==
+"@endpass/ui@^0.15.83":
+  version "0.15.83"
+  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.83.tgz#48017e1f2cf20efd5c525c5d1d1090392e3787a4"
+  integrity sha512-aHdTZMUA1pGcSBy/PL0PCXb6TvwopVb/8ovySpGUEaTsQ3MzizmdPfzKiy+Y8vaPY5eLaEwL/JsJqyY4n98tXw==
   dependencies:
-    dayjs "^1.8.16"
+    dayjs "^1.8.17"
     lodash.chunk "^4.2.0"
     vue "^2.5.21"
 
@@ -2867,7 +2867,7 @@ date-now@^0.1.4:
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
-dayjs@^1.8.16:
+dayjs@^1.8.17:
   version "1.8.17"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.17.tgz#53ec413f2a7b02afbea1846d61bb260fa8567cea"
   integrity sha512-47VY/htqYqr9GHd7HW/h56PpQzRBSJcxIQFwqL3P20bMF/3az5c3PWdVY3LmPXFl6cQCYHL7c79b9ov+2bOBbw==
