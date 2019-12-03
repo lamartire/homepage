@@ -1,5 +1,5 @@
 <template>
-  <a v-bind="$attrs" :class="{ 'v-button': true, [skin]: !!skin }">
+  <a :class="{ 'v-button': true, [skin]: !!skin }">
     <slot />
   </a>
 </template>

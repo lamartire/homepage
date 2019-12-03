@@ -11,7 +11,7 @@ module.exports = {
    */
   head: {
     title: "endpass Decentralized Cloud Wallet",
-    titleTemplate: "%s | endpass",
+    titleTemplate: "Endpass: %s",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },

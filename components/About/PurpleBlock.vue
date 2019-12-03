@@ -1,16 +1,15 @@
 <template>
   <div class="purple-block">
     <div class="purple-block-content">
-    <h2 class="purple-block-title">
-      <slot />
-    </h2>
-    <div class="purple-block-buttons">
-      <v-button-link>Partner with us</v-button-link>
-      <v-button-link skin="ghost">Join our team</v-button-link>
-    </div>
-
-    </div>
+      <h2 class="purple-block-title">
+        <slot />
+      </h2>
+      <div class="purple-block-buttons">
+        <v-button-link>Partner with us</v-button-link>
+        <v-button-link skin="ghost">Join our team</v-button-link>
       </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -20,7 +19,7 @@ export default {
   components: {
     VButtonLink
   }
-}
+};
 </script>
 
 <style lang="scss">

@@ -1,8 +1,10 @@
 <template>
-  <theme-provider>
-    <page-header />
-    <nuxt />
-  </theme-provider>
+  <div class="default-layout">
+    <theme-provider>
+      <page-header />
+      <nuxt />
+    </theme-provider>
+  </div>
 </template>
 
 <script>
@@ -12,7 +14,8 @@ import PageHeader from "~/components/PageHeader";
 export default {
   components: {
     ThemeProvider,
-    PageHeader,
+    PageHeader
   }
 };
 </script>
+
