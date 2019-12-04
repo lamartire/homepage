@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import VButtonLink from "~/components/common/VButtonLink";
+import VButtonLink from "~/components/VButtonLink";
 
 export default {
   components: {

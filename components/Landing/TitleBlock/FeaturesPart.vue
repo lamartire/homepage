@@ -18,7 +18,7 @@
 <script>
 import VCard from "@endpass/ui/kit/VCard";
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
-import Feature from "~/components/common/Feature";
+import Feature from "~/components/Feature";
 
 export default {
   name: "FeaturesPart",
@@ -35,7 +35,7 @@ export default {
 .features-part-card {
   position: relative;
   z-index: 3;
-  padding: 65px 0;
+  padding: 59px 0 93px;
 }
 
 .features-part-card:after {
@@ -64,7 +64,7 @@ export default {
 }
 
 .features-part-card h3 {
-  margin-bottom: 60px;
+  margin-bottom: 68px;
 }
 
 .features-part-list {

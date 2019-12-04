@@ -1,15 +1,19 @@
-.ladnging .columns {
+.container {
+  max-width: 1124px;
+}
+
+.columns {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.landing .column {
+.column {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
 @include touch {
-  .landing .container {
+  .container {
     padding: 0 23px;
     margin: 0;
     width: 100% !important;

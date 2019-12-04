@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import VMoreLink from "~/components/common/VMoreLink";
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   name: "TwoColsWithListBlock",
@@ -56,12 +56,12 @@ export default {
 <style lang="scss">
 .two-cols-with-list-block {
   background-color: var(--endpass-ui-color-white);
-  padding: 80px 0 90px;
+  padding: 74px 0 122px;
 }
 
 .two-cols-with-list-block-header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 46px;
 }
 
 .two-cols-with-list-block-header h3 {
@@ -73,7 +73,7 @@ export default {
 }
 
 .two-cols-with-list-block-lists p:first-child {
-  margin-bottom: 30px;
+  margin-bottom: 13px;
 }
 
 .two-cols-with-list-block-lists ul {

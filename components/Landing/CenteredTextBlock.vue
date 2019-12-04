@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import VMoreLink from "~/components/common/VMoreLink";
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   name: "ApiBlock",
@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss">
 .centered-text--block {
-  padding: 110px 0 120px;
+  padding: 104px 0 126px;
   background-image: url(../../assets/img/backgrounds/api-block.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,11 +45,11 @@ export default {
 }
 
 .centered-text--block-content h2 {
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 }
 
 .centered-text--block-content p {
-  margin-bottom: 32px;
+  margin-bottom: 42px;
 }
 
 .centered-text--block-link {

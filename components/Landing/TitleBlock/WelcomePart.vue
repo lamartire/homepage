@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import VButtonLink from "~/components/common/VButtonLink";
-import VMoreLink from "~/components/common/VMoreLink";
+import VButtonLink from "~/components/VButtonLink";
+import VMoreLink from "~/components/VMoreLink";
 import CallToAction from "~/components/Landing/LeadForm/CallToAction.vue";
 
 export default {
@@ -51,9 +51,9 @@ export default {
 
 .welcome-part-mockup {
   position: absolute;
-  top: -80px;
+  top: -20px;
   z-index: 4;
-  width: 624px;
+  width: 597px;
   height: 870px;
   background-image: url(../../../assets/img/tablet.png);
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ export default {
 }
 
 .welcome-part-content h1 {
-  margin-bottom: 32px;
+  margin-bottom: 37px;
 }
 
 .welcome-part-content p {
