@@ -34,7 +34,7 @@
 
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
-import Feature from "~/components/common/Feature";
+import Feature from "~/components/Feature";
 
 export default {
   name: "TwoColsFeaturesBlock",
@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss">
 .two-cols-features-block {
-  padding: 120px 0 130px;
+  padding: 112px 0 148px;
   background-color: $bg-light-grey;
   background-image: url(../../assets/img/backgrounds/automation-block.svg);
   background-repeat: no-repeat;

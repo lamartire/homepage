@@ -38,7 +38,7 @@
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VCard from "@endpass/ui/kit/VCard";
-import VMoreLink from "~/components/common/VMoreLink";
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   name: "TwoColsCardBlock",
@@ -62,7 +62,7 @@ export default {
 }
 
 .two-cols-card-block .two-cols-card-block-card {
-  padding: 48px 0 70px;
+  padding: 48px 0 35px;
 }
 
 .two-cols-card-block-header {
@@ -72,7 +72,7 @@ export default {
 .two-cols-card-block-icon {
   width: 49px;
   height: 56px;
-  margin: 0 auto 24px;
+  margin: 0 auto 18px;
 }
 
 .two-cols-card-block-header h2 {

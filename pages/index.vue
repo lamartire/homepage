@@ -207,7 +207,7 @@ import CenteredTextBlock from "~/components/Landing/CenteredTextBlock";
 import TwoColsCardBlock from "~/components/Landing/TwoColsCardBlock";
 import TwoColsWithListBlock from "~/components/Landing/TwoColsWithListBlock";
 import TwoColsFeaturesBlock from "~/components/Landing/TwoColsFeaturesBlock";
-import Feature from "~/components/common/Feature";
+import Feature from "~/components/Feature";
 import PageFooter from "~/components/PageFooter";
 
 export default {

@@ -24,7 +24,7 @@
 .two-cols-image-block {
   overflow: hidden;
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 125px;
 }
 .two-cols-image-block-content {
   position: relative;

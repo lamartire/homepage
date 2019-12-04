@@ -53,7 +53,7 @@
           </div>
         </section>
         <div class="column is-5 is-12-touch is-offset-1-desktop">
-          <image-card class="automation-block-image"></image-card>
+          <img class="automation-block-image" />
         </div>
       </div>
     </section>
@@ -62,14 +62,12 @@
 
 <script>
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
-import ImageCard from "~/components/ImageCard";
 
 export default {
   name: "AutomationBlock",
 
   components: {
     VSvgIcon,
-    ImageCard
   }
 };
 </script>

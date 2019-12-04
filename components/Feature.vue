@@ -50,8 +50,8 @@ export default {
 
 <style lang="scss">
 .feature-icon {
-  width: 46px;
-  height: 46px;
+  width: 47px;
+  height: 47px;
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 30px;

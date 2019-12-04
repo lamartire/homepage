@@ -13,6 +13,7 @@
           <v-logo></v-logo>
         </div>
         <nav class="page-header-menu-list">
+          <li><a href="/">Home</a></li>
           <!-- <li><a href="#">Pricing</a></li> -->
           <li><a href="/about">About</a></li>
           <li><a href="/careers">Careers</a></li>
@@ -38,7 +39,7 @@
 import { debounce } from "throttle-debounce";
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VIconButton from "@endpass/ui/kit/VIconButton";
-import VLogo from "~/components/common/VLogo";
+import VLogo from "~/components/VLogo";
 
 export default {
   name: "Header",

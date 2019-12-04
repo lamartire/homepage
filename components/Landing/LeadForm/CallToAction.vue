@@ -1,8 +1,8 @@
 <template>
   <div class="lead-cta-container">
-    <v-button skin="tertiary" @click="openModal">
+    <v-button-link skin="tertiary" @click="openModal">
       <slot>Learn More</slot>
-    </v-button>
+    </v-button-link>
     <lead-form-modal
       v-if="isModalOpen"
       @close="closeModal"
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import VButton from '@endpass/ui/kit/VButton';
+import VButtonLink from "~/components/VButtonLink";
 import LeadFormModal from "~/components/Landing/LeadForm/Modal.vue";
 
 export default {
@@ -31,7 +31,7 @@ export default {
     },
   },
   components: {
-    VButton,
+    VButtonLink,
     LeadFormModal,
   }
 };
