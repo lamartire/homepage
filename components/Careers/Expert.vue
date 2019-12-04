@@ -33,8 +33,12 @@
 	overflow: hidden;
 }
 
+.careers-page-expert-content {
+  padding-top: 5px;
+}
+
 .careers-page-expert-name {
-  margin-bottom: 16px;
+  margin-bottom: 11px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.56;

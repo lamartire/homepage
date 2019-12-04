@@ -11,11 +11,11 @@
 
 <style lang="scss">
 .careers-page-labeled-section:not(:last-child) {
-  margin-bottom: 64px;
+  margin-bottom: 68px;
 }
 
 .careers-page-labeled-section-title {
-  margin-bottom: 34px;
+  margin-bottom: 27px;
   font-size: 24px;
   font-weight: 500;
   font-stretch: normal;

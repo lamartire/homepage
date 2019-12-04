@@ -28,7 +28,8 @@ export default {
 <style lang="scss">
 .careers-page-card-section {
   position: relative;
-  padding: 52px 0 95px;
+  z-index: 5;
+  padding: 61px 0 95px;
 }
 
 .careers-page-card-section-title {
