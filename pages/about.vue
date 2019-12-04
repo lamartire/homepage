@@ -82,7 +82,6 @@
         </div>
       </two-cols-block>
       <div class="about-page-mission">
-
         <two-cols-block class="about-page-mission-content">
           <div slot="left">
             <h2 class="about-page-title">

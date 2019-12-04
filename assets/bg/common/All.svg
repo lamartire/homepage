@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1440 2992" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>All</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.2361753%" y1="27.6590793%" x2="28.2862808%" y2="67.1834503%" id="linearGradient-1">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="78.7737422%" y1="27.6590793%" x2="27.87289%" y2="67.1834503%" id="linearGradient-2">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.7443442%" y1="31.3786879%" x2="78.6799038%" y2="96.3256418%" id="linearGradient-3">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="106.70076%" y1="26.6872559%" x2="25.0605598%" y2="82.985678%" id="linearGradient-4">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#721FDF" offset="40.75%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-2.49956469%" y1="33.3272516%" x2="82.4019522%" y2="84.799715%" id="linearGradient-5">
+            <stop stop-color="#DFCCF8" offset="0%"></stop>
+            <stop stop-color="#B288E9" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="0" width="1440" height="1733"></rect>
+        <linearGradient x1="74.4379873%" y1="26.4585377%" x2="20.3425793%" y2="66.543258%" id="linearGradient-8">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-9" x="0" y="0" width="1440" height="1012"></rect>
+    </defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Endpass-About-Copy">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="3537"></rect>
+            <polygon id="Path" fill="#F2F4F8" fill-rule="nonzero" points="-298 383.431448 686 -256 684.849233 383.431448 -298 1021"></polygon>
+            <g id="bgendpass" transform="translate(-6.000000, -3379.000000)" fill-rule="nonzero">
+                <polygon id="Path" fill="#F2F4F8" points="1147 4025.68126 1867 3558 1866.15798 4025.68126 1147 4492"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-1)" points="546 2052.57904 3673 0 3669.34304 2052.57904 546 4099.17817"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-2)" points="854 3801.38176 1708 3246.07285 1707.00127 3801.38176 854 4355.07285"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-3)" points="854 3801.33331 0 3246.07285 0.998629363 3801.33331 854 4355.07285"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-4)" opacity="0.75" points="1552 2442 156 3348.40588 854.039364 3802.03747 1552 3348.09548"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-5)" opacity="0.18687221" points="671 2559 1973 3404.06736 1322.02876 3827 671 3403.77726"></polygon>
+            </g>
+            <g id="Mission" transform="translate(0.000000, 1522.000000)">
+                <mask id="mask-7" fill="white">
+                    <use xlink:href="#path-6"></use>
+                </mask>
+                <use id="BG" fill="#F8F9FB" xlink:href="#path-6"></use>
+                <polygon id="Path" fill="#F2F4F8" fill-rule="nonzero" mask="url(#mask-7)" points="773 1619.68126 1493 1152 1492.15798 1619.68126 773 2086"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-7)" points="-252 104.101041 1440 -995 1438.02124 104.101041 -252 1200"></polygon>
+                <polygon id="Path" fill="#F2F4F8" fill-rule="nonzero" mask="url(#mask-7)" points="-463 1455.68126 257 988 256.157976 1455.68126 -463 1922"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-8)" fill-rule="nonzero" mask="url(#mask-7)" points="-351 1069.72357 413 573 412.106519 1069.72357 -351 1565"></polygon>
+            </g>
+            <g id="Founders" transform="translate(0.000000, 769.000000)">
+                <g id="bg-founders">
+                    <mask id="mask-10" fill="white">
+                        <use xlink:href="#path-9"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <polygon id="Path" fill="#F2F4F8" fill-rule="nonzero" mask="url(#mask-10)" points="-404 795.681263 316 328 315.157976 795.681263 -404 1262"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
