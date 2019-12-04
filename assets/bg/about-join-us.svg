@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="416px" viewBox="0 0 1440 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>Call to action</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="1733"></rect>
+        <linearGradient x1="74.4379873%" y1="26.4585377%" x2="20.3425793%" y2="66.543258%" id="linearGradient-3">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="98.5225592%" y1="47.6503139%" x2="12.6859795%" y2="51.8072538%" id="linearGradient-4">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-5" x="0" y="0" width="1440" height="467"></rect>
+        <linearGradient x1="74.4518927%" y1="26.4585377%" x2="20.3257041%" y2="66.543258%" id="linearGradient-7">
+            <stop stop-color="#9960E2" offset="0%"></stop>
+            <stop stop-color="#7F39DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="106.70076%" y1="26.7175149%" x2="25.0605598%" y2="82.9428639%" id="linearGradient-8">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#721FDF" offset="40.75%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="78.8749596%" y1="74.6074556%" x2="25.8187288%" y2="30.0426246%" id="linearGradient-9">
+            <stop stop-color="#8035E2" offset="0%"></stop>
+            <stop stop-color="#6003DB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Endpass-About-Copy" transform="translate(0.000000, -2992.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="3537"></rect>
+            <g id="Mission" transform="translate(0.000000, 1522.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="BG" fill="#F8F9FB" xlink:href="#path-1"></use>
+                <polygon id="Path" fill="#F2F4F8" fill-rule="nonzero" mask="url(#mask-2)" points="773 1619.68126 1493 1152 1492.15798 1619.68126 773 2086"></polygon>
+                <polygon id="Path" fill="#F2F4F8" fill-rule="nonzero" mask="url(#mask-2)" points="-463 1455.68126 257 988 256.157976 1455.68126 -463 1922"></polygon>
+                <polygon id="Path" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-2)" points="-351 1069.72357 413 573 412.106519 1069.72357 -351 1565"></polygon>
+            </g>
+            <g id="Call-to-action" transform="translate(0.000000, 2992.000000)">
+                <g id="Group-5">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-4)" fill-rule="nonzero" xlink:href="#path-5"></use>
+                    <g mask="url(#mask-6)" fill-rule="nonzero" id="Path">
+                        <g transform="translate(-43.000000, -507.000000)">
+                            <polygon fill="url(#linearGradient-7)" points="719.220675 496.582309 1483.22068 0 1482.32719 496.582309 719.220675 991.717893"></polygon>
+                            <polygon fill="url(#linearGradient-8)" opacity="0.75" points="1530 462 720 987.581756 1125.02284 1250.62119 1530 987.401773"></polygon>
+                            <polygon fill="url(#linearGradient-9)" points="719.597361 698.683948 0 231 0.841464935 698.683948 719.597361 1165.08686"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

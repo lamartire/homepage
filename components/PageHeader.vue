@@ -15,8 +15,8 @@
         <nav class="page-header-menu-list">
           <!-- <li><a href="#">Pricing</a></li> -->
           <li><a href="/about">About</a></li>
-          <!-- <li><a href="#">Careers</a></li>
-          <li><a href="#">Blog</a></li> -->
+          <li><a href="/careers">Careers</a></li>
+          <!-- <li><a href="#">Blog</a></li> -->
           <!-- <li>
             <a href="https://developers.endpass.com/" target="_blank"
               >Developers</a
