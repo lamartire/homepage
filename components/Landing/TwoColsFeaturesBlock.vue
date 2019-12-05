@@ -112,7 +112,7 @@ export default {
   }
 
   .two-cols-features-block h3 {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
   }
 }
 </style>

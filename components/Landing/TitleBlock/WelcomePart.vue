@@ -105,6 +105,14 @@ export default {
   .welcome-part-mockup {
     display: none;
   }
+
+  .welcome-part-content h1 {
+    margin-bottom: 23px;
+  }
+
+  .welcome-part-content p{
+    margin-bottom: 28px;
+  }
 }
 
 @include widescreen {

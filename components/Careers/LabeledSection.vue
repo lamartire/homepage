@@ -24,4 +24,14 @@
   letter-spacing: -0.4px;
   color: var(--endpass-ui-color-primary-7);
 }
+
+@include touch {
+  .careers-page-labeled-section:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .careers-page-labeled-section-title {
+    margin-bottom: 16px;
+  }
+}
 </style>

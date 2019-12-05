@@ -46,4 +46,14 @@
 .person-description p:not(:last-child) {
   margin-bottom: 24px;
 }
+
+@include touch {
+  .person {
+    padding: 30px 0;
+  }
+
+  .person-image {
+    text-align: center;
+  }
+}
 </style>

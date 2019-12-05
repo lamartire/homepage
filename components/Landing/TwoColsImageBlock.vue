@@ -34,12 +34,12 @@
 .two-cols-image-block:after {
   content: "";
   position: absolute;
-	right: 0;
-	bottom: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
   width: 100%;
   height: 400px;
-	transform: skewY(-30deg);
+  transform: skewY(-30deg);
   transform-origin: bottom right;
   background-image: linear-gradient(128deg, #8035e2 10%, #6003db 97%);
 }
@@ -69,6 +69,10 @@
     background-image: none;
   }
 
+  .two-cols-image-block:after {
+    display: none;
+  }
+
   .two-cols-image-block-content {
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +83,10 @@
     width: 100%;
     max-width: 340px;
     margin: 24px auto 0;
+  }
+
+  .two-cols-image-block p:not(:last-child) {
+    margin-bottom: 25px;
   }
 }
 </style>

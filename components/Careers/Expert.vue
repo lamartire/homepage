@@ -21,16 +21,21 @@
 }
 
 .careers-page-expert:not(:last-child) {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .careers-page-expert-image {
   flex: 0 0 auto;
   width: 140px;
-  height: 140px;
   margin-right: 55px;
+  overflow: hidden;
+}
+
+.careers-page-expert-image img {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-	overflow: hidden;
+  object-fit: contain;
 }
 
 .careers-page-expert-content {
@@ -49,5 +54,18 @@
   font-size: 20px;
   line-height: 1.4;
   color: #373d42;
+}
+
+@include touch {
+  .careers-page-expert {
+    display: block;
+  }
+
+  .careers-page-expert-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+    text-align: center;
+  }
 }
 </style>

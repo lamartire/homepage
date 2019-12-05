@@ -63,4 +63,19 @@ export default {
   width: 1000px;
   box-shadow: inherit;
 }
+
+@include touch {
+  .careers-page-card-section-title {
+    margin-bottom: 60px;
+  }
+
+  .careers-page-card-section:before,
+  .careers-page-card-section:after {
+    display: none;
+  }
+
+  .careers-page-card-section {
+    padding: 41px 20px 65px;
+  }
+}
 </style>

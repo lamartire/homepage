@@ -92,7 +92,7 @@ export default {
   }
 
   .features-part-list li:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 
   .features-part-card:before,

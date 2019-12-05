@@ -100,8 +100,8 @@
             <div class="about-page-relative-content">
               <p>
                 <strong>
-                  Technology is constantly advancing life quality and business
-                  efficiency.
+                  Technology is constantly advancing life quality<br />
+                  and business efficiency.
                 </strong>
               </p>
               <p>
@@ -197,7 +197,7 @@ export default {
 }
 
 .about-page-content {
-  padding: 170px 0;
+  padding-top: 170px;
 }
 
 .about-page-title {
@@ -216,11 +216,12 @@ export default {
 }
 
 .about-page-intro {
-  margin-bottom: 270px;
+  margin-bottom: 228px;
 }
 
 .about-page-intro-content {
   padding-top: 106px;
+  line-height: 1.56;
 }
 
 .about-page-intro p,
@@ -229,12 +230,12 @@ export default {
 }
 
 .about-page-intro p:not(:last-child) {
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 
 .about-page-founders {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 210px;
 }
 
 .about-page-founders:before {
@@ -267,7 +268,7 @@ export default {
 
 .about-page-mission {
   position: relative;
-  padding-bottom: 220px;
+  padding-bottom: 221px;
 }
 
 .about-page-mission:before {
@@ -275,9 +276,9 @@ export default {
   display: block;
   position: absolute;
   z-index: 2;
-  bottom: 0;
+  bottom: 10%;
   left: 0;
-  width: 35%;
+  width: 25%;
   background: #7f39db;
   height: 50%;
   transform-origin: 0;
@@ -289,7 +290,7 @@ export default {
   display: block;
   position: absolute;
   z-index: 1;
-  bottom: -40%;
+  bottom: -20%;
   right: 0;
   width: 80%;
   background: #fff;
@@ -298,8 +299,13 @@ export default {
   transform: skewY(-33deg);
 }
 
+.about-page-mission-text {
+  font-size: 18px;
+  line-height: 1.56;
+}
+
 .about-page-mission-text p:not(:last-child) {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .about-page-relative-content {
@@ -312,6 +318,45 @@ export default {
     background-image: url(../assets/bg/widescreen/header.svg);
     background-size: initial;
     background-position: top right;
+  }
+}
+
+@include touch {
+  .about-page {
+    background: none;
+  }
+
+  .about-page-content {
+    padding-top: 0;
+  }
+
+  .about-page-intro {
+    padding-top: 110px;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    background-image: url(../assets/bg/api-block.svg);
+    background-size: cover;
+  }
+
+  .about-page-intro-content {
+    padding-top: 30px;
+  }
+
+  .about-page-founders {
+    position: relative;
+    padding-bottom: 140px;
+  }
+
+  .about-page-mission {
+    position: relative;
+    padding-bottom: 140px;
+  }
+
+  .about-page-mission:after,
+  .about-page-mission:before,
+  .about-page-founders:after,
+  .about-page-founders:before {
+    display: none;
   }
 }
 </style>

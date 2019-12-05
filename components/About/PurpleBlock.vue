@@ -4,10 +4,14 @@
       <h2 class="purple-block-title">
         <slot />
       </h2>
-      <div class="purple-block-buttons">
-        <v-button-link>Partner with us</v-button-link>
-        <v-button-link skin="ghost">Join our team</v-button-link>
-      </div>
+      <ul class="purple-block-buttons">
+        <li>
+          <v-button-link>Partner with us</v-button-link>
+        </li>
+        <li>
+          <v-button-link skin="ghost">Join our team</v-button-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -51,7 +55,19 @@ export default {
   justify-content: center;
 }
 
-.purple-block-buttons > *:not(:last-child) {
+.purple-block-buttons > li:not(:last-child) {
   margin-right: 30px;
+}
+
+@include touch {
+  .purple-block-buttons {
+    display: block;
+    text-align: center;
+  }
+
+  .purple-block-buttons > li:not(:last-child) {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
 }
 </style>

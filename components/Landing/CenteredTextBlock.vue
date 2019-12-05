@@ -67,11 +67,11 @@ export default {
   }
 
   .centered-text--block-content h2 {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
   .centered-text--block-content p {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 }
 </style>

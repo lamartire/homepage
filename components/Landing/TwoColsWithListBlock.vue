@@ -109,15 +109,19 @@ export default {
 
   .two-cols-with-list-block-header {
     text-align: left;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
 
   .two-cols-with-list-block-description {
     margin-bottom: 35px;
   }
 
+  .two-cols-with-list-block-description p:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
   .two-cols-with-list-block-lists p:first-child {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .two-cols-with-list-block-lists ul {
@@ -126,7 +130,7 @@ export default {
   }
 
   .two-cols-with-list-block-lists ul li:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 }
 </style>

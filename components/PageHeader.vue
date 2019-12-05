@@ -105,6 +105,7 @@ export default {
 
 .page-header-menu-trigger {
   display: none;
+  color: var(--endpass-ui-color-white) !important;
 }
 
 .page-header-menu {
@@ -133,10 +134,6 @@ export default {
 .page-header-menu-list a {
   font-size: 16px;
   line-height: 1.5;
-  color: var(--endpass-ui-color-white);
-}
-
-.page-header-menu-trigger {
   color: var(--endpass-ui-color-white);
 }
 

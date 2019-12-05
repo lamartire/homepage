@@ -1,18 +1,18 @@
 <template>
   <section class="careers-page">
-    <div class="container">
-      <div class="columns is-variable is-4">
-        <div class="column is-offset-2 is-8">
-          <section class="careers-page-title">
+    <section class="careers-page-title">
+      <div class="container">
+        <div class="columns is-variable is-4">
+          <div class="column is-offset-2 is-8">
             <h3>Fraudsters hate us. Banks thank us. Their customers love us</h3>
             <p>
               Sound cool?
               <a class="v-color-white" href="#">Why don’t you join us?</a>
             </p>
-          </section>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     <div class="careers-page-perks">
       <div class="container">
         <card-section>
@@ -284,5 +284,36 @@ export default {
 
 .careers-page-culture {
   margin-bottom: 150px;
+}
+
+@include touch {
+  .careers-page {
+    padding-top: 0;
+    background-image: none;
+  }
+
+  .careers-page-title {
+    padding-top: 120px;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    background-image: url(../assets/bg/api-block.svg);
+    background-size: cover;
+  }
+
+  .careers-page-perks:before {
+    display: none
+  }
+
+  .careers-page-perks {
+    margin-bottom: 70px;
+  }
+
+  .careers-page-section-title {
+    margin-bottom: 40px;
+  }
+
+  .careers-page-culture {
+    margin-bottom: 70px;
+  }
 }
 </style>

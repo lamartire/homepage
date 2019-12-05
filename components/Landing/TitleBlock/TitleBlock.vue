@@ -103,8 +103,7 @@ export default {
 
 @include touch {
   .title-block {
-    background-position: center;
-    padding-bottom: 0;
+    padding: 20px 0 0;
   }
 }
 </style>

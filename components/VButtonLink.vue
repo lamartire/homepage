@@ -36,4 +36,13 @@ a.v-button {
     color: var(--endpass-ui-color-white);
   }
 }
+
+@include touch {
+  a.v-button {
+    padding: 12px 13px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 184px;
+  }
+}
 </style>

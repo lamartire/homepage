@@ -86,7 +86,7 @@ export default {
   }
 
   .feature-icon {
-    margin-bottom: 24px;
+    margin-bottom: 17px;
   }
 
   .feature.is-horizontal .feature-icon {
