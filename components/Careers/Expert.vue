@@ -20,6 +20,10 @@
   align-items: flex-start;
 }
 
+.careers-page-expert:first-child {
+  margin-top: 50px;
+}
+
 .careers-page-expert:not(:last-child) {
   margin-bottom: 40px;
 }

@@ -2,7 +2,7 @@
   <v-card class="careers-page-card-centered-section">
     <div class="container">
       <div class="columns is-variable is-4">
-        <div class="column is-6 is-offset-3">
+        <div class="column is-8 is-offset-2">
           <h3 class="careers-page-card-centered-section-title">
             <slot name="title" />
           </h3>
@@ -31,11 +31,11 @@ export default {
 
 <style lang="scss">
 .careers-page-card-centered-section {
-  padding: 54px 0 137px;
+  padding: 62px 0 124px;
 }
 
 .careers-page-card-centered-section-title {
-  margin-bottom: 76px;
+  margin-bottom: 62px;
   font-size: 32px;
   line-height: 1.25;
   text-align: center;

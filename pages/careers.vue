@@ -27,13 +27,13 @@
               <list>
                 <list-item>No commute!</list-item>
                 <list-item>
-                  We get you — wearing a suit sucks. Come to work in your
+                  We get you — wearing a suit sucks. Come to work in your<br />
                   pajamas or a superhero costume; we don’t care
                 </list-item>
                 <list-item>
-                  Want to work from a beach or cute cafe in Europe or Asia? As
-                  long as you have wifi and get shit done, we don’t care where
-                  you work from.
+                  Want to work from a beach or cute cafe in Europe or Asia?<br />
+                  As long as you have wifi and get shit done, we don’t care<br />
+                  where you work from.
                 </list-item>
                 <list-item>
                   Spend more time with family — or don’t — we won’t tell them.
@@ -46,12 +46,13 @@
               </template>
               <list>
                 <list-item>
-                  Get the opportunity to work in a fast-paced startup that cares
-                  about personal growth and be early to join a team that’s on a
-                  path to becoming a billion dollar company.
+                  Get the opportunity to work in a fast-paced startup that<br />
+                  cares about personal growth and be early to join a team<br />
+                  that’s on a path to becoming a billion dollar company.
                 </list-item>
                 <list-item>
-                  Learn more than ever, faster than ever. Work in a place that
+                  Learn more than ever, faster than ever. Work in a place
+                  that<br />
                   fosters high-growth of all kinds.
                 </list-item>
               </list>
@@ -79,9 +80,9 @@
                   >Dutch (Ilya) Lichtenstein</template
                 >
                 <template>
-                  He’s been doing [xyz] since [age y] and he pioneered many of
-                  the technology concepts behind sales automation and growth
-                  marketing [starting in 2011].
+                  He’s been reverse engineering hardware and writing code since
+                  age 9 and he pioneered many of the technology concepts behind
+                  sales automation and growth marketing starting in 2011.
                 </template>
               </expert>
             </labeled-section>
@@ -100,7 +101,7 @@
           </list-item>
           <list-item>
             We’re passionate about building technology that solves real problems
-            and&nbsp;<strong>delights</strong>&nbsp;users.
+            and <strong>delights</strong> users.
           </list-item>
           <list-item>
             We believe in meritocracy and have no patience for office politics.
@@ -212,7 +213,7 @@ export default {
 
 <style lang="scss">
 .careers-page {
-  padding-top: 150px;
+  padding-top: 170px;
   background-color: #f2f4f8;
   background-image: url(../assets/bg/desktop/header.svg);
   background-repeat: no-repeat;
@@ -244,14 +245,14 @@ export default {
 }
 
 .careers-page-title {
-  margin-bottom: 135px;
+  margin-bottom: 129px;
   text-align: center;
   color: var(--endpass-ui-color-white);
   line-height: 1.17;
 }
 
 .careers-page-title h3 {
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   font-size: 48px;
   font-weight: bold;
   letter-spacing: -0.9px;

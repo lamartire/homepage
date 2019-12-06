@@ -29,12 +29,13 @@ export default {
 .careers-page-card-section {
   position: relative;
   z-index: 5;
-  padding: 61px 0 95px;
+  padding: 59px 0 79px;
 }
 
 .careers-page-card-section-title {
-  margin-bottom: 90px;
+  margin-bottom: 72px;
   font-size: 32px;
+  font-weight: bold;
   line-height: 1.25;
   color: #50565b;
 }

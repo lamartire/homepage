@@ -11,7 +11,7 @@
 
 <style lang="scss">
 .careers-page-labeled-section:not(:last-child) {
-  margin-bottom: 68px;
+  margin-bottom: 71px;
 }
 
 .careers-page-labeled-section-title {
