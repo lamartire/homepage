@@ -1,5 +1,5 @@
 <template>
-  <a :class="{ 'v-button': true, [skin]: !!skin }">
+  <a :class="{ 'v-button': true, fluid: fluid, [skin]: !!skin }">
     <slot />
   </a>
 </template>
@@ -10,6 +10,11 @@ export default {
     skin: {
       type: String,
       default: ""
+    },
+
+    fluid: {
+      type: Boolean,
+      default: false,
     }
   }
 };
@@ -30,11 +35,28 @@ a.v-button {
   background-color: var(--endpass-ui-color-white);
   color: var(--endpass-ui-color-primary-7);
   border-radius: 6px;
+}
 
-  &.ghost {
-    background-color: transparent;
-    color: var(--endpass-ui-color-white);
-  }
+a.v-button.fluid {
+  display: block;
+  width: 100%;
+}
+
+a.v-button.ghost {
+  background-color: transparent;
+  color: var(--endpass-ui-color-white);
+}
+
+a.v-button.primary {
+  border-color: var(--endpass-ui-color-primary-7);
+  background-color: var(--endpass-ui-color-primary-7);
+  color: var(--endpass-ui-color-white);
+}
+
+a.v-button.red {
+  background-color: #ff404a;
+  border-color: #ff404a;
+  color: var(--endpass-ui-color-white);
 }
 
 @include touch {
