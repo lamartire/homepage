@@ -1,6 +1,6 @@
 <template>
   <div class="lead-cta-container">
-    <v-button-link skin="tertiary" @click="openModal">
+    <v-button-link skin="white" @click="openModal">
       <slot>Learn More</slot>
     </v-button-link>
     <lead-form-modal
