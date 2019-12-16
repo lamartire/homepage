@@ -1,20 +1,20 @@
 <template>
   <div class="pricing-card">
-    <p class="title">
+    <p class="pricing-card-title">
       <slot name="title"></slot>
     </p>
-    <section class="price">
-      <span class="amount">
+    <section class="pricing-card-price">
+      <span class="pricing-card-amount">
         <slot name="amount"></slot>
       </span>
-      <span class="count"> per user<br />identity verified </span>
+      <span class="pricing-card-count"> per user<br />identity verified </span>
     </section>
-    <section class="list">
+    <section class="pricing-card-list">
       <markered-list>
         <slot />
       </markered-list>
     </section>
-    <section class="button-wrapper">
+    <section class="pricing-card-button-wrapper">
       <v-button-link href="#" :skin="buttonSkin" :fluid="true">
         Subscribe
       </v-button-link>
@@ -64,21 +64,21 @@ export default {
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
-.title {
+.pricing-card-title {
   margin-bottom: 1px;
   font-size: 18px;
   line-height: 1.56;
   color: var(--endpass-ui-color-black);
 }
 
-.price {
+.pricing-card-price {
   display: flex;
   align-items: flex-end;
   color: var(--endpass-ui-color-black);
   margin-bottom: 43px;
 }
 
-.amount {
+.pricing-card-amount {
   flex: 0 0 auto;
   margin-right: 12px;
   font-size: 48px;
@@ -87,7 +87,7 @@ export default {
   letter-spacing: -0.5px;
 }
 
-.count {
+.pricing-card-count {
   flex: 0 0 auto;
   font-size: 16px;
   line-height: 1.25;
@@ -95,11 +95,11 @@ export default {
   margin-bottom: 7px;
 }
 
-.list {
+.pricing-card-list {
   margin-bottom: 93px;
 }
 
-.button-wrapper {
+.pricing-card-button-wrapper {
   margin-top: auto;
 }
 </style>

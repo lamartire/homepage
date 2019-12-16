@@ -9,7 +9,8 @@ export default {
   props: {
     skin: {
       type: String,
-      default: ""
+      validator: (val) => ['white', 'ghost', 'red', 'primary'].includes(val),
+      default: "white"
     },
 
     fluid: {

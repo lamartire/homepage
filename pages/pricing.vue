@@ -1,6 +1,6 @@
 <template>
   <section class="pricing-page">
-    <div class="title container">
+    <div class="pricing-page-title container">
       <div class="columns is-variable is-4">
         <div class="column is-offset-2 is-8">
           <page-intro>
@@ -16,9 +16,9 @@
         </div>
       </div>
     </div>
-    <div class="content container">
-      <div class="cards columns is-variable is-4">
-        <div class="price column is-offset-2 is-4">
+    <div class="pricing-page-content container">
+      <div class="pricing-page-cards columns is-variable is-4">
+        <div class="pricing-page-price column is-offset-2 is-4">
           <pricing-card>
             <template slot="title">
               Startup
@@ -33,7 +33,7 @@
             <markered-list-item>Someting else</markered-list-item>
           </pricing-card>
         </div>
-        <div class="price column is-4">
+        <div class="pricing-page-price column is-4">
           <pricing-card :is-primary="true">
             <template slot="title">
               Pro
@@ -91,11 +91,11 @@ export default {
   background-position: top center;
 }
 
-.content {
+.pricing-page-content {
   padding-bottom: 286px;
 }
 
-.cards {
+.pricing-page-cards {
   align-items: stretch;
 }
 
@@ -104,7 +104,7 @@ export default {
     background-image: none;
   }
 
-  .title {
+  .pricing-page-title {
     padding-top: 120px;
     padding-bottom: 70px;
     margin-bottom: 70px;
@@ -112,11 +112,11 @@ export default {
     background-size: cover;
   }
 
-  .price:not(:last-child) {
+  .pricing-page-price:not(:last-child) {
     margin-bottom: 32px;
   }
 
-  .content {
+  .pricing-page-content {
     padding-bottom: 100px;
   }
 }

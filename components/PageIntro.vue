@@ -10,7 +10,7 @@
 <style lang="scss" scoped>
 .page-intro {
   margin-top: 170px;
-  margin-bottom: 129px;
+  margin-bottom: 64px;
   text-align: center;
   color: var(--endpass-ui-color-white);
   line-height: 1.17;

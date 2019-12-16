@@ -1,6 +1,6 @@
 <template>
-  <li class="careers-page-list-item">
-    <div class="careers-page-list-item-icon">
+  <li class="markered-list-item">
+    <div class="markered-list-item-icon">
       <v-svg-icon name="check" />
     </div>
     <slot />
@@ -17,8 +17,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.careers-page-list-item {
+<style lang="scss" scoped>
+.markered-list-item {
   display: flex;
   align-items: flex-start;
   font-size: 20px;
@@ -26,7 +26,7 @@ export default {
   color: #373d42;
 }
 
-.careers-page-list-item-icon {
+.markered-list-item-icon {
   flex: 0 0 auto;
   width: 17px;
   height: 17px;
