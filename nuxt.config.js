@@ -32,6 +32,10 @@ module.exports = {
         href: "https://use.typekit.net/yiq0llk.css"
       },
       {
+        rel: "stylesheet",
+        href: "https://unpkg.com/vueperslides/dist/vueperslides.css"
+      },
+      {
         rel: "apple-touch-icon",
         sizes: "180x180",
         href: "/apple-touch-icon.png"
