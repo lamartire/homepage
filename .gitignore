@@ -12,3 +12,5 @@ dist
 
 # Dev tools
 .tern-port
+
+yarn-error.log

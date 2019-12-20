@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
+// Overriding external gallry styles
 .vueperslides__arrow {
   transform: none;
   top: auto;

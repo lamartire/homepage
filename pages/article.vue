@@ -1,7 +1,7 @@
 <template>
-  <section :class="$style.base">
-    <section :class="$style.content">
-      <section :class="[$style.header, 'container']">
+  <section class="blog-article">
+    <section class="blog-article-content">
+      <section class="blog-article-header container">
         <div class="columns is-variable is-4">
           <div class="column is-3">
             <author>
@@ -25,7 +25,7 @@
           </div>
         </div>
       </section>
-      <section :class="$style.gallery">
+      <section class="blog-article-gallery">
         <Gallery
           :images="[
             'http://placekitten.com/g/1440/780',
@@ -37,7 +37,7 @@
       <section class="container">
         <div class="columns is-variable is-4">
           <div class="column is-3">
-            <div :class="$style.suggestion">
+            <div class="blog-article-suggestion">
               <suggestion>
                 <template slot="image">
                   <img src="http://placekitten.com/g/1440/780" />
@@ -49,7 +49,7 @@
               </suggestion>
             </div>
           </div>
-          <div :class="[$style.article, 'column', 'is-8', 'is-offset-1']">
+          <div class="blog-article-article column is-8 is-offset-1">
             <h4>
               Sync your wallet to all your devices. No software to download.
             </h4>
@@ -86,7 +86,7 @@
               community and standards-driven, open source development. All of
               the wallet code is available on Github to inspect.
             </p>
-            <div :class="$style.images">
+            <div class="blog-article-images">
               <div class="columns is-variable is-4">
                 <div class="column is-4">
                   <img src="http://placekitten.com/g/1440/780" />
@@ -138,8 +138,8 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
-.base {
+<style lang="scss" scoped>
+.blog-article {
   padding-top: 196px;
   background-image: url(../assets/bg/desktop/header.svg);
   background-repeat: no-repeat;
@@ -147,20 +147,20 @@ export default {
   background-position: top center;
 }
 
-.content {
+.blog-article-content {
   padding-bottom: 478px;
   background-color: var(--endpass-ui-color-white);
 }
 
-.content img {
+.blog-article-content img {
   border-radius: 6px;
 }
 
-.header {
+.blog-article-header {
   padding-top: 99px;
 }
 
-.header h2 {
+.blog-article-header h2 {
   margin-bottom: 113px;
   font-size: 48px;
   font-weight: bold;
@@ -169,83 +169,83 @@ export default {
   color: #13171a;
 }
 
-.header h4 {
+.blog-article-header h4 {
   margin-bottom: 20px;
   font-size: 20px;
   line-height: 1.4;
   color: #13171a;
 }
 
-.gallery {
+.blog-article-gallery {
   margin-bottom: 96px;
 }
 
-.images {
+.blog-article-images {
   margin-bottom: 48px;
 }
 
-.images img {
+.blog-article-images img {
   display: block;
   width: 100%;
   object-fit: cover;
   margin: 0 !important;
 }
 
-.images img:after {
+.blog-article-images img:after {
   content: "";
   display: block;
   padding-top: 100%;
 }
 
-.article h3 {
+.blog-article-article h3 {
   margin-bottom: 48px;
   font-size: 32px;
   line-height: 1.25;
   color: #50565b;
 }
 
-.article h4 {
+.blog-article-article h4 {
   margin-bottom: 28px;
   font-size: 24px;
   font-weight: bold;
-  line-height: 1.17;
+  line-height: 1.7;
   color: #13171a;
 }
 
-.article p {
+.blog-article-article p {
   margin-bottom: 28px;
 }
 
-.article img {
+.blog-article-article img {
   margin: 48px 0;
 }
 
 @include touch {
-  .base {
+  .blog-article-blog-article {
     padding-top: 96px;
   }
 
-  .header {
+  .blog-article-header {
     padding-top: 39px;
   }
 
-  .header h2 {
+  .blog-article-header h2 {
     margin-bottom: 60px;
   }
 
-  .gallery {
+  .blog-article-gallery {
     margin-bottom: 70px;
   }
 
-  .suggestion {
+  .blog-article-suggestion {
     margin-bottom: 70px;
   }
 
-  .images img {
+  .blog-article-images img {
     margin-bottom: 32px !important;
   }
 
-  .content {
+  .blog-article-content {
     padding-bottom: 150px;
   }
 }

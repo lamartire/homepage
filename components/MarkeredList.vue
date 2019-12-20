@@ -1,7 +1,7 @@
 <template>
   <div class="markered-list">
     <ul>
-      <slot></slot>
+      <slot />
     </ul>
   </div>
 </template>

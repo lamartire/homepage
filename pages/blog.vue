@@ -1,6 +1,6 @@
 <template>
-  <section :class="$style.base">
-    <div :class="[$style.title, 'container']">
+  <section class="blog">
+    <div class="blog-title container">
       <div class="columns is-variable is-4">
         <div class="column is-offset-2 is-8">
           <page-intro>
@@ -16,10 +16,10 @@
         </div>
       </div>
     </div>
-    <div :class="[$style.content, 'container']">
-      <div :class="$style.row">
+    <div class="blog-content container">
+      <div class="blog-row">
         <div class="columns is-variable is-4">
-          <div :class="[$style.post, 'column', 'is-8']">
+          <div class="blog-post column is-8">
             <news-image-card
               href="/article"
               image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.independent.co.uk%2Fs3fs-public%2Fthumbnails%2Fimage%2F2018%2F11%2F24%2F16%2Fcat.jpg&f=1&nofb=1"
@@ -35,9 +35,9 @@
               spending time on long and confusing applications.
             </news-image-card>
           </div>
-          <div :class="[$style.post, 'column', 'is-4']">
+          <div class="blog-post column is-4">
             <news-card href="/article">
-              <template name="date">
+              <template slot="date">
                 12 June
               </template>
               <template slot="title">
@@ -51,11 +51,11 @@
           </div>
         </div>
       </div>
-      <div :class="$style.row">
+      <div class="blog-row">
         <div class="columns is-variable is-4">
-          <div :class="[$style.post, 'column', 'is-4']">
+          <div class="blog-post column is-4">
             <news-card href="/article">
-              <template name="date">
+              <template slot="date">
                 12 June
               </template>
               <template slot="title">
@@ -67,9 +67,9 @@
               </template>
             </news-card>
           </div>
-          <div :class="[$style.post, 'column', 'is-4']">
+          <div class="blog-post column is-4">
             <news-card href="/article">
-              <template name="date">
+              <template slot="date">
                 12 June
               </template>
               <template slot="title">
@@ -81,9 +81,9 @@
               </template>
             </news-card>
           </div>
-          <div :class="[$style.post, 'column', 'is-4']">
+          <div class="blog-post column is-4">
             <news-card href="/article">
-              <template name="date">
+              <template slot="date">
                 12 June
               </template>
               <template slot="title">
@@ -130,8 +130,8 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
-.base {
+<style lang="scss" scoped>
+.blog {
   background-color: #f2f4f8;
   background-image: url(../assets/bg/desktop/header.svg);
   background-repeat: no-repeat;
@@ -139,24 +139,24 @@ export default {
   background-position: top center;
 }
 
-.content {
+.blog-content {
   padding-bottom: 286px;
 }
 
-.row {
+.blog-row {
   align-items: stretch;
 }
 
-.row:not(:last-child) {
+.blog-row:not(:last-child) {
   margin-bottom: 30px;
 }
 
 @include touch {
-  .base {
+  .blog {
     background-image: none;
   }
 
-  .title {
+  .blog-title {
     padding-top: 120px;
     padding-bottom: 70px;
     margin-bottom: 70px;
@@ -164,11 +164,11 @@ export default {
     background-size: cover;
   }
 
-  .post {
+  .blog-post {
     margin-bottom: 20px;
   }
 
-  .row:not(:last-child) {
+  .blog-row:not(:last-child) {
     margin-bottom: 20px;
   }
 }

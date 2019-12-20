@@ -1,23 +1,19 @@
 <template>
-  <div :class="$style.base">
-    <div :class="$style.avatar">
+  <div class="blog-author">
+    <div class="blog-author-avatar">
       <slot name="avatar"></slot>
     </div>
-    <p :class="$style.name">
+    <p class="blog-author-name">
       <slot name="author"></slot>
     </p>
-    <time :class="$style.date">
+    <time class="blog-author-date">
       <slot name="date"></slot>
     </time>
   </div>
 </template>
 
-<style lang="scss" module>
-.base {
-
-}
-
-.avatar {
+<style lang="scss" scoped>
+.blog-author-avatar {
   display: inline-block;
   vertical-align: middle;
   width: 36px;
@@ -25,7 +21,7 @@
   margin-bottom: 4px;
 }
 
-.name {
+.blog-author-name {
   margin-bottom: 12px;
   font-size: 18px;
   font-weight: bold;
@@ -33,7 +29,7 @@
   color: #13171a;
 }
 
-.date {
+.blog-author-date {
   font-size: 16px;
   line-height: 1.5;
   color: #50565b;

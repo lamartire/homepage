@@ -1,16 +1,16 @@
 <template>
-  <v-card :class="$style.base">
-    <time :class="$style.date">
+  <v-card class="blog-news-card">
+    <time class="blog-news-card-date">
       <slot name="date" />
     </time>
-    <h3 :class="$style.title">
+    <h3 class="blog-news-card-title">
       <slot name="title" />
     </h3>
-    <p :class="$style.intro">
+    <p class="blog-news-card-intro">
       <slot />
     </p>
-    <a :class="$style.link" :href="href">
-      <div :class="$style.icon">
+    <a class="blog-news-card-link" :href="href">
+      <div class="blog-news-card-icon">
         <v-svg-icon name="arrow-right" />
       </div>
       Read more
@@ -37,15 +37,15 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
-.base {
+<style lang="scss" scoped>
+.blog-news-card {
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 28px 32px 36px;
 }
 
-.date {
+.blog-news-card-date {
   display: block;
   margin-bottom: 12px;
   font-size: 16px;
@@ -53,7 +53,7 @@ export default {
   color: #50565b;
 }
 
-.title {
+.blog-news-card-title {
   margin-bottom: auto;
   font-size: 32px;
   font-style: normal;
@@ -61,7 +61,7 @@ export default {
   color: #50565b;
 }
 
-.intro {
+.blog-news-card-intro {
 	margin-top: 48px;
   margin-bottom: 70px;
   font-size: 18px;
@@ -69,7 +69,7 @@ export default {
   color: #13171a;
 }
 
-.link {
+.blog-news-card-link {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -78,7 +78,7 @@ export default {
   color: #6e32c9;
 }
 
-.icon {
+.blog-news-card-icon {
   position: relative;
   width: 17px;
   height: 14px;

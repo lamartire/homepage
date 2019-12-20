@@ -1,13 +1,13 @@
 <template>
-  <v-card :class="$style.base" :style="{ 'background-image': `url(${image})` }">
-    <a :class="$style.link" :href="href" />
-    <p :class="$style.author">
+  <v-card class="blog-news-image-card" :style="{ 'background-image': `url(${image})` }">
+    <a class="blog-news-image-card-link" :href="href" />
+    <p class="blog-news-image-card-author">
       <slot name="author" />
     </p>
-    <h3 :class="$style.title">
+    <h3 class="blog-news-image-card-title">
       <slot name="title" />
     </h3>
-    <p :class="$style.intro">
+    <p class="blog-news-image-card-intro">
       <slot />
     </p>
   </v-card>
@@ -35,8 +35,8 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
-.base {
+<style lang="scss" scoped>
+.blog-news-image-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -47,13 +47,13 @@ export default {
   background-position: center;
 }
 
-.autor {
+.blog-news-image-card-author {
   margin-bottom: 11px;
   font-size: 20px;
   line-height: 1.4;
 }
 
-.title {
+.blog-news-image-card-title {
   margin-bottom: 120px;
   font-size: 48px;
   font-weight: bold;
@@ -61,14 +61,14 @@ export default {
   letter-spacing: -0.9px;
 }
 
-.intro {
+.blog-news-image-card-intro {
   margin-top: auto;
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
 }
 
-.link {
+.blog-news-image-card-link {
   display: block;
   position: absolute;
   top: 0;
