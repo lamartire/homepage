@@ -15,7 +15,11 @@
       </markered-list>
     </section>
     <section class="pricing-card-button-wrapper">
-      <v-button-link href="#" :skin="buttonSkin" :fluid="true">
+      <v-button-link
+        href="https://vault.endpass.com/#/profile/payment"
+        :skin="buttonSkin"
+        :fluid="true"
+      >
         Subscribe
       </v-button-link>
     </section>
