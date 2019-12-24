@@ -15,11 +15,7 @@
       </markered-list>
     </section>
     <section class="pricing-card-button-wrapper">
-      <v-button-link
-        href="https://vault.endpass.com/#/profile/payment"
-        :skin="buttonSkin"
-        :fluid="true"
-      >
+      <v-button-link :href="pricingPageUrl" :skin="buttonSkin" :fluid="true" target="_blank">
         Subscribe
       </v-button-link>
     </section>
@@ -47,6 +43,10 @@ export default {
       }
 
       return "primary";
+    },
+
+    pricingPageUrl() {
+      return `${process.env.VAULT_URL}/#/profile/payment`
     }
   },
 
