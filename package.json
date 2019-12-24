@@ -10,6 +10,7 @@
     "build:dev": "NODE_ENV=development nuxt build",
     "start": "NODE_ENV=production nuxt start",
     "generate": "NODE_ENV=production nuxt generate",
+    "generate:dev": "NODE_ENV=development nuxt generate",
     "deploy": "./deploy.sh"
   },
   "dependencies": {
