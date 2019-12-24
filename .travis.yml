@@ -10,7 +10,7 @@ install:
   - brew install awscli 
   - yarn install --frozen-lockfile
 script:
-- yarn generate
+- yarn generate:dev
 deploy:
 - provider: script
   script: aws s3 sync dist/ s3://landing-dev.endpass.com --region=us-east-1 --delete
