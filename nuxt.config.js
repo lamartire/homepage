@@ -1,9 +1,24 @@
-require("dotenv").config();
-
-const resolve = require("path").resolve;
-
+import path from "path";
+import fs from "fs";
+import dotenv from "dotenv";
 import cockpit from "./plugins/cockpit.js";
 import endpass from "./plugins/endpass.js";
+
+const { NODE_ENV = "development" } = process.env;
+const isProduction = NODE_ENV === "production";
+const envFilePath = path.join(
+  __dirname,
+  isProduction ? ".env" : `.env.${NODE_ENV}`
+);
+const envFileBuf = fs.readFileSync(envFilePath);
+const ENV_VARIABLES = dotenv.parse(envFileBuf);
+
+dotenv.config({
+  path: envFilePath
+});
+
+console.info(`env-file loaded from: ${envFilePath}`);
+console.info(ENV_VARIABLES);
 
 module.exports = {
   /*
@@ -107,10 +122,10 @@ module.exports = {
   router: {
     linkActiveClass: "is-active"
   },
+  env: ENV_VARIABLES,
   modules: [
-    "@nuxtjs/dotenv",
     "@nuxtjs/style-resources",
-    ["@nuxtjs/google-analytics", { id: process.env.ANALYTICS_SITE_ID }],
+    ["@nuxtjs/google-analytics", { id: ENV_VARIABLES.ANALYTICS_SITE_ID }],
     "@nuxtjs/axios",
     "@nuxtjs/markdownit"
   ],
@@ -122,13 +137,13 @@ module.exports = {
   },
   styleResources: {
     scss: [
-      resolve(__dirname, "assets/css/_settings.scss"),
-      resolve(__dirname, "assets/css/_mixins.scss"),
-      resolve(__dirname, "assets/css/_external.scss"),
-      resolve(__dirname, "assets/css/_utilities.scss"),
-      resolve(__dirname, "assets/css/_overrides.scss"),
-      resolve(__dirname, "assets/css/_typography.scss"),
-      resolve(__dirname, "assets/css/global.scss")
+      path.resolve(__dirname, "assets/css/_settings.scss"),
+      path.resolve(__dirname, "assets/css/_mixins.scss"),
+      path.resolve(__dirname, "assets/css/_external.scss"),
+      path.resolve(__dirname, "assets/css/_utilities.scss"),
+      path.resolve(__dirname, "assets/css/_overrides.scss"),
+      path.resolve(__dirname, "assets/css/_typography.scss"),
+      path.resolve(__dirname, "assets/css/global.scss")
     ]
   }
 };

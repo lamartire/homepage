@@ -5,16 +5,16 @@
   "author": "Dutch <dutch@unviral.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "dev": "NODE_ENV=development nuxt",
+    "build": "NODE_ENV=production nuxt build",
+    "build:dev": "NODE_ENV=development nuxt build",
+    "start": "NODE_ENV=production nuxt start",
+    "generate": "NODE_ENV=production nuxt generate",
     "deploy": "./deploy.sh"
   },
   "dependencies": {
     "@endpass/ui": "^0.15.83",
     "@nuxtjs/axios": "^5.8.0",
-    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-analytics": "^2.2.1",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^1.0.0",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
+    "dotenv": "^8.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
