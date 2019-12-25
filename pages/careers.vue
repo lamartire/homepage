@@ -26,7 +26,7 @@
               <template slot="title">
                 Working remotely
               </template>
-              <markered-list>
+              <ul>
                 <markered-list-item>No commute!</markered-list-item>
                 <markered-list-item>
                   We get you — wearing a suit sucks. Come to work in your<br />
@@ -40,13 +40,13 @@
                 <markered-list-item>
                   Spend more time with family — or don’t — we won’t tell them.
                 </markered-list-item>
-              </markered-list>
+              </ul>
             </labeled-section>
             <labeled-section>
               <template slot="title">
                 Startup culture, without the bro’s
               </template>
-              <markered-list>
+              <ul>
                 <markered-list-item>
                   Get the opportunity to work in a fast-paced startup that<br />
                   cares about personal growth and be early to join a team<br />
@@ -57,7 +57,7 @@
                   that<br />
                   fosters high-growth of all kinds.
                 </markered-list-item>
-              </markered-list>
+              </ul>
             </labeled-section>
             <labeled-section>
               <template slot="title">
@@ -97,7 +97,7 @@
         <h2 class="careers-page-section-title" slot="left">
           More on our team culture:
         </h2>
-        <markered-list slot="right">
+        <ul slot="right">
           <markered-list-item>
             We celebrate resourcefulness, creativity, and having deep empathy.
           </markered-list-item>
@@ -118,7 +118,7 @@
             States, Europe, and Asia. (This means you can work remotely, from
             anywhere, as long as you have good wifi.)
           </markered-list-item>
-        </markered-list>
+        </ul>
       </two-cols-block>
     </div>
     <div class="careers-page-table">
@@ -184,7 +184,6 @@ import PageFooter from "~/components/PageFooter";
 import CardSection from "~/components/Careers/CardSection";
 import CardCenteredSection from "~/components/Careers/CardCenteredSecion";
 import LabeledSection from "~/components/Careers/LabeledSection";
-import MarkeredList from "~/components/MarkeredList";
 import MarkeredListItem from "~/components/MarkeredListItem";
 import Expert from "~/components/Careers/Expert";
 
@@ -208,7 +207,6 @@ export default {
     CardSection,
     CardCenteredSection,
     LabeledSection,
-    MarkeredList,
     MarkeredListItem,
     Expert
   }
