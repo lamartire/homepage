@@ -2,7 +2,6 @@
 	<div class="feature section">
 		<div class="container is-narrow">
 			<div class="columns reversible">
-
 				<div class="column side-column is-two-fifths has-text-centered"
           v-if="$slots.image">
 					<div class="image is-square">
@@ -21,7 +20,6 @@
 					  <slot></slot>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
