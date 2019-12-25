@@ -855,10 +855,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@endpass/ui@^0.15.89":
-  version "0.15.89"
-  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.89.tgz#9051e6d73c55428b9b58e689b8bffc3587736668"
-  integrity sha512-7i2e09vrYA/aGjSuzwRk5N5Xgv46RRi+xVuuvB/xRR0/FYBu3k1L108Q16Ap5EZke+5DXAhjnMEbs7Iq8KRn7g==
+"@endpass/ui@^0.15.90":
+  version "0.15.90"
+  resolved "https://registry.yarnpkg.com/@endpass/ui/-/ui-0.15.90.tgz#16f5838f7f174659c0b92d056a05c83f911b5b98"
+  integrity sha512-zfnYKI03xr563tL4oBni+WlvKAlQCIzLN+yvXhb7kgAuGrLxsg+CUHGkr4VjYUuRxpGF2+WI0XiqclWyKFDHxQ==
   dependencies:
     dayjs "^1.8.18"
     lodash.chunk "^4.2.0"
