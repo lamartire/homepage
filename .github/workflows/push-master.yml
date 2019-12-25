@@ -37,12 +37,12 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         SOURCE_DIR: 'dist/'
 
-    - name: Slack Notification
-      uses: homoluctus/slatify@master
-      if: always()
-      with:
-        type: ${{ job.status }}
-        job_name: 'landing page built'
-        username: 'GitHub Actions'
-        icon_emoji: ':github:'
-        url: ${{ secrets.SLACK_WEBHOOK }}
+#    - name: Slack Notification
+#      uses: homoluctus/slatify@master
+#      if: always()
+#      with:
+#        type: ${{ job.status }}
+#        job_name: 'landing page built'
+#        username: 'GitHub Actions'
+#        icon_emoji: ':github:'
+#        url: ${{ secrets.SLACK_WEBHOOK }}
