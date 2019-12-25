@@ -10,9 +10,9 @@
       <span class="pricing-card-count"> per user<br />identity verified </span>
     </section>
     <section class="pricing-card-list">
-      <markered-list>
+      <ul>
         <slot />
-      </markered-list>
+      </ul>
     </section>
     <section class="pricing-card-button-wrapper">
       <v-button-link :href="pricingPageUrl" :skin="buttonSkin" :fluid="true" target="_blank">
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import MarkeredList from "~/components/MarkeredList";
 import VButtonLink from "~/components/VButtonLink";
 
 export default {
@@ -51,7 +50,6 @@ export default {
   },
 
   components: {
-    MarkeredList,
     VButtonLink
   }
 };
