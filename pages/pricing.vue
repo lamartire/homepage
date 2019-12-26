@@ -61,8 +61,8 @@
       <section class="pricing-page-faq container">
         <v-accordion size="large">
           <v-accordion-item>
-            <tempate slot="title"
-              >How many times do i need to pay rep month?</tempate
+            <template slot="title"
+              >How many times do i need to pay rep month?</template
             >
             <p class="pricing-page-faq-content">
               Don't worry about choosing the right gas price. Simply choose a
@@ -73,8 +73,8 @@
             </p>
           </v-accordion-item>
           <v-accordion-item>
-            <tempate slot="title"
-              >Where is repost button and how to delete account?</tempate
+            <template slot="title"
+              >Where is repost button and how to delete account?</template
             >
             <p class="pricing-page-faq-content">
               Don't worry about choosing the right gas price. Simply choose a
@@ -85,8 +85,8 @@
             </p>
           </v-accordion-item>
           <v-accordion-item>
-            <tempate slot="title"
-              >The navigation design should communicate?</tempate
+            <template slot="title"
+              >The navigation design should communicate?</template
             >
             <p class="pricing-page-faq-content">
               Don't worry about choosing the right gas price. Simply choose a
@@ -97,7 +97,7 @@
             </p>
           </v-accordion-item>
           <v-accordion-item>
-            <tempate slot="title">How to change password? </tempate>
+            <template slot="title">How to change password? </template>
             <p class="pricing-page-faq-content">
               Don't worry about choosing the right gas price. Simply choose a
               priority level for your transaction and the wallet's prediction
