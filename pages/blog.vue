@@ -27,8 +27,8 @@
               <template slot="author">
                 Heather R Morgan
               </template>
-              <tempate slot="title"
-                >How software will re-invent identity verification</tempate
+              <template slot="title"
+                >How software will re-invent identity verification</template
               >
               Like many busy professionals, I had been procrastinating switching
               banks and setting up new financial accounts because I was dreading
