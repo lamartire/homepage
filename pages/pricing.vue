@@ -5,13 +5,11 @@
         <div class="column is-offset-2 is-8">
           <page-intro>
             <template slot="title">
-              The right price for you,<br />whoever you are
+              Finally, AI that makes your identity verification delightful
             </template>
-            <p>
-              Whether you’re a freelancer or need Sketch for a whole team our
-              pricing just makes sense. Renewing your license? We offer a
-              discount for returning customers too.
-            </p>
+            <p>Partner with Endpass to automate identity verification for
+              your organization, and you'll also help fight global fraud
+              and cybercrime.</p>
           </page-intro>
         </div>
       </div>
@@ -19,33 +17,44 @@
     <div class="pricing-page-content container">
       <div class="pricing-page-cards columns is-variable is-4">
         <div class="pricing-page-price column is-offset-2 is-4">
-          <pricing-card>
+          <pricing-card  :is-primary="true">
             <template slot="title">
-              Startup
+              Pay as you grow
             </template>
             <template slot="amount">
-              $80
+              $1
             </template>
-            <markered-list-item>Auto update mode</markered-list-item>
-            <markered-list-item>Online operator 24/7</markered-list-item>
-            <markered-list-item>International posting</markered-list-item>
-            <markered-list-item>Unique newsletters</markered-list-item>
-            <markered-list-item>Someting else</markered-list-item>
+            <template slot="button">
+              Get Started
+            </template>
+            <markered-list-item>AI powered instant identity verification</markered-list-item>
+            <markered-list-item>Automated KYC/AML compliance</markered-list-item>
+            <markered-list-item>Continuous sanctions list monitoring</markered-list-item>
+            <markered-list-item>Easy to use compliance dashboard</markered-list-item>
+            <markered-list-item>OAuth standard single sign on</markered-list-item>
+            <markered-list-item>Full API access</markered-list-item>
+            <markered-list-item>Simple to integrate mobile SDK</markered-list-item>
+            <markered-list-item>24/7 Support</markered-list-item>
           </pricing-card>
         </div>
         <div class="pricing-page-price column is-4">
-          <pricing-card :is-primary="true">
+          <pricing-card>
             <template slot="title">
-              Pro
+              Enterprise
             </template>
             <template slot="amount">
-              $298
+              Custom
             </template>
-            <markered-list-item>Auto update mode</markered-list-item>
-            <markered-list-item>Online operator 24/7</markered-list-item>
-            <markered-list-item>International posting</markered-list-item>
-            <markered-list-item>Unique newsletters</markered-list-item>
-            <markered-list-item>Someting else</markered-list-item>
+            <template slot="button">
+              Contact Us
+            </template>
+            <markered-list-item>Corporate identity provider integration</markered-list-item>
+            <markered-list-item>Full audit log</markered-list-item>
+            <markered-list-item>Custom integrations</markered-list-item>
+            <markered-list-item>Granular verification rules</markered-list-item>
+            <markered-list-item>Real-time fraud alerts</markered-list-item>
+            <markered-list-item>Uptime Guarantee SLA</markered-list-item>
+            <markered-list-item>Personal success manager</markered-list-item>
           </pricing-card>
         </div>
       </div>

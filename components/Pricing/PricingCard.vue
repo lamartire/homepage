@@ -7,7 +7,7 @@
       <span class="pricing-card-amount">
         <slot name="amount"></slot>
       </span>
-      <span class="pricing-card-count"> per user<br />identity verified </span>
+      <span class="pricing-card-count" v-if="isPrimary"> per verified<br />identity</span>
     </section>
     <section class="pricing-card-list">
       <ul>
@@ -16,7 +16,7 @@
     </section>
     <section class="pricing-card-button-wrapper">
       <v-button-link :href="pricingPageUrl" :skin="buttonSkin" :fluid="true" target="_blank">
-        Subscribe
+        <slot name="button"></slot>
       </v-button-link>
     </section>
   </div>
