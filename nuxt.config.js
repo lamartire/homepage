@@ -95,17 +95,6 @@ module.exports = {
     interval: 100,
     routes: async function() {
       const routes = [];
-      const tokens = await endpass.getTokens();
-      const tokenContents = await cockpit.getCollection("coins");
-      const tokenRoutes = tokens.map(token => {
-        return {
-          route: `/coin/${token.slug}-${token.symbol}`.toLowerCase(),
-          payload: {
-            token,
-            content: tokenContents.find(c => c.symbol === token.symbol)
-          }
-        };
-      });
       const features = await cockpit.getCollection("features", {
         filter: { published: true }
       });
@@ -116,7 +105,7 @@ module.exports = {
         };
       });
 
-      return routes.concat(tokenRoutes, featureRoutes);
+      return routes.concat(featureRoutes);
     }
   },
   router: {
