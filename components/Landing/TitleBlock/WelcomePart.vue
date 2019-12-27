@@ -14,7 +14,7 @@
       </div>
       <ul class="welcome-part-controls">
         <li class="welcome-part-controls-item">
-          <call-to-action>
+          <call-to-action skin="white">
             Request demo
           </call-to-action>
         </li>

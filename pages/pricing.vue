@@ -48,7 +48,7 @@
               Custom
             </template>
             <template slot="button">
-              <call-to-action>
+              <call-to-action skin="primary">
                 Contact Us
               </call-to-action>
             </template>
