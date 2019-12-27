@@ -26,7 +26,7 @@ module.exports = {
    */
   head: {
     title: "automated identity verification",
-    titleTemplate: "Endpass: %s",
+    titleTemplate: "%s | Endpass",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
