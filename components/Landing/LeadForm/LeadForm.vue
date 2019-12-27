@@ -54,7 +54,7 @@ import VButton from '@endpass/ui/kit/VButton';
 import qs from 'qs';
 import axios from 'axios';
 
-import formHelper from "@/plugins/form.js";
+import formHelper from "~/plugins/form.js";
 
 
 export default {

@@ -15,43 +15,21 @@
       </ul>
     </section>
     <section class="pricing-card-button-wrapper">
-      <v-button-link :href="pricingPageUrl" :skin="buttonSkin" :fluid="true" target="_blank">
         <slot name="button"></slot>
-      </v-button-link>
     </section>
   </div>
 </template>
 
 <script>
-import VButtonLink from "~/components/VButtonLink";
 
 export default {
   name: "PricingCard",
-
   props: {
     isPrimary: {
       type: Boolean,
       default: false
     }
   },
-
-  computed: {
-    buttonSkin() {
-      if (this.isPrimary) {
-        return "red";
-      }
-
-      return "primary";
-    },
-
-    pricingPageUrl() {
-      return `${process.env.VAULT_URL}/#/profile/payment`
-    }
-  },
-
-  components: {
-    VButtonLink
-  }
 };
 </script>
 

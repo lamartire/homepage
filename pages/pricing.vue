@@ -25,7 +25,9 @@
               $1
             </template>
             <template slot="button">
-              Get Started
+              <v-button-link :href="pricingPageUrl" skin="red" :fluid="true" target="_blank">
+                Get Started
+              </v-button-link>
             </template>
             <markered-list-item>AI powered instant identity verification</markered-list-item>
             <markered-list-item>Automated KYC/AML compliance</markered-list-item>
@@ -46,8 +48,11 @@
               Custom
             </template>
             <template slot="button">
-              Contact Us
+              <call-to-action>
+                Contact Us
+              </call-to-action>
             </template>
+
             <markered-list-item><strong>Everything in the Pay as You Grow Plan</strong></markered-list-item>
             <markered-list-item>Corporate identity provider integration</markered-list-item>
             <markered-list-item>Full audit log</markered-list-item>
@@ -121,10 +126,12 @@
 <script>
 import VAccordion from "@endpass/ui/kit/VAccordion";
 import VAccordionItem from "@endpass/ui/kit/VAccordionItem";
+import VButtonLink from "~/components/VButtonLink";
 import PageIntro from "~/components/PageIntro";
 import PageFooter from "~/components/PageFooter";
 import MarkeredListItem from "~/components/MarkeredListItem";
 import PricingCard from "~/components/Pricing/PricingCard";
+import CallToAction from "~/components/Landing/LeadForm/CallToAction.vue";
 
 export default {
   head() {
@@ -138,11 +145,18 @@ export default {
   components: {
     VAccordion,
     VAccordionItem,
+    VButtonLink,
+    CallToAction,
     PageFooter,
     PageIntro,
     MarkeredListItem,
     PricingCard
-  }
+  },
+  computed: {
+    pricingPageUrl() {
+      return `${process.env.VAULT_URL}/#/profile/payment`
+    }
+  },
 };
 </script>
 
