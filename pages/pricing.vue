@@ -111,8 +111,8 @@ export default {
     PricingCard
   },
   async asyncData () {
-      let faqs = await cockpit.getCollection("features", {
-        // filter: { published: true, page: 'pricing' },
+      let faqs = await cockpit.getCollection("faqs", {
+        filter: { published: true, page: 'pricing' },
         sort: {number:1},
       });
       return { faqs }
