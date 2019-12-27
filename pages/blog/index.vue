@@ -23,7 +23,7 @@
             <div class="tile is-child blog-post">
               <news-image-card
                 v-if="p.image"
-                :href="p.title_slug"
+                :slug="p.title_slug"
                 :image="p.image.path"
                 >
                 <template v-if="p.author" slot="author">
@@ -35,7 +35,7 @@
 
               <news-card
                 v-else
-                :href="p.title_slug"
+                :slug="p.title_slug"
                 >
                 <template v-if="p.author" slot="author">
                   {{ p.author }}

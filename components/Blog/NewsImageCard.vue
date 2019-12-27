@@ -1,6 +1,6 @@
 <template>
   <v-card class="blog-news-image-card" :style="{ 'background-image': `url(${image})` }">
-    <a class="blog-news-image-card-link" :href="href" />
+    <nuxt-link class="blog-news-image-card-link" :to="href" exact />
     <p class="blog-news-image-card-author">
       <slot name="author" />
     </p>
@@ -18,7 +18,7 @@ import VCard from "@endpass/ui/kit/VCard";
 
 export default {
   props: {
-    href: {
+    slug: {
       type: String,
       required: true
     },
@@ -31,6 +31,12 @@ export default {
 
   components: {
     VCard
+  },
+
+  computed: {
+    href() {
+      return `/blog/${this.slug}`;
+    }
   }
 };
 </script>

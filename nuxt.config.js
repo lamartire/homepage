@@ -95,6 +95,18 @@ module.exports = {
     interval: 100,
     routes: async function() {
       const routes = [];
+
+      const posts = await cockpit.getCollection("blog_posts", {
+        filter: { published: true},
+        sort: {_created:-1},
+      });
+      const postRoutes = posts.map(post => {
+        return {
+          route: `/blog/${post.title_slug}`,
+          payload: post
+        };
+      });
+
       const features = await cockpit.getCollection("features", {
         filter: { published: true }
       });
@@ -105,7 +117,7 @@ module.exports = {
         };
       });
 
-      return routes.concat(featureRoutes);
+      return routes.concat(postRoutes,featureRoutes);
     }
   },
   router: {

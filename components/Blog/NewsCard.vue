@@ -9,12 +9,12 @@
     <p class="blog-news-card-intro">
       <slot />
     </p>
-    <a class="blog-news-card-link" :href="href">
+    <nuxt-link class="blog-news-card-link" :to="href" exact>
       <div class="blog-news-card-icon">
         <v-svg-icon name="arrow-right" />
       </div>
       Read more
-    </a>
+    </nuxt-link>
   </v-card>
 </template>
 
@@ -24,7 +24,7 @@ import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 
 export default {
   props: {
-    href: {
+    slug: {
       type: String,
       required: true,
     }
@@ -33,6 +33,11 @@ export default {
   components: {
     VCard,
     VSvgIcon
+  },
+  computed: {
+    href() {
+      return `/blog/${this.slug}`;
+    }
   }
 };
 </script>
