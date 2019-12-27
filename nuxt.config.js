@@ -80,6 +80,10 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    // experimental build flags to improve speed
+    cache: true,
+    hardSource: true,
+    // end experimental build flags
     postcss: {
       plugins: {
         "postcss-custom-properties": false
