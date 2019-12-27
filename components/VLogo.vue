@@ -1,7 +1,7 @@
 <template>
-  <a  href="/" class="v-logo">
+  <nuxt-link to="/" class="v-logo">
     <v-svg-icon name="endpass"></v-svg-icon>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

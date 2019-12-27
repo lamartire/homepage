@@ -13,11 +13,11 @@
           <v-logo></v-logo>
         </div>
         <nav class="page-header-menu-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="/pricing">Pricing</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
+          <li><nuxt-link to="/about">About</nuxt-link></li>
+          <li><nuxt-link to="/careers">Careers</nuxt-link></li>
+          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
           <li>
             <a href="https://developers.endpass.com/" target="_blank"
               >Developers</a>
