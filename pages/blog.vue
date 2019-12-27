@@ -18,83 +18,32 @@
     </div>
     <div class="blog-content container">
       <div class="blog-row">
-        <div class="columns is-variable is-4">
-          <div class="blog-post column is-8">
+        <div class="tile is-ancestor">
+          <div v-for="p in posts" :key="p._id" class="blog-post tile">
             <news-image-card
-              href="/article"
-              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.independent.co.uk%2Fs3fs-public%2Fthumbnails%2Fimage%2F2018%2F11%2F24%2F16%2Fcat.jpg&f=1&nofb=1"
-            >
-              <template slot="author">
-                Heather R Morgan
-              </template>
-              <template slot="title"
-                >How software will re-invent identity verification</template
+              v-if="p.image"
+              :href="p.title_slug"
+              :image="p.image.path"
               >
-              Like many busy professionals, I had been procrastinating switching
-              banks and setting up new financial accounts because I was dreading
-              spending time on long and confusing applications.
+              <template v-if="p.author" slot="author">
+                {{ p.author }}
+              </template>
+              <template slot="title"> {{ p.title }}</template>
+              {{ p.subhead }}
             </news-image-card>
-          </div>
-          <div class="blog-post column is-4">
-            <news-card href="/article">
-              <template slot="date">
-                12 June
+
+            <news-card
+              v-else
+              :href="p.title_slug"
+            >
+              <template v-if="p.author" slot="author">
+                {{ p.author }}
               </template>
-              <template slot="title">
-                Manage all your accounts from one place.
-              </template>
-              <template>
-                Endpass Wallet automatically tracks all tokens at any Ethereum
-                address
-              </template>
+              <template slot="title"> {{ p.title }}</template>
+              {{ p.subhead }}
             </news-card>
           </div>
-        </div>
-      </div>
-      <div class="blog-row">
-        <div class="columns is-variable is-4">
-          <div class="blog-post column is-4">
-            <news-card href="/article">
-              <template slot="date">
-                12 June
-              </template>
-              <template slot="title">
-                Manage all your accounts from one place.
-              </template>
-              <template>
-                Endpass Wallet automatically tracks all tokens at any Ethereum
-                address
-              </template>
-            </news-card>
-          </div>
-          <div class="blog-post column is-4">
-            <news-card href="/article">
-              <template slot="date">
-                12 June
-              </template>
-              <template slot="title">
-                Manage all your accounts from one place.
-              </template>
-              <template>
-                Endpass Wallet automatically tracks all tokens at any Ethereum
-                address
-              </template>
-            </news-card>
-          </div>
-          <div class="blog-post column is-4">
-            <news-card href="/article">
-              <template slot="date">
-                12 June
-              </template>
-              <template slot="title">
-                Manage all your accounts from one place.
-              </template>
-              <template>
-                Endpass Wallet automatically tracks all tokens at any Ethereum
-                address
-              </template>
-            </news-card>
-          </div>
+
         </div>
       </div>
     </div>
@@ -112,6 +61,8 @@ import PageFooter from "~/components/PageFooter";
 import NewsImageCard from "~/components/Blog/NewsImageCard";
 import NewsCard from "~/components/Blog/NewsCard";
 
+import cockpit from '~/plugins/cockpit.js';
+
 export default {
   head() {
     return {
@@ -126,7 +77,14 @@ export default {
     PageIntro,
     NewsImageCard,
     NewsCard
-  }
+  },
+  async asyncData () {
+    let posts = await cockpit.getCollection("blog_posts", {
+      filter: { published: true},
+      sort: {_created:-1},
+    });
+    return { posts }
+  },
 };
 </script>
 

@@ -111,11 +111,11 @@ export default {
     PricingCard
   },
   async asyncData () {
-      let faqs = await cockpit.getCollection("faqs", {
-        filter: { published: true, page: 'pricing' },
-        sort: {number:1},
-      });
-      return { faqs }
+    let faqs = await cockpit.getCollection("faqs", {
+      filter: { published: true, page: 'pricing' },
+      sort: {number:1},
+    });
+    return { faqs }
   },
   computed: {
     pricingPageUrl() {
