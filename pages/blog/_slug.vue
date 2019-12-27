@@ -22,17 +22,17 @@
           </div>
         </div>
       </section>
-      <section class="blog-article-images columns is-variable is-4" v-if="images.length">
-        <div class="column is-8 is-offset-2">
-          <img :src="images[0]" />
+      <section class="blog-article-images" v-if="images.length">
+        <div class="columns is-variable is-4">
+          <div class="column is-8 is-offset-2">
+            <img :src="images[0]" />
+          </div>
         </div>
       </section>
       <section class="container">
         <div class="columns is-variable is-4">
-          <div class="blog-article-article column is-8 is-offset-3">
-            <template lang="md">
-              {{ post.body }}
-            </template>
+          <div class="blog-article-article column is-8 is-offset-2">
+            <div class="content" v-html="postBody"></div>
           </div>
         </div>
       </section>
@@ -89,6 +89,12 @@ export default {
       }
       return imageUrls;
     },
+    postBody() {
+      if (!this.post.body) {
+        return;
+      }
+      return this.$md.render(this.post.body);
+    }
   },
 
   filters: {
