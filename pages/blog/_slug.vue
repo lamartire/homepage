@@ -3,7 +3,7 @@
     <section class="blog-article-content">
       <section class="blog-article-header container">
         <div class="columns is-variable is-4">
-          <div class="column is-3">
+          <div class="column is-2 is-offset-2">
             <author>
               <img src="~/assets/img/36-px.png" slot="avatar" />
               <template slot="author" v-if="post.author">
@@ -22,27 +22,14 @@
           </div>
         </div>
       </section>
-      <section class="blog-article-gallery" v-if="images.length">
-        <Gallery
-          :images="images"
-        />
+      <section class="blog-article-images columns is-variable is-4" v-if="images.length">
+        <div class="column is-8 is-offset-2">
+          <img :src="images[0]" />
+        </div>
       </section>
       <section class="container">
         <div class="columns is-variable is-4">
-          <div class="column is-3">
-            <div class="blog-article-suggestion">
-              <suggestion>
-                <template slot="image">
-                  <img src="http://placekitten.com/g/1440/780" />
-                </template>
-                <template>
-                  Because the wallet is built on a open protocol, you can also
-                  sync wallets to a server that you control.
-                </template>
-              </suggestion>
-            </div>
-          </div>
-          <div class="blog-article-article column is-8 is-offset-1">
+          <div class="blog-article-article column is-8 is-offset-3">
             <template lang="md">
               {{ post.body }}
             </template>
