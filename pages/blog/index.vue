@@ -93,7 +93,7 @@ export default {
 <style lang="scss" scoped>
 .blog {
   background-color: #f2f4f8;
-  background-image: url(../assets/bg/desktop/header.svg);
+  background-image: url(~assets/bg/desktop/header.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top center;
@@ -120,7 +120,7 @@ export default {
     padding-top: 120px;
     padding-bottom: 70px;
     margin-bottom: 70px;
-    background-image: url(../assets/bg/api-block.svg);
+    background-image: url(~assets/bg/api-block.svg);
     background-size: cover;
   }
 

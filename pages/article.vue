@@ -5,7 +5,7 @@
         <div class="columns is-variable is-4">
           <div class="column is-3">
             <author>
-              <img src="../assets/img/36-px.png" slot="avatar" />
+              <img src="~/assets/img/36-px.png" slot="avatar" />
               <template slot="author">
                 Heather R Morgan
               </template>
@@ -141,7 +141,7 @@ export default {
 <style lang="scss" scoped>
 .blog-article {
   padding-top: 196px;
-  background-image: url(../assets/bg/desktop/header.svg);
+  background-image: url(~assets/bg/desktop/header.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top center;

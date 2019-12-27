@@ -2,10 +2,10 @@
   <section>
     <vueper-slides :slide-ratio="1 / 2" :bullets="false" fixed-height="638px">
       <template v-slot:arrow-left>
-        <img src="../../assets/img/gallery-arrow-left.svg" />
+        <img src="~/assets/img/gallery-arrow-left.svg" />
       </template>
       <template v-slot:arrow-right>
-        <img src="../../assets/img/gallery-arrow-right.svg" />
+        <img src="~/assets/img/gallery-arrow-right.svg" />
       </template>
       <vueper-slide v-for="(img, i) in images" :key="i" :image="img" />
     </vueper-slides>

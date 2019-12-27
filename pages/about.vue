@@ -44,7 +44,7 @@
             <div class="columns is-variable is-4">
               <div class="column is-6">
                 <Person>
-                  <img src="../assets/img/Heather.jpg" alt="" slot="image" />
+                  <img src="~/assets/img/Heather.jpg" alt="" slot="image" />
                   <p slot="name">Heather R Morgan</p>
                   <p slot="title">CEO</p>
                   <template>
@@ -67,7 +67,7 @@
               </div>
               <div class="column is-6">
                 <Person>
-                  <img src="../assets/img/Ilya.jpg" alt="" slot="image" />
+                  <img src="~/assets/img/Ilya.jpg" alt="" slot="image" />
                   <p slot="name">Dutch (Ilya) Lichtenstein</p>
                   <p slot="title">CTO</p>
                   <p>
@@ -190,7 +190,7 @@ export default {
 <style lang="scss">
 .about-page {
   background-color: #f2f4f8;
-  background-image: url(../assets/bg/desktop/header.svg);
+  background-image: url(~assets/bg/desktop/header.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top center;
@@ -315,7 +315,7 @@ export default {
 
 @media (min-width: 1600px) {
   .about-page {
-    background-image: url(../assets/bg/widescreen/header.svg);
+    background-image: url(~assets/bg/widescreen/header.svg);
     background-size: initial;
     background-position: top right;
   }
@@ -334,7 +334,7 @@ export default {
     padding-top: 110px;
     padding-bottom: 70px;
     margin-bottom: 70px;
-    background-image: url(../assets/bg/api-block.svg);
+    background-image: url(~assets/bg/api-block.svg);
     background-size: cover;
   }
 
