@@ -7,11 +7,8 @@
             <template slot="title">
               Welcome to the Endpass Blog
             </template>
-            <p>
-              This documentation is your Sketch reference manual. No matter how
-              experienced you are or what you want to achieve, it should cover
-              everything you need to know.
-            </p>
+            <p>Stay informed of the latest trends in AI-powered identity
+              verification, KYC, and compliance.</p>
           </page-intro>
         </div>
       </div>
