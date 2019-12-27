@@ -19,29 +19,34 @@
     <div class="blog-content container">
       <div class="blog-row">
         <div class="tile is-ancestor">
-          <div v-for="p in posts" :key="p._id" class="blog-post tile">
-            <news-image-card
-              v-if="p.image"
-              :href="p.title_slug"
-              :image="p.image.path"
-              >
-              <template v-if="p.author" slot="author">
-                {{ p.author }}
-              </template>
-              <template slot="title"> {{ p.title }}</template>
-              {{ p.subhead }}
-            </news-image-card>
+          <div v-for="(p, i) in posts"
+               :key="p._id"
+               class="tile is-parent"
+               :class="{'is-8': i === 0}">
+            <div class="tile is-child blog-post">
+              <news-image-card
+                v-if="p.image"
+                :href="p.title_slug"
+                :image="p.image.path"
+                >
+                <template v-if="p.author" slot="author">
+                  {{ p.author }}
+                </template>
+                <template slot="title"> {{ p.title }}</template>
+                {{ p.subhead }}
+              </news-image-card>
 
-            <news-card
-              v-else
-              :href="p.title_slug"
-            >
-              <template v-if="p.author" slot="author">
-                {{ p.author }}
-              </template>
-              <template slot="title"> {{ p.title }}</template>
-              {{ p.subhead }}
-            </news-card>
+              <news-card
+                v-else
+                :href="p.title_slug"
+                >
+                <template v-if="p.author" slot="author">
+                  {{ p.author }}
+                </template>
+                <template slot="title"> {{ p.title }}</template>
+                {{ p.subhead }}
+              </news-card>
+            </div>
           </div>
 
         </div>
