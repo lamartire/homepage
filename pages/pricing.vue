@@ -66,17 +66,9 @@
       </div>
       <section class="pricing-page-faq container">
         <faq-list size="large">
-          <faq-item>
-            <template slot="title"
-              >How many times do i need to pay rep month?</template
-            >
-            <template>
-              Don't worry about choosing the right gas price. Simply choose a
-              priority level for your transaction and the wallet's prediction
-              algorithms will select the optimal gas price. If a transaction
-              does get stuck, you can resend it with a higher fee or cancel it
-              in one click.
-            </template>
+          <faq-item v-for="f in faqs" :key="f._id">
+            <template slot="title" >{{ f.title }} </template>
+            <template> {{ f.description }} </template>
           </faq-item>
         </faq-list>
       </section>
@@ -99,15 +91,15 @@ import MarkeredListItem from "~/components/MarkeredListItem";
 import PricingCard from "~/components/Pricing/PricingCard";
 import CallToAction from "~/components/Landing/LeadForm/CallToAction.vue";
 
+import cockpit from '~/plugins/cockpit.js';
+
 export default {
   head() {
     return {
       title: "pricing"
     };
   },
-
   layout: "new",
-
   components: {
     FaqList,
     FaqItem,
@@ -117,6 +109,13 @@ export default {
     PageIntro,
     MarkeredListItem,
     PricingCard
+  },
+  async asyncData () {
+      let faqs = await cockpit.getCollection("features", {
+        // filter: { published: true, page: 'pricing' },
+        sort: {number:1},
+      });
+      return { faqs }
   },
   computed: {
     pricingPageUrl() {
