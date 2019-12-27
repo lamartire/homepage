@@ -45,7 +45,6 @@ export default {
 }
 
 .pricing-card-title {
-  text-transform: uppercase;
   margin-bottom: 1px;
   font-size: 18px;
   line-height: 1.56;
