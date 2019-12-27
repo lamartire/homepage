@@ -48,6 +48,7 @@
             <template slot="button">
               Contact Us
             </template>
+            <markered-list-item><strong>Everything in the Pay as You Grow Plan</strong></markered-list-item>
             <markered-list-item>Corporate identity provider integration</markered-list-item>
             <markered-list-item>Full audit log</markered-list-item>
             <markered-list-item>Custom integrations</markered-list-item>
