@@ -68,17 +68,20 @@
               <div class="column is-6">
                 <Person>
                   <img src="~/assets/img/Ilya.jpg" alt="" slot="image" />
-                  <p slot="name">Dutch (Ilya) Lichtenstein</p>
+                  <p slot="name">Dutch Ilya Lichtenstein</p>
                   <p slot="title">CTO</p>
                   <p>
                     is a security expert and technology enthusiast who is
-                    obsessed with automation, who has been reverse engineering
-                    hardware and writing code since age 9. Prior to Endpass, he
-                    was the CEO of Mixrank, a Y Combinator startup backed by
-                    investors such as Mark Cuban and Data Collective (DCVC).
-                    Mixrank was one of the earliest sales automation tools of
-                    its kind, acting as a powerful customer discovery platform
-                    for sales teams.
+                    obsessed with automation. He has been reverse engineering
+                    hardware and writing code since age 9. Prior to Endpass,
+                    he was the CEO of Mixrank, a Y Combinator startup that
+                    was one of the earliest sales automation and company
+                    discovery platforms. He grew MixRank from a two-person
+                    startup to one of the fastest growing companies in
+                    America as recognized in the Inc 5000.
+                    He holds a degree in Psychology from the University of
+                    Wisconsin-Madison, and enjoys home automation and
+                    close-up magic in his spare time.
                   </p>
                 </Person>
               </div>
