@@ -7,53 +7,29 @@
       <span class="pricing-card-amount">
         <slot name="amount"></slot>
       </span>
-      <span class="pricing-card-count"> per user<br />identity verified </span>
+      <span class="pricing-card-count" v-if="isPrimary"> per verified<br />identity</span>
     </section>
     <section class="pricing-card-list">
-      <markered-list>
+      <ul>
         <slot />
-      </markered-list>
+      </ul>
     </section>
     <section class="pricing-card-button-wrapper">
-      <v-button-link
-        href="https://vault.endpass.com/#/profile/payment"
-        :skin="buttonSkin"
-        :fluid="true"
-      >
-        Subscribe
-      </v-button-link>
+        <slot name="button"></slot>
     </section>
   </div>
 </template>
 
 <script>
-import MarkeredList from "~/components/MarkeredList";
-import VButtonLink from "~/components/VButtonLink";
 
 export default {
   name: "PricingCard",
-
   props: {
     isPrimary: {
       type: Boolean,
       default: false
     }
   },
-
-  computed: {
-    buttonSkin() {
-      if (this.isPrimary) {
-        return "red";
-      }
-
-      return "primary";
-    }
-  },
-
-  components: {
-    MarkeredList,
-    VButtonLink
-  }
 };
 </script>
 

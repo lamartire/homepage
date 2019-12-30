@@ -1,9 +1,24 @@
-require("dotenv").config();
-
-const resolve = require("path").resolve;
-
+import path from "path";
+import fs from "fs";
+import dotenv from "dotenv";
 import cockpit from "./plugins/cockpit.js";
 import endpass from "./plugins/endpass.js";
+
+const { NODE_ENV = "development" } = process.env;
+const isProduction = NODE_ENV === "production";
+const envFilePath = path.join(
+  __dirname,
+  isProduction ? ".env" : `.env.${NODE_ENV}`
+);
+const envFileBuf = fs.readFileSync(envFilePath);
+const ENV_VARIABLES = dotenv.parse(envFileBuf);
+
+dotenv.config({
+  path: envFilePath
+});
+
+console.info(`env-file loaded from: ${envFilePath}`);
+console.info(ENV_VARIABLES);
 
 module.exports = {
   /*
@@ -11,7 +26,7 @@ module.exports = {
    */
   head: {
     title: "automated identity verification",
-    titleTemplate: "Endpass: %s",
+    titleTemplate: "%s | Endpass",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -30,6 +45,10 @@ module.exports = {
       {
         rel: "stylesheet",
         href: "https://use.typekit.net/yiq0llk.css"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/vueperslides/dist/vueperslides.css"
       },
       {
         rel: "apple-touch-icon",
@@ -76,17 +95,18 @@ module.exports = {
     interval: 100,
     routes: async function() {
       const routes = [];
-      const tokens = await endpass.getTokens();
-      const tokenContents = await cockpit.getCollection("coins");
-      const tokenRoutes = tokens.map(token => {
+
+      const posts = await cockpit.getCollection("blog_posts", {
+        filter: { published: true},
+        sort: {_created:-1},
+      });
+      const postRoutes = posts.map(post => {
         return {
-          route: `/coin/${token.slug}-${token.symbol}`.toLowerCase(),
-          payload: {
-            token,
-            content: tokenContents.find(c => c.symbol === token.symbol)
-          }
+          route: `/blog/${post.title_slug}`,
+          payload: post
         };
       });
+
       const features = await cockpit.getCollection("features", {
         filter: { published: true }
       });
@@ -97,16 +117,16 @@ module.exports = {
         };
       });
 
-      return routes.concat(tokenRoutes, featureRoutes);
+      return routes.concat(postRoutes,featureRoutes);
     }
   },
   router: {
     linkActiveClass: "is-active"
   },
+  env: ENV_VARIABLES,
   modules: [
-    "@nuxtjs/dotenv",
     "@nuxtjs/style-resources",
-    ["@nuxtjs/google-analytics", { id: process.env.ANALYTICS_SITE_ID }],
+    ["@nuxtjs/google-analytics", { id: ENV_VARIABLES.ANALYTICS_SITE_ID }],
     "@nuxtjs/axios",
     "@nuxtjs/markdownit"
   ],
@@ -118,13 +138,13 @@ module.exports = {
   },
   styleResources: {
     scss: [
-      resolve(__dirname, "assets/css/_settings.scss"),
-      resolve(__dirname, "assets/css/_mixins.scss"),
-      resolve(__dirname, "assets/css/_external.scss"),
-      resolve(__dirname, "assets/css/_utilities.scss"),
-      resolve(__dirname, "assets/css/_overrides.scss"),
-      resolve(__dirname, "assets/css/_typography.scss"),
-      resolve(__dirname, "assets/css/global.scss")
+      path.resolve(__dirname, "assets/css/_settings.scss"),
+      path.resolve(__dirname, "assets/css/_mixins.scss"),
+      path.resolve(__dirname, "assets/css/_external.scss"),
+      path.resolve(__dirname, "assets/css/_utilities.scss"),
+      path.resolve(__dirname, "assets/css/_overrides.scss"),
+      path.resolve(__dirname, "assets/css/_typography.scss"),
+      path.resolve(__dirname, "assets/css/global.scss")
     ]
   }
 };

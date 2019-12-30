@@ -26,6 +26,10 @@ export default {
   color: #373d42;
 }
 
+.markered-list-item:not(:last-child) {
+	margin-bottom: 16px;
+}
+
 .markered-list-item-icon {
   flex: 0 0 auto;
   width: 17px;

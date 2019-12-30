@@ -5,7 +5,7 @@ const CONTENT_URL='https://cockpit.endpass.com/api'
 
 export default {
   // Fetches content about tokens from headless CRM
-  // Returns promise which resolves to an object of content keyed by uppercase
+  // Returns promise which resolves to an array of entries
   // token symbol
   getCollection(name, params = {}) {
     let apiKey = process.env.COCKPIT_API_KEY
@@ -16,5 +16,19 @@ export default {
     .then(res => {
       return res.data.entries
     })
-  }
+  },
+
+  // Get a single item from a collection by the given filter
+  getItem(collectionName, filter = {}) {
+    let params = {
+      filter,
+      populate: 1
+    }
+    return this.getCollection(collectionName, params).then(items => {
+      if (!items.length) {
+        return
+      }
+      return items[0]
+    })
+  },
 }
