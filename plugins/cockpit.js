@@ -1,7 +1,7 @@
 // Functions for Cockpit CMS API
 import axios from 'axios'
 
-const CONTENT_URL='https://cockpit.endpass.com/api'
+const CONTENT_URL=`${process.env.COCKPIT_URL}/api`
 
 export default {
   // Fetches content about tokens from headless CRM

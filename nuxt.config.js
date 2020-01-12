@@ -91,6 +91,9 @@ module.exports = {
       // console.dir(config.module.rules)
     }
   },
+  plugins: [
+    '~plugins/filters.js'
+  ],
   generate: {
     interval: 100,
     routes: async function() {

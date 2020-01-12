@@ -24,7 +24,7 @@
               <news-image-card
                 v-if="p.image"
                 :slug="p.title_slug"
-                :image="p.image.path"
+                :image="p.image.path | imageUrl"
                 >
                 <template v-if="p.author" slot="author">
                   {{ p.author }}

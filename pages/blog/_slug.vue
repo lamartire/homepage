@@ -25,7 +25,7 @@
       <section class="blog-article-images" v-if="images.length">
         <div class="columns is-variable is-4">
           <div class="column is-8 is-offset-2">
-            <img :src="images[0]" />
+            <img :src="images[0] | imageUrl" />
           </div>
         </div>
       </section>
