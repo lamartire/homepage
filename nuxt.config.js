@@ -1,8 +1,6 @@
-import path from "path";
-import fs from "fs";
-import dotenv from "dotenv";
-import cockpit from "./plugins/cockpit.js";
-import endpass from "./plugins/endpass.js";
+const path = require("path");
+const fs = require("fs");
+const dotenv = require("dotenv");
 
 const { NODE_ENV = "development" } = process.env;
 const isProduction = NODE_ENV === "production";
@@ -16,6 +14,9 @@ const ENV_VARIABLES = dotenv.parse(envFileBuf);
 dotenv.config({
   path: envFilePath
 });
+
+const cockpit = require("./plugins/cockpit.js").default;
+const endpass = require("./plugins/endpass.js").default;
 
 console.info(`env-file loaded from: ${envFilePath}`);
 console.info(ENV_VARIABLES);
