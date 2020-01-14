@@ -1,9 +1,9 @@
-name: landing page master	
+name: landing page release	
 on:
   repository_dispatch:
   push:	
     branches:	
-      - master	
+      - release	
     paths-ignore:	
       - '**.md'	
 
@@ -26,16 +26,16 @@ jobs:
       run: yarn install --frozen-lockfile	
 
     - name: Build	
-      run: yarn generate:dev	
+      run: yarn generate	
 
     - name: Deploy to S3 bucket	
       uses: jakejarvis/s3-sync-action@master	
       with:	
         args: --delete	
       env:	
-        AWS_S3_BUCKET: landing-dev.endpass.com	
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}	
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}	
+        AWS_S3_BUCKET: endpass.com	
+        AWS_ACCESS_KEY_ID: ${{ secrets.LANDING_AWS_ACCESS_KEY_ID }}	
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.LANDING_AWS_SECRET_ACCESS_KEY }}	
         SOURCE_DIR: 'dist/'	
 
     - name: Slack Notification	
@@ -44,7 +44,7 @@ jobs:
       continue-on-error: true	
       with:	
         type: ${{ job.status }}	
-        job_name: 'landing page built (master)'	
+        job_name: 'landing page built (release)'	
         username: 'GitHub Actions'	
         icon_emoji: ':github:'	
         url: ${{ secrets.SLACK_WEBHOOK }}
