@@ -1,15 +1,20 @@
 <template>
-  <v-card class="blog-news-image-card" :style="{ 'background-image': `url(${image})` }">
-    <nuxt-link class="blog-news-image-card-link" :to="href" exact />
-    <p class="blog-news-image-card-author">
-      <slot name="author" />
-    </p>
-    <h3 class="blog-news-image-card-title">
-      <slot name="title" />
-    </h3>
-    <p class="blog-news-image-card-intro">
-      <slot />
-    </p>
+  <v-card
+    class="blog-news-image-card"
+    :style="{ 'background-image': `url(${image})` }"
+  >
+    <div class="blog-news-image-card-content">
+      <nuxt-link class="blog-news-image-card-link" :to="href" exact />
+      <p class="blog-news-image-card-author">
+        <slot name="author" />
+      </p>
+      <h3 class="blog-news-image-card-title">
+        <slot name="title" />
+      </h3>
+      <p class="blog-news-image-card-intro">
+        <slot />
+      </p>
+    </div>
   </v-card>
 </template>
 
@@ -51,6 +56,23 @@ export default {
   color: var(--endpass-ui-color-white);
   background-size: cover;
   background-position: center;
+}
+
+.blog-news-image-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.4;
+  background: var(--endpass-ui-color-primary-6);
+}
+
+.blog-news-image-card-content {
+  position: relative;
+  z-index: 1;
 }
 
 .blog-news-image-card-author {
