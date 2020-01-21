@@ -25,7 +25,7 @@
       <section class="blog-article-images" v-if="images.length">
         <div class="columns is-variable is-4">
           <div class="column is-8 is-offset-2">
-            <img :src="images[0] | imageUrl" />
+            <img :src="images[0]" />
           </div>
         </div>
       </section>
@@ -50,28 +50,56 @@ import PageFooter from "~/components/PageFooter";
 import Author from "~/components/Blog/Author";
 import Gallery from "~/components/Blog/Gallery";
 import Suggestion from "~/components/Blog/Suggestion";
-
-import cockpit from '~/plugins/cockpit.js';
+import cockpit from "~/plugins/cockpit.js";
 
 export default {
   head() {
     return {
       title: this.post.title,
+      meta: [
+        {
+          hid: "ogTitle",
+          property: "og:title",
+          content: this.post.title
+        },
+        {
+          hid: "ogImage",
+          property: "og:image",
+          content: this.images[0]
+        },
+        {
+          hid: "ogDescription",
+          property: "og:description",
+          content: this.post.subhead || ""
+        },
+        {
+          hid: "ogUrl",
+          property: "og:url",
+          content: this.url
+        },
+        {
+          hid: "twitterUrl",
+          name: "twitter:card",
+          content: this.images[0]
+        }
+      ]
     };
   },
 
   layout: "new",
 
-  async asyncData ({ params, error, payload }) {
+  async asyncData({ params, error, payload }) {
     // Generated static site
     if (payload) {
       return { post: payload };
     } else {
-    // Dev server, dynamic load
-      let post = await cockpit.getItem('blog_posts',
-        {published: true, title_slug: params.slug});
+      // Dev server, dynamic load
+      let post = await cockpit.getItem("blog_posts", {
+        published: true,
+        title_slug: params.slug
+      });
       if (!post) {
-        return error({statusCode: 404, message: '404 Page not found'});
+        return error({ statusCode: 404, message: "404 Page not found" });
       }
       return { post };
     }
@@ -79,8 +107,15 @@ export default {
 
   computed: {
     date() {
-      return new Date(this.post._created*1000);
+      return new Date(this.post._created * 1000);
     },
+
+    url() {
+      return `https://${process.env.S3_BUCKET_NAME}/blog/${
+        this.post.title_slug
+      }`;
+    },
+
     // TODO multiple post images
     images() {
       let imageUrls = [];
@@ -89,6 +124,7 @@ export default {
       }
       return imageUrls;
     },
+
     postBody() {
       if (!this.post.body) {
         return;
@@ -100,10 +136,20 @@ export default {
   filters: {
     fmtDate(d) {
       if (!d) {
-        return '';
+        return "";
       }
       return d.toDateString();
-    },
+    }
+  },
+
+  methods: {
+    createMetaTag(prefix, property, content = "") {
+      return {
+        hid: `${prefix}:${property}`,
+        property,
+        content
+      };
+    }
   },
 
   components: {
