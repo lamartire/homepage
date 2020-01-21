@@ -36,6 +36,11 @@ module.exports = {
         name: "description",
         content: "Endpass is a automated identity verification."
       },
+      {
+        hid: "goSiteName",
+        name: "og:site_name",
+        content: "Endpass, Inc."
+      },
       { name: "apple-mobile-web-app-title", content: "Endpass" },
       { name: "application-name", content: "Endpass" },
       { name: "msapplication-TileColor", content: "#da532c" },
