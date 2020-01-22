@@ -57,6 +57,7 @@ export default {
     return {
       title: this.post.title,
       meta: [
+        // Common meta
         {
           hid: "ogTitle",
           property: "og:title",
@@ -77,10 +78,26 @@ export default {
           property: "og:url",
           content: this.url
         },
+        // Twitter meta
         {
-          hid: "twitterUrl",
+          hid: "twitterTitle",
+          name: "twitter:title",
+          content: this.post.title
+        },
+        {
+          hid: "twitterCard",
           name: "twitter:card",
           content: this.images[0]
+        },
+        {
+          hid: "twitterDescription",
+          name: "twitter:description",
+          content: this.post.subhead || ""
+        },
+        {
+          hid: "twitterSite",
+          name: "twitter:site",
+          content: this.url
         }
       ]
     };
