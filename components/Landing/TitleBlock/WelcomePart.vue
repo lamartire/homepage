@@ -19,9 +19,7 @@
           </call-to-action>
         </li>
         <li class="welcome-part-controls-item">
-          <v-more-link class="v-color-white">
-            <slot name="link" />
-          </v-more-link>
+          <slot name="link" />
         </li>
       </ul>
     </div>
@@ -29,15 +27,11 @@
 </template>
 
 <script>
-import VButtonLink from "~/components/VButtonLink";
-import VMoreLink from "~/components/VMoreLink";
 import CallToAction from "~/components/Landing/LeadForm/CallToAction.vue";
 
 export default {
   components: {
-    CallToAction,
-    VButtonLink,
-    VMoreLink
+    CallToAction
   }
 };
 </script>
@@ -110,7 +104,7 @@ export default {
     margin-bottom: 23px;
   }
 
-  .welcome-part-content p{
+  .welcome-part-content p {
     margin-bottom: 28px;
   }
 }

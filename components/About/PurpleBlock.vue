@@ -6,7 +6,7 @@
       </h2>
       <ul class="purple-block-buttons">
         <li>
-          <v-button-link>Partner with us</v-button-link>
+          <v-button-link href="/about">Partner with us</v-button-link>
         </li>
         <li>
           <v-button-link skin="ghost">Join our team</v-button-link>

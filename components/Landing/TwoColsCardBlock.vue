@@ -25,9 +25,7 @@
           </div>
           <div class="column is-5 is-12-touch">
             <slot name="col-2" />
-            <v-more-link href="#">
-              <slot name="link" />
-            </v-more-link>
+            <slot name="link" />
           </div>
         </section>
       </v-card>
