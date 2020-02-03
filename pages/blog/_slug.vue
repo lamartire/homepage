@@ -25,7 +25,7 @@
       <section class="blog-article-images" v-if="images.length">
         <div class="columns is-variable is-4">
           <div class="column is-8 is-offset-2">
-            <img :src="images[0]" />
+            <img :src="titleImage" />
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default {
         {
           hid: "ogImage",
           property: "og:image",
-          content: this.images[0]
+          content: this.titleImage
         },
         {
           hid: "ogDescription",
@@ -87,7 +87,7 @@ export default {
         {
           hid: "twitterCard",
           name: "twitter:card",
-          content: this.images[0]
+          content: this.titleImage
         },
         {
           hid: "twitterDescription",
@@ -140,6 +140,10 @@ export default {
         imageUrls.push(this.post.image.path);
       }
       return imageUrls;
+    },
+
+    titleImage() {
+      return `${process.env.COCKPIT_URL}${this.images[0]}`;
     },
 
     postBody() {
