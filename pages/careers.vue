@@ -9,7 +9,9 @@
             </template>
             <p>
               Sound cool?
-              <a class="v-color-white" href="#">Why don’t you join us?</a>
+              <a class="v-color-white" href="#open-positions"
+                >Why don’t you join us?</a
+              >
             </p>
           </page-intro>
         </div>
@@ -121,7 +123,7 @@
         </ul>
       </two-cols-block>
     </div>
-    <div class="careers-page-table">
+    <div id="open-positions" class="careers-page-table">
       <card-centered-section>
         <template slot="title">
           Here are some of our current openings:

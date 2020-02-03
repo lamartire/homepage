@@ -9,9 +9,7 @@
           <p class="v-page-intro">
             <slot name="content"></slot>
           </p>
-          <v-more-link href="#" class="v-color-white centered-text--block-link">
-            <slot name="link"></slot>
-          </v-more-link>
+          <slot name="link"></slot>
         </div>
       </div>
     </section>
@@ -19,14 +17,8 @@
 </template>
 
 <script>
-import VMoreLink from "~/components/VMoreLink";
-
 export default {
-  name: "ApiBlock",
-
-  components: {
-    VMoreLink
-  }
+  name: "ApiBlock"
 };
 </script>
 
