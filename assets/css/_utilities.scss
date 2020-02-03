@@ -10,6 +10,10 @@
   color: var(--endpass-ui-color-white);
 }
 
+.v-text-underline {
+  text-decoration: underline;
+}
+
 @include tablet {
   .columns.is-tablet-reverse {
     flex-direction: row-reverse;

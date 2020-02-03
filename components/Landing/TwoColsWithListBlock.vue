@@ -31,9 +31,7 @@
           </ul>
           <p>
             <slot name="link-text" />
-            <v-more-link>
-              <slot name="link" />
-            </v-more-link>
+            <slot name="link" />
           </p>
         </section>
       </section>
@@ -42,14 +40,8 @@
 </template>
 
 <script>
-import VMoreLink from "~/components/VMoreLink";
-
 export default {
-  name: "TwoColsWithListBlock",
-
-  components: {
-    VMoreLink
-  }
+  name: "TwoColsWithListBlock"
 };
 </script>
 

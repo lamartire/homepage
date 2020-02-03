@@ -12,9 +12,14 @@
         <template slot="button">
           Request a demo
         </template>
-        <template slot="link">
+        <v-more-link
+          slot="link"
+          class="v-color-white"
+          href="https://develops.endpass.com"
+          target="_blank"
+        >
           Learn more
-        </template>
+        </v-more-link>
         <template slot="features-title">
           How we delight you & your customers:
         </template>
@@ -101,9 +106,13 @@
         <template slot="link-text">
           We also offer secure Single Sign On options with Endpass.
         </template>
-        <template slot="link">
+        <v-more-link
+          slot="link"
+          href="https://develops.endpass.com"
+          target="_blank"
+        >
           Learn more
-        </template>
+        </v-more-link>
       </two-cols-with-list-block>
       <two-cols-features-block>
         <img src="~/assets/img/automation-image.png" slot="image" />
@@ -153,9 +162,14 @@
           users to sign in or register with the option to use Endpass Single
           Sign On?
         </template>
-        <template slot="link">
+        <v-more-link
+          slot="link"
+          class="v-color-white centered-text--block-link"
+          href="https://developers.endpass.com/#introduction"
+          target="_blank"
+        >
           Learn more about the benefits and how easy it is to install our API
-        </template>
+        </v-more-link>
       </centered-text-block>
       <two-cols-card-block>
         <template slot="title">
@@ -186,9 +200,10 @@
             stopping cybercrime in its tracks.
           </p>
         </template>
-        <template slot="link">
+        <v-more-link slot="link" href="/careers" target="_blank">
           Join us in the fight against global fraud
-        </template>
+        </v-more-link>
+        <template slot="link"> </template>
       </two-cols-card-block>
       <page-footer>
         <template slot="copyright">
@@ -209,6 +224,7 @@ import TwoColsWithListBlock from "~/components/Landing/TwoColsWithListBlock";
 import TwoColsFeaturesBlock from "~/components/Landing/TwoColsFeaturesBlock";
 import Feature from "~/components/Feature";
 import PageFooter from "~/components/PageFooter";
+import VMoreLink from "~/components/VMoreLink";
 
 export default {
   name: "LandingPage",
@@ -226,7 +242,8 @@ export default {
     TwoColsWithListBlock,
     TwoColsFeaturesBlock,
     Feature,
-    PageFooter
+    PageFooter,
+    VMoreLink
   }
 };
 </script>
