@@ -6,10 +6,14 @@
       </h2>
       <ul class="purple-block-buttons">
         <li>
-          <v-button-link href="/about">Partner with us</v-button-link>
+          <call-to-action skin="white">
+            Partner with us
+          </call-to-action>
         </li>
         <li>
-          <v-button-link skin="ghost">Join our team</v-button-link>
+          <v-button-link href="/careers" skin="ghost">
+            Join our team
+          </v-button-link>
         </li>
       </ul>
     </div>
@@ -17,10 +21,12 @@
 </template>
 
 <script>
+import CallToAction from "~/components/Landing/LeadForm/CallToAction.vue";
 import VButtonLink from "~/components/VButtonLink";
 
 export default {
   components: {
+    CallToAction,
     VButtonLink
   }
 };

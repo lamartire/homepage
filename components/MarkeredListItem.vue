@@ -3,18 +3,20 @@
     <div class="markered-list-item-icon">
       <v-svg-icon name="check" />
     </div>
-    <slot />
+    <div>
+      <slot />
+    </div>
   </li>
 </template>
 
 <script>
-import VSvgIcon from '@endpass/ui/kit/VSvgIcon'
+import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 
 export default {
   components: {
     VSvgIcon
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -27,7 +29,7 @@ export default {
 }
 
 .markered-list-item:not(:last-child) {
-	margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .markered-list-item-icon {
