@@ -108,7 +108,7 @@
         </template>
         <v-more-link
           slot="link"
-          href="https://develops.endpass.com"
+          href="https://developers.endpass.com/#introduction"
           target="_blank"
         >
           Learn more
