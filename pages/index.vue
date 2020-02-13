@@ -15,7 +15,7 @@
         <v-more-link
           slot="link"
           class="v-color-white"
-          href="https://develops.endpass.com"
+          href="https://developers.endpass.com/#introduction"
           target="_blank"
         >
           Learn more
