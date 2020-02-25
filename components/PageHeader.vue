@@ -13,21 +13,76 @@
           <v-logo></v-logo>
         </div>
         <nav class="page-header-menu-list">
-          <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
-          <li><nuxt-link to="/about">About</nuxt-link></li>
-          <li><nuxt-link to="/careers">Careers</nuxt-link></li>
-          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
           <li>
-            <a href="https://developers.endpass.com/" target="_blank"
-              >Developers</a>
+            <nuxt-link
+              class="page-header-link"
+              exact-active-class="active"
+              to="/"
+            >
+              Home
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              to="/pricing"
+              class="page-header-link"
+              exact-active-class="active"
+            >
+              Pricing
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              to="/about"
+              class="page-header-link"
+              exact-active-class="active"
+            >
+              About
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              to="/careers"
+              class="page-header-link"
+              exact-active-class="active"
+            >
+              Careers
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              to="/blog"
+              class="page-header-link"
+              exact-active-class="active"
+            >
+              Blog
+            </nuxt-link>
+          </li>
+          <li>
+            <a
+              class="page-header-link"
+              href="https://developers.endpass.com/"
+              target="_blank"
+            >
+              Developers
+            </a>
           </li>
         </nav>
         <ul class="page-header-menu-list">
           <li>
-            <a href="https://help.endpass.com/" target="_blank">Support</a>
+            <a
+              class="page-header-link"
+              href="https://help.endpass.com/"
+              target="_blank"
+            >
+              Support
+            </a>
           </li>
-          <li><a href="https://vault.endpass.com/">Sign in</a></li>
+          <li>
+            <a class="page-header-link" href="https://vault.endpass.com/">
+              Sign in
+            </a>
+          </li>
         </ul>
       </section>
     </section>
@@ -36,7 +91,6 @@
 
 <script>
 import { debounce } from "throttle-debounce";
-import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 import VIconButton from "@endpass/ui/kit/VIconButton";
 import VLogo from "~/components/VLogo";
 
@@ -54,6 +108,10 @@ export default {
       }
 
       return "close";
+    },
+
+    isHomePage() {
+      return this.$route.name === "index";
     }
   },
 
@@ -75,9 +133,9 @@ export default {
 
     debouncedScreenResizeHandler: debounce(150, function(e) {
       if (e.target.innerWidth >= 1024) {
-        this.isMenuVisible = false
+        this.isMenuVisible = false;
       }
-    }),
+    })
   },
 
   beforeDestroy() {
@@ -85,14 +143,13 @@ export default {
   },
 
   components: {
-    VSvgIcon,
     VLogo,
     VIconButton
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-header {
   position: absolute;
   top: 0;
@@ -100,6 +157,19 @@ export default {
   z-index: 20;
   width: 100%;
   padding: 27px 50px;
+}
+
+.page-header-link {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--endpass-ui-color-white);
+}
+
+.page-header-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: default;
+  pointer-events: none;
 }
 
 .page-header-menu-trigger {
@@ -131,9 +201,6 @@ export default {
 }
 
 .page-header-menu-list a {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--endpass-ui-color-white);
 }
 
 @include touch {
