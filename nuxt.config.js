@@ -76,7 +76,7 @@ module.exports = {
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-    ]
+    ],
   },
   /*
    ** Customize the progress bar color
