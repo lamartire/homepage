@@ -9,9 +9,9 @@
             </template>
             <p>
               Sound cool?
-              <a class="v-color-white" href="#open-positions"
-                >Why don’t you join us?</a
-              >
+              <a class="v-color-white" href="#open-positions">
+                Why don’t you join us?
+              </a>
             </p>
           </page-intro>
         </div>
@@ -128,7 +128,7 @@
         <template slot="title">
           Here are some of our current openings:
         </template>
-        <v-table>
+        <!--<v-table>
           <v-table-body>
             <v-table-row>
               <v-table-cell class="careers-page-cell">
@@ -164,7 +164,10 @@
               >
             </v-table-row>
           </v-table-body>
-        </v-table>
+        </v-table>-->
+        <div class="careers-widget">
+          <div id="BrzyHr_app"></div>
+        </div>
       </card-centered-section>
     </div>
     <page-footer>
@@ -176,10 +179,6 @@
 </template>
 
 <script>
-import VTable from "@endpass/ui/kit/VTable";
-import VTableRow from "@endpass/ui/kit/VTableRow";
-import VTableCell from "@endpass/ui/kit/VTableCell";
-import VTableBody from "@endpass/ui/kit/VTableBody";
 import TwoColsBlock from "~/components/About/TwoColsBlock";
 import PageIntro from "~/components/PageIntro";
 import PageFooter from "~/components/PageFooter";
@@ -192,18 +191,40 @@ import Expert from "~/components/Careers/Expert";
 export default {
   head() {
     return {
-      title: "careers"
+      title: "careers",
+      script: [
+        {
+          src: "https://endpass.breezy.hr/embed/js?link_external=true"
+        }
+      ]
     };
   },
 
   layout: "new",
 
+  methods: {
+    loadBreezyHr() {
+      return new Promise(resolve => {
+        const handler = () =>
+          setTimeout(() => {
+            if (!global._BrzyHr) return handler();
+
+            return resolve(global._BrzyHr);
+          }, 1000);
+
+        handler();
+      });
+    }
+  },
+
+  async mounted() {
+    const { load } = await this.loadBreezyHr();
+
+    load();
+  },
+
   components: {
     TwoColsBlock,
-    VTable,
-    VTableRow,
-    VTableCell,
-    VTableBody,
     PageIntro,
     PageFooter,
     CardSection,
