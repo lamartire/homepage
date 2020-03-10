@@ -1,20 +1,15 @@
 name: pull
 on:
   pull_request:
-    branches:
-      - master
-      - release
-    paths-ignore:
-      - '**.md'
 
 jobs:
-  build:
+  tests:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
  
     - name: Setup node version
       uses: actions/setup-node@v1
@@ -36,4 +31,4 @@ jobs:
         job_name: 'landing page built'
         username: 'GitHub Actions'
         icon_emoji: ':github:'
-        url: ${{ secrets.SLACK_WEBHOOK }}
+        url: ${{ secrets.SLACK_WEBHOOK_URL }}
