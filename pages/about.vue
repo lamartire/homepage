@@ -99,7 +99,7 @@
             <div class="about-page-relative-content">
               <h2 class="about-page-title">
                 Our Mission: <br />
-                <strong>Fighting Global Fraud & Cybercrime</strong>
+                <strong>Fighting Global Fraud & Cybercrime</strong>
               </h2>
             </div>
           </div>

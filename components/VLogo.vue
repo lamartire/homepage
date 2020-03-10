@@ -8,7 +8,7 @@
 import VSvgIcon from "@endpass/ui/kit/VSvgIcon";
 
 export default {
-  name: 'VLogo',
+  name: "VLogo",
 
   components: {
     VSvgIcon
@@ -16,17 +16,17 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-logo {
   display: inline-block;
   vertical-align: middle;
   width: 35px;
   height: 45px;
   color: var(--endpass-ui-color-white);
+  cursor: pointer;
 }
 
-a.v-logo:hover {
+.v-logo:hover {
   color: var(--endpass-ui-color-white);
-  cursor: pointer;
 }
 </style>
