@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-footer {
   padding: 56px 106px;
   background-image: url(../assets/img/backgrounds/footer.svg);

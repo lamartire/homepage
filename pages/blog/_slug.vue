@@ -1,52 +1,55 @@
 <template>
-  <section class="blog-article">
-    <section class="blog-article-content">
-      <section class="blog-article-header container">
-        <div class="columns is-variable is-4">
-          <div class="column is-2 is-offset-2">
-            <author>
-              <img src="~/assets/img/36-px.png" slot="avatar" />
-              <template slot="author" v-if="post.author">
-                {{ post.author }}
-              </template>
-              <template slot="date">
-                {{ date | fmtDate }}
-              </template>
-            </author>
+  <page-template>
+    <section class="blog-article">
+      <section class="blog-article-content">
+        <section class="blog-article-header container">
+          <div class="columns is-variable is-4">
+            <div class="column is-2 is-offset-2">
+              <author>
+                <img src="~/assets/img/36-px.png" slot="avatar" />
+                <template slot="author" v-if="post.author">
+                  {{ post.author }}
+                </template>
+                <template slot="date">
+                  {{ date | fmtDate }}
+                </template>
+              </author>
+            </div>
+            <div class="column is-8">
+              <h4>
+                {{ post.category }}
+              </h4>
+              <h2>{{ post.title }}</h2>
+            </div>
           </div>
-          <div class="column is-8">
-            <h4>
-              {{ post.category }}
-            </h4>
-            <h2>{{ post.title }}</h2>
+        </section>
+        <section class="blog-article-images" v-if="images.length">
+          <div class="columns is-variable is-4">
+            <div class="column is-8 is-offset-2">
+              <img :src="titleImage" />
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="blog-article-images" v-if="images.length">
-        <div class="columns is-variable is-4">
-          <div class="column is-8 is-offset-2">
-            <img :src="titleImage" />
+        </section>
+        <section class="container">
+          <div class="columns is-variable is-4">
+            <div class="blog-article-article column is-8 is-offset-2">
+              <div class="content" v-html="postBody"></div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="container">
-        <div class="columns is-variable is-4">
-          <div class="blog-article-article column is-8 is-offset-2">
-            <div class="content" v-html="postBody"></div>
-          </div>
-        </div>
+        </section>
       </section>
     </section>
-    <page-footer>
+    <page-footer slot="footer">
       <template slot="copyright">
         Endpass. All rights reserved
       </template>
     </page-footer>
-  </section>
+  </page-template>
 </template>
 
 <script>
 import PageFooter from "~/components/PageFooter";
+import PageTemplate from "~/components/PageTemplate";
 import Author from "~/components/Blog/Author";
 import Gallery from "~/components/Blog/Gallery";
 import Suggestion from "~/components/Blog/Suggestion";
@@ -175,6 +178,7 @@ export default {
 
   components: {
     PageFooter,
+    PageTemplate,
     Author,
     Gallery,
     Suggestion

@@ -1,5 +1,5 @@
 <template>
-  <theme-provider>
+  <page-template>
     <div class="landing-page">
       <title-block>
         <template slot="title">
@@ -205,17 +205,16 @@
         </v-more-link>
         <template slot="link"> </template>
       </two-cols-card-block>
-      <page-footer>
-        <template slot="copyright">
-          Endpass. All rights reserved
-        </template>
-      </page-footer>
     </div>
-  </theme-provider>
+    <page-footer slot="footer">
+      <template slot="copyright">
+        Endpass. All rights reserved
+      </template>
+    </page-footer>
+  </page-template>
 </template>
 
 <script>
-import ThemeProvider from "@endpass/ui/kit/ThemeProvider";
 import TitleBlock from "~/components/Landing/TitleBlock";
 import TwoColsImageBlock from "~/components/Landing/TwoColsImageBlock";
 import CenteredTextBlock from "~/components/Landing/CenteredTextBlock";
@@ -223,6 +222,7 @@ import TwoColsCardBlock from "~/components/Landing/TwoColsCardBlock";
 import TwoColsWithListBlock from "~/components/Landing/TwoColsWithListBlock";
 import TwoColsFeaturesBlock from "~/components/Landing/TwoColsFeaturesBlock";
 import Feature from "~/components/Feature";
+import PageTemplate from "~/components/PageTemplate";
 import PageFooter from "~/components/PageFooter";
 import VMoreLink from "~/components/VMoreLink";
 
@@ -234,7 +234,6 @@ export default {
   layout: "new",
 
   components: {
-    ThemeProvider,
     TitleBlock,
     TwoColsImageBlock,
     CenteredTextBlock,
@@ -242,6 +241,7 @@ export default {
     TwoColsWithListBlock,
     TwoColsFeaturesBlock,
     Feature,
+    PageTemplate,
     PageFooter,
     VMoreLink
   }

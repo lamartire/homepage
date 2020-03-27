@@ -76,7 +76,7 @@ module.exports = {
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-    ],
+    ]
   },
   /*
    ** Customize the progress bar color
@@ -97,17 +97,15 @@ module.exports = {
       // console.dir(config.module.rules)
     }
   },
-  plugins: [
-    '~plugins/filters.js'
-  ],
+  plugins: ["~plugins/filters.js"],
   generate: {
     interval: 100,
     routes: async function() {
       const routes = [];
 
       const posts = await cockpit.getCollection("blog_posts", {
-        filter: { published: true},
-        sort: {_created:-1},
+        filter: { published: true },
+        sort: { _created: -1 }
       });
       const postRoutes = posts.map(post => {
         return {
@@ -126,7 +124,7 @@ module.exports = {
         };
       });
 
-      return routes.concat(postRoutes,featureRoutes);
+      return routes.concat(postRoutes, featureRoutes);
     }
   },
   router: {
@@ -152,8 +150,15 @@ module.exports = {
       path.resolve(__dirname, "assets/css/_external.scss"),
       path.resolve(__dirname, "assets/css/_utilities.scss"),
       path.resolve(__dirname, "assets/css/_overrides.scss"),
-      path.resolve(__dirname, "assets/css/_typography.scss"),
-      path.resolve(__dirname, "assets/css/global.scss")
+      path.resolve(__dirname, "assets/css/_typography.scss")
     ]
-  }
+  },
+  css: [
+    path.resolve(
+      __dirname,
+      "node_modules/@endpass/ui/kit/kit.theme-default.css"
+    ),
+    path.resolve(__dirname, "node_modules/animate.css/animate.min.css"),
+    path.resolve(__dirname, "assets/css/global.scss")
+  ]
 };

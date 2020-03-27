@@ -1,69 +1,76 @@
 <template>
-  <section class="blog">
-    <div class="blog-title container">
-      <div class="columns is-variable is-4">
-        <div class="column is-offset-2 is-8">
-          <page-intro>
-            <template slot="title">
-              Welcome to the Endpass Blog
-            </template>
-            <p>Stay informed of the latest trends in AI-powered identity
-              verification, KYC, and compliance.</p>
-          </page-intro>
+  <page-template>
+    <section class="blog">
+      <div class="blog-title container">
+        <div class="columns is-variable is-4">
+          <div class="column is-offset-2 is-8">
+            <page-intro>
+              <template slot="title">
+                Welcome to the Endpass Blog
+              </template>
+              <p>
+                Stay informed of the latest trends in AI-powered identity
+                verification, KYC, and compliance.
+              </p>
+            </page-intro>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="blog-content container">
-      <div class="blog-row">
-        <div class="tile is-ancestor">
-          <div v-for="(p, i) in posts"
-               :key="p._id"
-               class="tile is-parent"
-               :class="{'is-8': i === 0}">
-            <div class="tile is-child blog-post">
-              <news-image-card
-                v-if="p.image"
-                :slug="p.title_slug"
-                :image="p.image.path | imageUrl"
+      <div class="blog-content container">
+        <div class="blog-row">
+          <div class="tile is-ancestor">
+            <div
+              v-for="(p, i) in posts"
+              :key="p._id"
+              class="tile is-parent"
+              :class="{ 'is-8': i === 0 }"
+            >
+              <div class="tile is-child blog-post">
+                <news-image-card
+                  v-if="p.image"
+                  :slug="p.title_slug"
+                  :image="p.image.path | imageUrl"
                 >
-                <template v-if="p.author" slot="author">
-                  {{ p.author }}
-                </template>
-                <template slot="title"> {{ p.title }}</template>
-                {{ p.subhead }}
-              </news-image-card>
+                  <template v-if="p.author" slot="author">
+                    {{ p.author }}
+                  </template>
+                  <template slot="title">
+                    {{ p.title }}</template
+                  >
+                  {{ p.subhead }}
+                </news-image-card>
 
-              <news-card
-                v-else
-                :slug="p.title_slug"
-                >
-                <template v-if="p.author" slot="author">
-                  {{ p.author }}
-                </template>
-                <template slot="title"> {{ p.title }}</template>
-                {{ p.subhead }}
-              </news-card>
+                <news-card v-else :slug="p.title_slug">
+                  <template v-if="p.author" slot="author">
+                    {{ p.author }}
+                  </template>
+                  <template slot="title">
+                    {{ p.title }}</template
+                  >
+                  {{ p.subhead }}
+                </news-card>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
-    <page-footer>
+    </section>
+    <page-footer slot="footer">
       <template slot="copyright">
         Endpass. All rights reserved
       </template>
     </page-footer>
-  </section>
+  </page-template>
 </template>
 
 <script>
 import PageIntro from "~/components/PageIntro";
 import PageFooter from "~/components/PageFooter";
+import PageTemplate from "~/components/PageTemplate";
 import NewsImageCard from "~/components/Blog/NewsImageCard";
 import NewsCard from "~/components/Blog/NewsCard";
 
-import cockpit from '~/plugins/cockpit.js';
+import cockpit from "~/plugins/cockpit.js";
 
 export default {
   head() {
@@ -76,17 +83,18 @@ export default {
 
   components: {
     PageFooter,
+    PageTemplate,
     PageIntro,
     NewsImageCard,
     NewsCard
   },
-  async asyncData () {
+  async asyncData() {
     let posts = await cockpit.getCollection("blog_posts", {
-      filter: { published: true},
-      sort: {_created:-1},
+      filter: { published: true },
+      sort: { _created: -1 }
     });
-    return { posts }
-  },
+    return { posts };
+  }
 };
 </script>
 
